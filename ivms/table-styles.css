@@ -1,3 +1,4 @@
+html,
 body {
     font-family: Arial, sans-serif;
     background-color: #5a4f95 !important;
@@ -5,14 +6,71 @@ body {
     padding: 0;
 }
 
-.container {
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    height: 100vh;
+    padding: 0 2rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgba(113, 99, 186, 255);
+}
+
+.logo {
+    height: 80px;
+    padding: 16px;
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.active {
+    background: #e0e0e058;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logout {
+    position: absolute;
+    bottom: 10;
+    left: 0;
     width: 100%;
-    max-width: 1200px;
+}
+
+.container {
+    width: 80% !important;
+    margin-left: 19% !important;
+    margin-top: -44% !important;
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    transition: width 0.3s;
 }
 
 header {
@@ -50,8 +108,8 @@ header img {
 #searchBox {
     position: relative;
     top: 50%;
-    left: 40%;
-    width: 260px;
+    left: 25%;
+    width: 560px;
     padding: 10px;
     margin-left: -10px;
     margin-bottom: 20px;
@@ -129,7 +187,7 @@ td button:nth-child(1) {
 }
 
 td button:nth-child(2) {
-    background-color: red; 
+    background-color: red;
     color: white;
     border-radius: 8px;
     height: 32px;
@@ -201,16 +259,15 @@ td button:nth-child(2) {
     padding: 20px;
 }
 
-.btn-close{
+.btn-close {
     background-color: transparent !important;
     font-size: 1.5rem;
 }
 
-.btn-close:hover{
+.btn-close:hover {
     transform: rotate(90deg);
     transition: all 0.2s;
 }
-
 
 @keyframes slideIn {
     from {
@@ -292,19 +349,15 @@ td button:nth-child(2) {
         padding: 7px;
     }
 
-    .popup {
-        width: 240px !important;
-        padding: 10px;
-    }
-
-    #popupContent {
-        font-size: 14px;
-        padding: 20px;
+    .sidebar {
+        display: none;
+        /* width: 60px;
+        padding: 0 0.5rem; */
     }
 
     .container {
         display: block;
-        width: 100%;
+        width: calc(100% - 60px);
         overflow-x: hidden;
     }
 
@@ -341,10 +394,14 @@ td button:nth-child(2) {
         content: attr(data-label);
         position: absolute;
         left: 0;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
+        top: 10px;
         font-weight: bold;
         text-align: left;
+        padding-left: 15px;
+    }
+
+    .pagination button {
+        padding: 8px 15px;
+        font-size: 14px;
     }
 }
