@@ -197,22 +197,28 @@ td button:nth-child(2) {
 
 .popup {
     display: none;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1rem;
     position: fixed;
     height: 80%;
-    width: 80%;
+    width: 100%;
     max-width: 400px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
-    background-color: white;
+    background-color:  #5a4f95;
+    background: url("https://img.freepik.com/premium-vector/purple-gradient-background_322958-697.jpg");
+    background-size: cover;
     padding: 30px;
     border-radius: 8px;
-    border: 2px solid #ccc;
+    /* border: 1px solid #ccc; */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: opacity 0.3s ease, transform 0.3s ease;
     overflow-y: auto;
+    color: white;
 }
 
 .popup.active {
@@ -226,13 +232,14 @@ td button:nth-child(2) {
     top: 10px;
     right: 10px;
     cursor: pointer;
-    font-size: 3.2rem;
+    font-size: 4rem;
     color: #999;
     transition: color 0.3s;
 }
 
 .popup .close:hover {
     color: #333;
+    transform: rotateX('45deg');
 }
 
 .overlay {
