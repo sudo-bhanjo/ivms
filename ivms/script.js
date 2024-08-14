@@ -454,8 +454,8 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </div>
   </div>
-  
-          ${application.status || "inprocess"}</td>
+  </td>
+          <td>${application.status || "inprocess"}</td>
           <td>
             <button onclick="updateStatus(${index}, 'Approved')">Approve</button>
             <button onclick="updateStatus(${index}, 'Disapproved')">Disapprove</button>
