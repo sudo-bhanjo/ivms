@@ -208,12 +208,13 @@ td button:nth-child(2) {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
-    background-color:  #5a4f95;
+    background-color: #5a4f95;
     background: url("https://img.freepik.com/premium-vector/purple-gradient-background_322958-697.jpg");
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     background-size: cover;
     padding: 30px;
-    border-radius: 8px;
-    /* border: 1px solid #ccc; */
+    border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -229,7 +230,7 @@ td button:nth-child(2) {
 
 .popup .close {
     position: absolute;
-    top: 10px;
+    top: -2px !important;
     right: 10px;
     cursor: pointer;
     font-size: 4rem;
@@ -347,68 +348,62 @@ td button:nth-child(2) {
     background-color: #0056b3;
 }
 
-@media (max-width: 600px) {
+.toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
 
     html,
     body {
         display: block;
         width: 100%;
-        padding: 7px;
     }
 
-    .sidebar {
+    .navbar {
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        padding: 20px;
+    }
+
+    #responsive-sidebar {
         display: none;
-        /* width: 60px;
-        padding: 0 0.5rem; */
+    }
+
+    .toggle {
+        display: flex;
+        width: 100%;
+    }
+
+    input {
+        width: 180px !important;
     }
 
     .container {
-        display: block;
-        width: calc(100% - 60px);
-        overflow-x: hidden;
+        margin-top: 20px !important;
+        margin-left: 0 !important;
+        width: 100% !important;
     }
 
-    header h1 {
-        font-size: 18px;
-        padding: 8px 16px;
-    }
-
-    table {
-        border: 0;
-    }
-
-    table thead {
-        display: none;
-    }
-
-    table tbody tr {
-        display: block;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    table tbody td {
-        display: block;
-        text-align: right;
-        font-size: 14px;
-        border: none;
+    #toggle {
+        left: 6%;
+        top: 20% !important;
         position: relative;
-        padding-left: 50%;
-        padding-top: 10px;
+        width: 54px;
+        margin-top: 10px;
+        border: 1px solid #333;
+        transition: all 0.5s linear;
+        background: rgba(113, 99, 186, 255) !important;
     }
 
-    table tbody td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        top: 10px;
-        font-weight: bold;
-        text-align: left;
-        padding-left: 15px;
+    .offcanvas-body {
+        transition: all 0.5s linear;
+        background: rgba(113, 99, 186, 255);
     }
 
-    .pagination button {
-        padding: 8px 15px;
-        font-size: 14px;
+    .popup{
+        width: 80%;
     }
 }
