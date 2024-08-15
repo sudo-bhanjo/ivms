@@ -473,6 +473,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showPopup(index) {
     const application = filteredApplications[index];
+    popupContent.innerHTML = `    
         <p><strong>Name:</strong> ${application.name}</p>
         <p><strong>Email:</strong> ${application.email}</p>
         <p><strong>Contact Number:</strong> ${application.contact}</p>
