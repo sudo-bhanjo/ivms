@@ -457,9 +457,9 @@ document.addEventListener("DOMContentLoaded", function () {
   </td>
           <td>${application.status || "inprocess"}</td>
           <td>
-            <button style="background: transparent";><i class="fa-solid fa-id-card" style="color:#0080ff";></i></button>
-            <button style="background: transparent";><i class="fa-regular fa-clock" style="color:black";>&nbsp;</i></button>
-            <button style="border: none";><i class="fa-solid fa-message" style="color:green">&nbsp;</i></button>
+            <button id=id><i class="fa-solid fa-id-card" style="color:#0080ff";></i></button>
+            <button id=schedule><i class="fa-regular fa-clock" style="color:black";>&nbsp;</i></button>
+            <button id=feedback><i class="fa-solid fa-message" style="color:green">&nbsp;</i></button>
           </td>
         `;
       responsesBody.appendChild(row);
