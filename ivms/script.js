@@ -457,8 +457,9 @@ document.addEventListener("DOMContentLoaded", function () {
   </td>
           <td>${application.status || "inprocess"}</td>
           <td>
-            <button onclick="updateStatus(${index}, 'Approved')">Approve</button>
-            <button onclick="updateStatus(${index}, 'Disapproved')">Disapprove</button>
+            <button style="background: transparent";><i class="fa-solid fa-id-card" style="color:#0080ff";></i></button>
+            <button style="background: transparent";><i class="fa-regular fa-clock" style="color:black";>&nbsp;</i></button>
+            <button style="border: none";><i class="fa-solid fa-message" style="color:green">&nbsp;</i></button>
           </td>
         `;
       responsesBody.appendChild(row);
@@ -469,11 +470,9 @@ document.addEventListener("DOMContentLoaded", function () {
     )}`;
   }
 
-  
-
   function showPopup(index) {
     const application = filteredApplications[index];
-    popupContent.innerHTML = `    
+    popupContent.innerHTML = `
         <p><strong>Name:</strong> ${application.name}</p>
         <p><strong>Email:</strong> ${application.email}</p>
         <p><strong>Contact Number:</strong> ${application.contact}</p>

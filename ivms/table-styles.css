@@ -11,9 +11,9 @@ body {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 240px;
+    width: 180px;
     height: 100vh;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     color: #fff;
     overflow: hidden;
     transition: all 0.5s linear;
@@ -61,8 +61,8 @@ body {
 }
 
 .container {
-    width: 80% !important;
-    margin-left: 19% !important;
+    width: 90% !important;
+    margin-left: 15% !important;
     margin-top: -44% !important;
     max-width: 800px;
     margin: 20px auto;
