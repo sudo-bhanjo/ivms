@@ -351,7 +351,45 @@ td button:nth-child(2) {
     display: none;
 }
 
+@media (max-width: 850px) {
+    html,
+    body {
+        display: block;
+        width: 100%;
+    }
+
+    input{
+        width:auto !important;
+    }
+
+    .container {
+        margin-top: -600px !important;
+        margin-left: -40% !important;
+        /* width: 55% !important; */
+    }
+}
+
 @media (max-width: 1350px) {
+
+    html,
+    body {
+        display: block;
+        width: 100%;
+    }
+
+    input{
+        width:auto !important;
+    }
+
+    .container {
+        margin-top: -600px !important;
+        margin-left: 20% !important;
+        width: 75% !important;
+        padding: 20px  !important;
+    }
+}
+
+@media (max-width: 768px) {
 
     html,
     body {
