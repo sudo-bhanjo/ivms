@@ -351,18 +351,20 @@ td button:nth-child(2) {
     display: none;
 }
 
-#id{
+#id {
     background-color: transparent;
+    color: #0080ff;
     border: none;
     font-size: 1.3rem;
     font-weight: bold;
 }
 
-#schedule{
+#schedule {
     background-color: transparent;
     border: none;
     font-size: 1.3rem;
     font-weight: bolder;
+    color: rgb(83, 82, 82);
 }
 
 #feedback {
@@ -370,8 +372,8 @@ td button:nth-child(2) {
     border: none;
     font-size: 1.3rem;
     font-weight: bold;
+    color: rgb(4, 175, 4);
 }
-
 @media (max-width: 850px) {
 
     html,
@@ -406,7 +408,7 @@ td button:nth-child(2) {
     .container {
         margin-top: -600px !important;
         margin-left: 20% !important;
-        width: 75% !important;
+        width: 78% !important;
         padding: 20px !important;
     }
 }
