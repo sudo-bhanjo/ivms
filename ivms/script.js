@@ -226,6 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Noah Brown",
+      id: "44444",
       email: "noah@example.com",
       contact: "5554567890",
       whatsapp: "5554567890",
@@ -247,6 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Ava Davis",
+      id: "84556",
       email: "ava@example.com",
       contact: "5555678901",
       whatsapp: "5555678901",
@@ -268,6 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Sophia Martinez",
+      id: "456569",
       email: "sophia@example.com",
       contact: "5556789012",
       whatsapp: "5556789012",
@@ -289,6 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "William Garcia",
+      id: "11474",
       email: "william@example.com",
       contact: "5557890123",
       whatsapp: "5557890123",
@@ -310,6 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "James Rodriguez",
+      id: "96369",
       email: "james@example.com",
       contact: "5558901234",
       whatsapp: "5558901234",
@@ -331,6 +336,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Mia Hernandez",
+      id: "191919",
       email: "mia@example.com",
       contact: "5559012345",
       whatsapp: "5559012345",
@@ -352,6 +358,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Isabella Lee",
+      id: "44567",
       email: "isabella@example.com",
       contact: "5550123456",
       whatsapp: "5550123456",
@@ -373,6 +380,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Henry Perez",
+      id: "77777",
       email: "henry@example.com",
       contact: "5551234560",
       whatsapp: "5551234560",
@@ -393,6 +401,36 @@ document.addEventListener("DOMContentLoaded", function () {
       status: "Scheduled",
     },
   ];
+
+  const tableData = [];
+  for (let i = 1; i <= 100; i++) {
+    tableData.push({ id: i, name: `Name ${i}` });
+  }
+
+  function loadTableData(entries) {
+    const tableBody = document.querySelector("#dataTable tbody");
+    tableBody.innerHTML = "";
+
+    const rows = tableData
+      .slice(0, entries)
+      .map((data) => {
+        return `<tr>
+                    <td>${data.id}</td>
+                    <td>${data.name}</td>
+                </tr>`;
+      })
+      .join("");
+
+    tableBody.innerHTML = rows;
+  }
+
+  function changeEntries() {
+    const entries = document.getElementById("entries").value;
+    loadTableData(parseInt(entries));
+  }
+
+  // Load initial data
+  loadTableData(10);
 
   localStorage.setItem("applications", JSON.stringify(applications));
   let filteredApplications = applications;
@@ -442,7 +480,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <select id="status" name="status" required>
                       <option value="approved">Approved</option>
                       <option value="disapproved">Disapproved</option>
-                      <option value="inprogress">In Progress</option>
+                      <option value="inprogress">Inprocess</option>
                   </select>
               </div>
               <div class="form-group">
@@ -491,8 +529,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p class="name-link" data-index="${index}">Name : ${application.name}</p>
-        <p>Id : ${application.id || N/A}</p>
+        <p class="name-link" data-index="${index}">Name : ${
+        application.name
+      }</p>
+        <p>Id : ${application.id || N / A}</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Save changes</button>
