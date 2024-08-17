@@ -230,16 +230,17 @@ td button:nth-child(2) {
     top: 2% !important;
     right: 5%;
     cursor: pointer;
-    font-size: 4rem;
+    font-size: 3.4rem;
     color: #999;
     transition: color 0.3s;
     transition: all 0.5s;
+    font-weight: normal;
 }
 
 .popup .close:hover {
     color: black;
     /* transform: rotate(90deg); */
-    transition: 0.5s;
+    transition: all 0.5s ease-in-out;
 }
 
 .overlay {
@@ -273,7 +274,7 @@ td button:nth-child(2) {
 
 .btn-close:hover {
     transform: rotate(90deg);
-    transition: all 0.2s;
+    transition: all 0.4s ease-in-out;
 }
 
 @keyframes slideIn {
@@ -373,7 +374,13 @@ td button:nth-child(2) {
     font-size: 1.3rem;
     font-weight: bold;
     color: rgb(4, 175, 4);
+    margin-top: 14px;
 }
+
+.modal-body textarea {
+    width: 100%;
+}
+
 @media (max-width: 850px) {
 
     html,

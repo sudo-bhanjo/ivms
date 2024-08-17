@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const applications = [
     {
       name: "John Doe",
+      id: "48656",
       email: "john@example.com",
       contact: "1234567890",
       whatsapp: "1234567890",
@@ -49,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Jane Smith",
+      id: "21656",
       email: "jane@example.com",
       contact: "0987654321",
       whatsapp: "0987654321",
@@ -70,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Alice Johnson",
+      id: "48699",
       email: "alice@example.com",
       contact: "5551234567",
       whatsapp: "5551234567",
@@ -91,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Bob Brown",
+      id: "96325",
       email: "bob@example.com",
       contact: "5559876543",
       whatsapp: "5559876543",
@@ -112,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Charlie Davis",
+      id: "44444",
       email: "charlie@example.com",
       contact: "5556543210",
       whatsapp: "5556543210",
@@ -133,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "David Evans",
+      id: "22556",
       email: "david@example.com",
       contact: "5553210987",
       whatsapp: "5553210987",
@@ -154,6 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Emily Watson",
+      id: "78965",
       email: "emily@example.com",
       contact: "5551234567",
       whatsapp: "5551234567",
@@ -175,6 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Liam Johnson",
+      id: "11102",
       email: "liam@example.com",
       contact: "5552345678",
       whatsapp: "5552345678",
@@ -196,6 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Olivia Smith",
+      id: "33033",
       email: "olivia@example.com",
       contact: "5553456789",
       whatsapp: "5553456789",
@@ -453,13 +462,99 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
     </div>
-  </div>
+    </div>
   </td>
           <td>${application.status || "inprocess"}</td>
           <td>
-            <button id=id><i class="fa-solid fa-id-card"></i></button>
-            <button id=schedule><i class="fa-regular fa-clock">&nbsp;</i></button>
-            <button id=feedback><i class="fa-solid fa-message">&nbsp;</i></button>
+
+            <!-- Button to Open Modal 1 -->
+<button type="button" id="id" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">
+  <i class="fa-solid fa-id-card"></i>
+</button>
+
+<!-- Button to Open Modal 2 -->
+<button type="button" id="schedule" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal2">
+  <i class="fa-regular fa-clock"></i>
+</button>
+
+<!-- Button to Open Modal 3 -->
+<button type="button" id="feedback" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal3">
+  <i class="fa-regular fa-message"></i>
+</button>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal1Label">Identification</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="name-link" data-index="${index}">Name : ${application.name}</p>
+        <p>Id : ${application.id || N/A}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal2Label">Meeting Date and Time</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-container">
+    <form>
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+        <div class="form-group">
+            <label for="platform">Platform:</label>
+              <select id="select">
+                <option value="zoom">Zoom</option>
+                <option value="gmeet">Google meet</option>
+                <option value="skype">Skype</option>
+              </select>
+        </div>
+    </form>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal3Label">Feedback</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <textarea rows="6" cols="60" placeholder="I think you did a great job when you..."></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
           </td>
         `;
       responsesBody.appendChild(row);
