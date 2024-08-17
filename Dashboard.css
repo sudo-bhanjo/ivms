@@ -13,6 +13,19 @@ body {
   display: flex;
 }
 
+/* body {
+  background-color: rgb(0, 0, 33);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+body.loaded {
+  opacity: 1;
+} */
+
 #toggle {
   display: none;
 }

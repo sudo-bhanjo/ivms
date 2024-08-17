@@ -12,6 +12,13 @@ function updateRatingValue(value, elementId) {
   document.getElementById(elementId).innerText = value;
 }
 
+// ---- Smooth loading ----
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.body.classList.add('loaded');
+});
+
+
 // --- Pop Up ---
 
 document.addEventListener("DOMContentLoaded", function () {
