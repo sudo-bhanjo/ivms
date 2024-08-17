@@ -515,11 +515,6 @@ document.addEventListener("DOMContentLoaded", function () {
   <i class="fa-regular fa-clock"></i>
 </button>
 
-<!-- Button to Open Modal 3 -->
-<button type="button" id="feedback" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal3">
-  <i class="fa-regular fa-message"></i>
-</button>
-
 <!-- Modal 1 -->
 <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
   <div class="modal-dialog">
@@ -562,32 +557,108 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="form-group">
             <label for="platform">Platform:</label>
-              <select id="select">
-                <option value="zoom">Zoom</option>
+              <select id="platform-select">
                 <option value="gmeet">Google meet</option>
+                <option value="zoom">Zoom</option>
                 <option value="skype">Skype</option>
               </select>
         </div>
+        <div id="zoom-conferences">
+              <label for="zoom-options">Select Zoom Room:</label>
+                <select id="zoom-options">
+                  <option value="conference1">Conference 1</option>
+                  <option value="conference2">Conference 2</option>
+                  <option value="conference3">Conference 3</option>
+                  <option value="conference4">Conference 4</option>
+                  <option value="conference5">Conference 5</option>
+                  <option value="conference6">Conference 6</option>
+                  <option value="conference7">Conference 7</option>
+                  <option value="Intromeet">Intro meet</option>
+                  <option value="interview1">Interview 1</option>
+                  <option value="Interview2">Interview 2</option>
+                  <option value="Intromeet">SomSir: Admin Coordinator</option>
+                  <option value="Intromeet">Pradipta Sir: Operation Coordin</option>
+                  <option value="Intromeet">Devika Ma'am: Workshop Coordinator</option>
+                  <option value="Intromeet">Pinnacle 1 (HR Team)</option>
+                  <option value="Intromeet">Pinnacle 2 (HR Team)</option>
+                  <option value="Intromeet">Pinnacle 3 (HR Team)</option>
+                  <option value="Intromeet">LSet</option>
+                  <option value="Intromeet">Picasso 1 (GD)</option>
+                  <option value="Intromeet">Picasso 2 (GD)</option>
+                  <option value="Intromeet">Picasso 3 (GD)</option>
+                  <option value="Intromeet">Echo</option>
+                  <option value="Intromeet">NexS 1 (SM)</option>
+                  <option value="Intromeet">NexS 2 (SM)</option> 
+                  <option value="Intromeet">NexS 3 (SM)</option> 
+                  <option value="Intromeet">NexS 4 (SM)</option>
+                  <option value="CliMet">CliMet</option>
+                  <option value="Simtrak">Simtrak</option>
+                  <option value="Ascend">Ascend</option>
+                  <option value="WeeHo">WeeHo</option>
+                  <option value="Inseeds">Inseeds</option>
+                  <option value="Initiators">Initiators</option>
+                  <option value="InkSpire">InkSpire</option>
+                  <option value="Fiesta">Fiesta</option>
+                  <option value="Young Leaders-1">Young Leaders-1</option>
+                  <option value="Young Leaders-2">Young Leaders-2</option>
+                  <option value="Young Leaders-3">Young Leaders-3</option>
+  <option value="VidyaKiran">VidyaKiran</option>
+  <option value="Spearhead 1">Spearhead 1</option>
+  <option value="Spearhead 2">Spearhead 2</option>
+  <option value="Spearhead 3">Spearhead 3</option>
+  <option value="Spearhead 4">Spearhead 4</option>
+  <option value="Infovue Solutions">Infovue Solutions</option>
+  <option value="Storewise">Storewise</option>
+  <option value="Storewise Managers">Storewise Managers</option>
+  <option value="Zeal">Zeal</option>
+  <option value="Venus">Venus</option>
+  <option value="Zenith">Zenith</option>
+  <option value="Spark">Spark</option>
+  <option value="Aurora">Aurora</option>
+  <option value="Phoenix">Phoenix</option>
+  <option value="Jupiter">Jupiter</option>
+  <option value="Marvel Beta">Marvel Beta</option>
+  <option value="Marvel Alpha">Marvel Alpha</option>
+  <option value="Blaze">Blaze</option>
+  <option value="Everest">Everest</option>
+  <option value="Flame">Flame</option>
+  <option value="K2">K2</option>
+  <option value="Gladiator">Gladiator</option>
+  <option value="SuperNova">SuperNova</option>
+  <option value="Glory">Glory</option>
+  <option value="Saturn">Saturn</option>
+  <option value="Star">Star</option>
+  <option value="Rays">Rays</option>
+  <option value="Genius">Genius</option>
+  <option value="Vision">Vision</option>
+  <option value="Pluto">Pluto</option>
+  <option value="Shinchan">Shinchan</option>
+  <option value="Doraemon">Doraemon</option>
+  <option value="Matrix">Matrix</option>
+  <option value="Mars">Mars</option>
+  <option value="Minions">Minions</option>
+  <option value="Dumbledore">Dumbledore</option>
+  <option value="Neptune">Neptune</option>
+  <option value="TAC">TAC</option>
+  <option value="International TAC">International TAC</option>
+  <option value="Pyramid">Pyramid</option>
+  <option value="Glowball">Glowball</option>
+  <option value="Maverick">Maverick</option>
+  <option value="Row">Row</option>
+  <option value="Hakuna Matata">Hakuna Matata</option>
+  <option value="Achievers">Achievers</option>
+  <option value="Shravya Katiyar">Shravya Katiyar</option>
+  <option value="Simtrak Coordinators">Simtrak Coordinators</option>
+  <option value="Get2gether (Fun n learn)">Get2gether (Fun n learn)</option>
+  <option value="Away">Away</option>
+  <option value="Simran Sharma">Simran Sharma</option>
+  <option value="Dinesh Agarwal">Dinesh Agarwal</option>                  
+      </select>
+      </div>
     </form>
+    <h6>Feedback: </h6>
+    <textarea rows=6 placeholder="I think you did a great job when you..."></textarea>
 </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success">Submit</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal 3 -->
-<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modal3Label">Feedback</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <textarea rows="6" cols="60" placeholder="I think you did a great job when you..."></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success">Submit</button>
@@ -603,6 +674,18 @@ document.addEventListener("DOMContentLoaded", function () {
     pageInfo.innerText = `Page ${page} of ${Math.ceil(
       applications.length / rowsPerPage
     )}`;
+
+    const platformSelect = document.getElementById("platform-select");
+    const zoomConferences = document.getElementById("zoom-conferences");
+
+    platformSelect.addEventListener("change", function () {
+      if (this.value === "zoom") {
+        zoomConferences.style.display = "block";
+      } else {
+        zoomConferences.style.display = "none";
+      }
+    });
+
   }
 
   function showPopup(index) {
