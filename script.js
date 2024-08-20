@@ -486,9 +486,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     <option value="3">3 (HR Interview)</option>
                 </select>
                 
-                <label for="meeting-taken-by">Meeting Taken By:</label>
+                <label for="meeting-taken-by">Meeting 1 Taken By:</label>
                 <input type="text" id="meeting-taken-by" name="meeting-taken-by" placeholder="Enter the name">
                 
+                <label for="meeting-taken-by">Meeting 2 Taken By:</label>
+                <input type="text" id="meeting-taken-by" name="meeting-taken-by" placeholder="Enter the name">
+                
+                <label for="meeting-taken-by">Meeting 3 Taken By:</label>
+                <input type="text" id="meeting-taken-by" name="meeting-taken-by" placeholder="Enter the name">
+                
+
                 <label for="meeting-feedback">Meeting Feedback:</label>
                 <textarea id="meeting-feedback" name="meeting-feedback" rows="4" placeholder="He needs improvement in communication skills and ......."></textarea>
             </form>
