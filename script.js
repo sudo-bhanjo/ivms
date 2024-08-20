@@ -740,30 +740,30 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showPopup(index) {
-    const application = filteredApplications[index];
-    popupContent.innerHTML = `
-        <p><strong>Name:</strong> ${application.name}</p>
-        <p><strong>Email:</strong> ${application.email}</p>
-        <p><strong>Contact Number:</strong> ${application.contact}</p>
-        <p><strong>WhatsApp Number:</strong> ${application.whatsapp}</p>
-        <p><strong>City:</strong> ${application.city}</p>
-        <p><strong>State:</strong> ${application.state}</p>
-        <p><strong>Country:</strong> ${application.country}</p>
-        <p><strong>Language:</strong> ${application.language}</p>
-        <p><strong>Fluency:</strong> ${application.fluency}</p>
-        <p><strong>Writing:</strong> ${application.writing}</p>
-        <p><strong>Introduction:</strong> ${application.intro}</p>
-        <p><strong>Source:</strong> ${application.source}</p>
-        <p><strong>Motivation:</strong> ${application.motivation}</p>
-        <p><strong>Meeting Time:</strong> ${application["meeting-time"]}</p>
-        <p><strong>Meeting Date:</strong> ${application["meeting-date"]}</p>
-        <p><strong>Platform:</strong> ${application.platform}</p>
-        <p><strong>Meeting Round:</strong> ${
-          application.meetingRound || "N/A"
-        }</p>
-        <p><strong>Remarks:</strong> ${application.remarks || "N/A"}</p>
-        <p><strong>Status:</strong> ${application.status || "inprocess"}</p>
-      `;
+    // const application = filteredApplications[index];
+    // popupContent.innerHTML = `
+    //     <p><strong>Name:</strong> ${application.name}</p>
+    //     <p><strong>Email:</strong> ${application.email}</p>
+    //     <p><strong>Contact Number:</strong> ${application.contact}</p>
+    //     <p><strong>WhatsApp Number:</strong> ${application.whatsapp}</p>
+    //     <p><strong>City:</strong> ${application.city}</p>
+    //     <p><strong>State:</strong> ${application.state}</p>
+    //     <p><strong>Country:</strong> ${application.country}</p>
+    //     <p><strong>Language:</strong> ${application.language}</p>
+    //     <p><strong>Fluency:</strong> ${application.fluency}</p>
+    //     <p><strong>Writing:</strong> ${application.writing}</p>
+    //     <p><strong>Introduction:</strong> ${application.intro}</p>
+    //     <p><strong>Source:</strong> ${application.source}</p>
+    //     <p><strong>Motivation:</strong> ${application.motivation}</p>
+    //     <p><strong>Meeting Time:</strong> ${application["meeting-time"]}</p>
+    //     <p><strong>Meeting Date:</strong> ${application["meeting-date"]}</p>
+    //     <p><strong>Platform:</strong> ${application.platform}</p>
+    //     <p><strong>Meeting Round:</strong> ${
+    //       application.meetingRound || "N/A"
+    //     }</p>
+    //     <p><strong>Remarks:</strong> ${application.remarks || "N/A"}</p>
+    //     <p><strong>Status:</strong> ${application.status || "inprocess"}</p>
+    //   `;
     popup.classList.add("active");
     overlay.classList.add("active");
   }
