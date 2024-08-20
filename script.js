@@ -497,7 +497,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
 
                 <label for="meeting-feedback">Meeting Feedback:</label>
-                <textarea id="meeting-feedback" name="meeting-feedback" rows="4" placeholder="He needs improvement in communication skills and ......."></textarea>
+                <textarea id="meeting-feedback" name="meeting-feedback" rows="4" placeholder="He needs improvement in communication skills and ..."></textarea>
             </form>
       </div>
       <div class="modal-footer">
@@ -574,7 +574,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <h5 class="modal-title" id="modal1Label">Identification</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="styling1">
         <p class="name-link" data-index="${index}">Name : ${
         application.name
       }</p>
