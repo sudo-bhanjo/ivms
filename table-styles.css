@@ -379,6 +379,7 @@ td button:nth-child(2) {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
 #meeting-rounds{
     padding: 10px;
     border-radius: 12px;
@@ -422,31 +423,45 @@ td button:nth-child(2) {
     color: rgb(83, 82, 82);
 }
 
-.modal-body textarea {
+.modal-body .feedback-container textarea {
     width: 100%;
+    padding: 10px;
+}
+
+.feedback-container{
+    /* border: 1px solid #999; */
+    border-radius: 16px;
+    padding: 10px;
 }
 
 .form-group {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 12px 0px;
-    /* background-color: #3d2b9eb0; */
+    flex-direction: column;
     color: black;
     font-size: 1rem;
-    border: 1px solid #999;
     border-radius: 16px;
     padding: 10px;
     cursor: pointer;
 }
 
 #platform-select {
-    border: none !important;
+    border: 1px solid #999;
+    color: black;
+    border-radius: 12px;
+    padding: 10px;
+    color: #000;    
+}
+
+#platform label{
+    display: flex;
+    flex-direction: column !important;
 }
 
 .form-group input{
-    border: none;
+    border: 1px solid #999;
     color: black;
+    border-radius: 12px;
+    padding: 10px;
 }
 
 #zoom-conferences {
