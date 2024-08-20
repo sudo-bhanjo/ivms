@@ -465,7 +465,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <td id="status-${index}"> 
           
           <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Update
           </button>
   
@@ -554,15 +554,15 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="form-container">
     <form>
         <div class="form-group">
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
+            <label for="date" title="Format: YYYY-MM-DD">Date</label>
+            <input type="date" id="date" name="date" value="2024-08-24" required>
         </div>
         <div class="form-group">
-            <label for="time">Time:</label>
-            <input type="time" id="time" name="time" required>
+            <label for="time" title="Format: HH:MM (24-hour)">Time</label>
+            <input type="time" id="time" name="time" value="16:45" required>
         </div>
         <div class="form-group">
-            <label for="platform">Platform:</label>
+            <label for="platform" id="platform">Platform</label>
               <select id="platform-select">
                 <option value="gmeet">Google meet</option>
                 <option value="zoom">Zoom</option>
@@ -662,8 +662,8 @@ document.addEventListener("DOMContentLoaded", function () {
       </select>
       </div>
     </form>
-    <h6>Feedback: </h6>
-    <textarea rows=6 placeholder="I think you did a great job when you..."></textarea>
+    <h6>Feedback </h6>
+    <textarea rows=5 placeholder="I think you did a great job when you..."></textarea>
 </div>
       </div>
       <div class="modal-footer">

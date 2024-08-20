@@ -221,13 +221,15 @@ td button:nth-child(2) {
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
     background-color: #5a4f95;
+    color: white;
+    /* background: url(https://media.istockphoto.com/id/1462709221/vector/premium-background-design-with-white-line-pattern-in-luxury-pastel-colour.jpg?s=612x612&w=0&k=20&c=qXK8X0XkC0wiueoveHk5sRZ46JMYjA5bDRNjuLtktTw=); */
+    background-size: cover;
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: opacity 0.5s ease, transform 0.5s ease;
     overflow-y: auto;
-    color: white;
 }
 
 .popup.active {
@@ -241,15 +243,14 @@ td button:nth-child(2) {
     top: 2% !important;
     right: 5%;
     cursor: pointer;
-    font-size: 3.4rem;
-    color: #999;
-    transition: color 0.3s;
+    font-size: 3.6rem;
+    color: rgb(169, 166, 166);
     transition: all 0.5s;
-    font-weight: normal;
+    font-weight: 100;
 }
 
 .popup .close:hover {
-    color: black;
+    color: rgb(231, 228, 228);
     /* transform: rotate(90deg); */
     transition: all 0.5s ease-in-out;
 }
@@ -389,14 +390,22 @@ td button:nth-child(2) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    margin: 16px;
-    background-color: #3d2b9eb0;
-    color: white;
+    margin: 12px 0px;
+    /* background-color: #3d2b9eb0; */
+    color: black;
     font-size: 1rem;
-    border: 2px solid #999;
+    border: 1px solid #999;
     border-radius: 16px;
     padding: 10px;
+    cursor: pointer;
+}
+
+#platform-select {
+    border: none !important;
+}
+
+.form-group input {
+    border: none;
 }
 
 #zoom-conferences {
@@ -408,9 +417,13 @@ td button:nth-child(2) {
     width: 50%;
     padding: 10px;
     border-radius: 16px;
-    background-color: #6d60b6;
-    color: white;
-    border: 2px solid #999;
+    color: black;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+textarea{
+    border-radius: 8px;
 }
 
 @media (max-width: 850px) {
