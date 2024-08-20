@@ -474,15 +474,14 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Update Status</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Rendon Feedback</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div>
             <div class="form-container">
-          <h2>Status Form</h2>
           <form>
-              <div class="form-group">
+              <div class="form-group1">
                   <label for="status">Status</label>
                   <select id="status" name="status" required>
                       <option value="approved">Approved</option>
@@ -490,15 +489,15 @@ document.addEventListener("DOMContentLoaded", function () {
                       <option value="inprogress">Inprocess</option>
                   </select>
               </div>
-              <div class="form-group">
+              <div class="form-group1">
                   <label for="leaderRemarks">Leader Remarks</label>
                   <textarea id="leaderRemarks" name="leaderRemarks" placeholder="Enter leader's remarks here..." required></textarea>
               </div>
-              <div class="form-group">
+              <div class="form-group1">
                   <label for="adminRemarks">Admin Remarks</label>
                   <textarea id="adminRemarks" name="adminRemarks" placeholder="Enter admin's remarks here..." required></textarea>
               </div>
-              <div class="form-group">
+              <div class="form-group1">
                   <button type="submit">Submit</button>
               </div>
           </form>
