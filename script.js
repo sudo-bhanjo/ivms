@@ -460,8 +460,46 @@ document.addEventListener("DOMContentLoaded", function () {
           <td><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09" class="meeting-link">${
             application.platform
           }</a></td>
-          <td>${application.meetingRound || "N/A"}</td>
+          <td>
+
+          <!-- Button to Open Modal 3 -->
+          <button type="button" class="modal3" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal3">${application.meetingRound || "N/A"}</td>
+          </button>
           
+          <!-- Modal 3 -->
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal3Label">Meeting Rounds</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <div class="meeting-round-form">
+          <form action="#" method="post">
+                <p class="name-link" data-index="${index}">Name : ${application.name}</p>
+                <p>Meeting round: ${application.meetingRound || "N/A"}</p>
+                <label for="meeting-rounds">Number of Meetings Conducted:</label>
+                <select id="meeting-rounds" name="meeting-rounds">
+                    <option value="1">1 (Apptitude)</option>
+                    <option value="2">2 (Technical)</option>
+                    <option value="3">3 (HR Interview)</option>
+                </select>
+                
+                <label for="meeting-taken-by">Meeting Taken By:</label>
+                <input type="text" id="meeting-taken-by" name="meeting-taken-by" placeholder="Enter the name">
+                
+                <label for="meeting-feedback">Meeting Feedback:</label>
+                <textarea id="meeting-feedback" name="meeting-feedback" rows="4" placeholder="He needs improvement in communication skills and ......."></textarea>
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
           <td id="status-${index}"> 
           
           <!-- Button trigger modal -->
@@ -554,15 +592,15 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="form-container">
     <form>
         <div class="form-group">
-            <label for="date" title="Format: YYYY-MM-DD">Date</label>
+            <label for="date" title="Format: YYYY-MM-DD">Date :</label>
             <input type="date" id="date" name="date" value="2024-08-24" required>
         </div>
         <div class="form-group">
-            <label for="time" title="Format: HH:MM (24-hour)">Time</label>
+            <label for="time" title="Format: HH:MM (24-hour)">Time :</label>
             <input type="time" id="time" name="time" value="16:45" required>
         </div>
         <div class="form-group">
-            <label for="platform" id="platform">Platform</label>
+            <label for="platform" id="platform">Platform :</label>
               <select id="platform-select">
                 <option value="gmeet">Google meet</option>
                 <option value="zoom">Zoom</option>
@@ -663,7 +701,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </form>
     <h6>Feedback </h6>
-    <textarea rows=5 placeholder="I think you did a great job when you..."></textarea>
+    <textarea rows="4" placeholder="I think you did a great job when you..."></textarea>
 </div>
       </div>
       <div class="modal-footer">
