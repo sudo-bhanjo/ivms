@@ -456,27 +456,21 @@ document.addEventListener("DOMContentLoaded", function () {
           <td><a href="#" class="name-link" data-index="${index}">${
         application.name
       }</a></td>
-          <td>${application["meeting-date"]} ${application["meeting-time"]}</td>
-          <td><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09" class="meeting-link">${
-            application.platform
-          }</a></td>
           <td>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+          Scheduling</button>
 
-          <!-- Button to Open Modal 3 -->
-          <button type="button" class="modal3" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal3">${application.meetingRound || "N/A"}</td>
-          </button>
-          
-          <!-- Modal 3 -->
-<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modal3Label">Meeting Rounds</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <div class="meeting-round-form">
-          <form action="#" method="post">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Meeting Rounds</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <div class="meeting-round-form">
+                <form action="#" method="post">
                 <p class="name-link" data-index="${index}">Name : ${application.name}</p>
                 <p>Meeting round: ${application.meetingRound || "N/A"}</p>
                 <label for="meeting-rounds">Number of Meetings Conducted:</label>
@@ -499,18 +493,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 <label for="meeting-feedback">Meeting Feedback:</label>
                 <textarea id="meeting-feedback" name="meeting-feedback" rows="4" placeholder="He needs improvement in communication skills and ..."></textarea>
             </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+          </div>
 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+          ${application["meeting-date"]} ${application["meeting-time"]}</td>
+          <td><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09" class="meeting-link">${
+            application.platform
+          }</a></td>
+          <td>${application.meetingRound || "N/A"}</td>
           <td id="status-${index}"> 
-          
           <!-- Button trigger modal -->
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Update
           </button>
   

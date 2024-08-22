@@ -379,34 +379,6 @@ td button:nth-child(2) {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-#meeting-rounds{
-    padding: 10px;
-    border-radius: 12px;
-}
-
-.meeting-round-form input{
-    padding: 10px !important;
-    border-radius: 12px;
-    border: 1px solid black;
-}
-
-.meeting-round-form textarea{
-    padding: 4px;
-}
-
-.meeting-round-form{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-weight: 600;
-    /* background-color: #f4f4f4; */
-    border-radius: 12px;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 #id {
     background-color: transparent;
     color: #0080ff;
@@ -481,6 +453,42 @@ td button:nth-child(2) {
 textarea{
     border-radius: 8px;
 }
+
+
+#meeting-rounds{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.meeting-round-form input{
+    padding: 10px !important;
+    border-radius: 12px;
+    border: 2px solid #999;
+}
+
+.meeting-round-form label,p{
+    font-weight: 600;
+}
+
+#meeting-taken-by{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#meeting-feedback{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #999;
+    border-radius: 12px;
+    width: 95%;
+}
+
 
 @media (max-width: 850px) {
 
