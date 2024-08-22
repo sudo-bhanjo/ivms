@@ -454,20 +454,28 @@ textarea{
     border-radius: 8px;
 }
 
+.meeting-round-form{
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
 
 #meeting-rounds{
     display: flex;
     flex-direction: column;
     padding: 10px;
     border-radius: 12px;
-    margin: 10px;
-    font-weight: bold;
+    margin: 10px 0px;
+    width: 50%;
+    font-weight: 500;
 }
 
 .meeting-round-form input{
     padding: 10px !important;
     border-radius: 12px;
     border: 2px solid #999;
+    margin: 10px 0px !important;
+    width: 50%;
 }
 
 .meeting-round-form label,p{
@@ -482,13 +490,17 @@ textarea{
 
 #meeting-feedback{
     display: flex;
-    margin: 10px;
+    margin: 10px 0px;
     padding: 10px;
     border: 2px solid #999;
     border-radius: 12px;
-    width: 95%;
+    width: 100%;
 }
 
+.modal-footer .btn{
+    padding: 0px 50px !important;
+    border-radius: 15px;
+}
 
 @media (max-width: 850px) {
 
