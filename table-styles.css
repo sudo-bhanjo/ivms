@@ -208,6 +208,17 @@ td button:nth-child(2) {
     border: none;
 }
 
+.name-link{
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}
+
+.platform-link a{
+    color: white;
+    text-decoration: none;
+}
+
 .popup {
     display: none;
     justify-content: center;
@@ -222,11 +233,10 @@ td button:nth-child(2) {
     opacity: 0;
     background-color: #5a4f95;
     color: white;
-    /* background: url(https://media.istockphoto.com/id/1462709221/vector/premium-background-design-with-white-line-pattern-in-luxury-pastel-colour.jpg?s=612x612&w=0&k=20&c=qXK8X0XkC0wiueoveHk5sRZ46JMYjA5bDRNjuLtktTw=); */
-    background-size: cover;
     padding: 30px;
+    font-weight: 300 !important;
     border-radius: 16px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: opacity 0.5s ease, transform 0.5s ease;
     overflow-y: auto;
@@ -278,6 +288,7 @@ td button:nth-child(2) {
     cursor: pointer;
     padding: 20px;
     margin: 10px;
+    font-weight: 300 !important;
 }
 
 .btn-close {
@@ -498,8 +509,11 @@ textarea{
 }
 
 .modal-footer .btn{
-    padding: 0px 50px !important;
+    padding: 17px 50px !important;
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 850px) {

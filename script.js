@@ -453,60 +453,14 @@ document.addEventListener("DOMContentLoaded", function () {
     paginatedApplications.forEach((application, index) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-          <td><a href="#" class="name-link" data-index="${index}">${
+          <td><button><a href="#" class="name-link" data-index="${index}">${
         application.name
-      }</a></td>
+      }</a></button></td>
           <td>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-          Scheduling</button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Meeting Rounds</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                <div class="meeting-round-form">
-                <form action="#" method="post">
-                <p class="name-link" data-index="${index}">Name : ${application.name}</p>
-                <p>Meeting round: ${application.meetingRound || "N/A"}</p>
-                <label for="meeting-rounds">Number of Meetings Conducted:</label>
-                <select id="meeting-rounds" name="meeting-rounds">
-                    <option value="1">1 (Apptitude)</option>
-                    <option value="2">2 (Technical)</option>
-                    <option value="3">3 (HR Interview)</option>
-                </select>
-                
-                <label for="meeting-taken-by">Meeting 1 Taken By:</label>
-                <input type="text" id="meeting-taken-by" name="meeting-taken-by" placeholder="Enter the name">
-                
-                <label for="meeting-taken-by">Meeting 2 Taken By:</label>
-                <input type="text" id="meeting-taken-by" name="meeting-taken-by" placeholder="Enter the name">
-                
-                <label for="meeting-taken-by">Meeting 3 Taken By:</label>
-                <input type="text" id="meeting-taken-by" name="meeting-taken-by" placeholder="Enter the name">
-                
-
-                <label for="meeting-feedback">Meeting Feedback:</label>
-                <textarea id="meeting-feedback" name="meeting-feedback" rows="4" placeholder="He needs improvement in communication skills and ..."></textarea>
-            </form>
-          </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success mx-auto">Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
           ${application["meeting-date"]} ${application["meeting-time"]}</td>
-          <td><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09" class="meeting-link">${
+          <td><button class="platform-link"><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09" class="meeting-link">${
             application.platform
-          }</a></td>
+          }</a></button></td>
           <td>${application.meetingRound || "N/A"}</td>
           <td id="status-${index}"> 
           <!-- Button trigger modal -->
