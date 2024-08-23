@@ -120,14 +120,15 @@ header img {
 
 #searchBox {
     position: relative;
-    top: 50%;
-    left: 25%;
-    width: 560px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
     padding: 10px;
     margin-left: -10px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border: 1px solid #999;
+    border-radius: 12px;
 }
 
 .table-container {
@@ -209,13 +210,13 @@ td button:nth-child(2) {
     border: none;
 }
 
-.name-link{
+.name-link {
     text-decoration: none;
     color: white;
     /* font-style: italic; */
 }
 
-.platform-link a{
+.platform-link a {
     color: white;
     text-decoration: none;
 }
@@ -378,17 +379,17 @@ td button:nth-child(2) {
     display: none;
 }
 
-.modal3{
+.modal3 {
     padding: 0px 14px;
     /* background-color: transparent !important; */
 }
 
-#styling1{
-    font-weight: 600;
+#styling1 {
+    font-weight: 500;
     border-radius: 12px;
     margin: 20px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 #id {
@@ -412,7 +413,7 @@ td button:nth-child(2) {
     padding: 10px;
 }
 
-.feedback-container{
+.feedback-container {
     /* border: 1px solid #999; */
     border-radius: 16px;
     padding: 10px;
@@ -433,15 +434,15 @@ td button:nth-child(2) {
     color: black;
     border-radius: 12px;
     padding: 10px;
-    color: #000;    
+    color: #000;
 }
 
-#platform label{
+#platform label {
     display: flex;
     flex-direction: column !important;
 }
 
-.form-group input{
+.form-group input {
     border: 1px solid #999;
     color: black;
     border-radius: 12px;
@@ -462,17 +463,17 @@ td button:nth-child(2) {
     cursor: pointer;
 }
 
-textarea{
+textarea {
     border-radius: 8px;
 }
 
-.meeting-round-form{
+.meeting-round-form {
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 8px;
 }
 
-#meeting-rounds{
+#meeting-rounds {
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -482,7 +483,7 @@ textarea{
     font-weight: 500;
 }
 
-.meeting-round-form input{
+.meeting-round-form input {
     padding: 10px !important;
     border-radius: 12px;
     border: 2px solid #999;
@@ -490,17 +491,18 @@ textarea{
     width: 50%;
 }
 
-.meeting-round-form label,p{
+.meeting-round-form label,
+p {
     font-weight: 600;
 }
 
-#meeting-taken-by{
+#meeting-taken-by {
     display: flex;
     flex-direction: column;
     margin: 10px;
 }
 
-#meeting-feedback{
+#meeting-feedback {
     display: flex;
     margin: 10px 0px;
     padding: 10px;
@@ -509,7 +511,7 @@ textarea{
     width: 100%;
 }
 
-.modal-footer .btn{
+.modal-footer .btn {
     padding: 17px 50px !important;
     border-radius: 15px;
     display: flex;
@@ -517,24 +519,21 @@ textarea{
     align-items: center;
 }
 
-#customModal form{
-    max-width: 700px !important;
+#customModal form {
+    max-width: fit-content !important;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
-    border-radius: 14px;
+    border-radius: 8px;
 }
 
-#customModal .modal-content{
-    width: 700px;
-}    
+#customModal .modal-content {
+    max-width: fit-content;
+}
 
-#customModal th{
+#customModal th {
     background-color: #5a4f95 !important;
     color: white;
 }
 
-#customModal tr{
-    background-color: #999;
-}
 
 @media (max-width: 850px) {
 
@@ -552,6 +551,11 @@ textarea{
         margin-top: -600px !important;
         margin-left: -40% !important;
         /* width: 55% !important; */
+    }
+
+    #customModal .modal-content form {
+        overflow-x: scroll !important;
+        box-shadow: none;
     }
 }
 
@@ -572,6 +576,11 @@ textarea{
         margin-left: 20% !important;
         width: 78% !important;
         padding: 20px !important;
+    }
+
+    #customModal .modal-content form {
+        overflow-x: scroll !important;
+        box-shadow: none;
     }
 }
 
@@ -600,10 +609,6 @@ textarea{
         width: 100%;
     }
 
-    input {
-        width: 180px !important;
-    }
-
     .container {
         margin-top: 20px !important;
         margin-left: 0 !important;
@@ -628,5 +633,10 @@ textarea{
 
     .popup {
         width: 80%;
+    }
+
+    #customModal .modal-content form {
+        overflow-x: scroll !important;
+        box-shadow: none;
     }
 }

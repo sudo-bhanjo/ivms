@@ -467,7 +467,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <!-- The Modal -->
     <div class="modal fade" id="customModal" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header">
@@ -589,10 +589,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" id="styling1">
-        <a><p class="name-link" data-index="${index}">Name : ${
+        <a href="#" class="name-link" data-index="${index}">${
         application.name
-      }</p></a>
-        <p>Id : ${application.id || N / A}</p>
+      }</a>
+        <p data-index="${index}">Id : ${application.id || N/A}</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Save changes</button>
