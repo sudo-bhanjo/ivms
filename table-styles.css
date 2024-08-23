@@ -192,6 +192,7 @@ table th {
 
 td button:nth-child(1) {
     background-color: #4CAF50;
+    /* background-color: #5a4f95; */
     color: white;
     border-radius: 8px;
     height: 32px;
@@ -211,7 +212,7 @@ td button:nth-child(2) {
 .name-link{
     text-decoration: none;
     color: white;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 .platform-link a{
@@ -231,7 +232,7 @@ td button:nth-child(2) {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
-    background-color: #5a4f95;
+    background-color: #634c9e;
     color: white;
     padding: 30px;
     font-weight: 200 !important;
@@ -514,6 +515,25 @@ textarea{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#customModal form{
+    max-width: 700px !important;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
+    border-radius: 14px;
+}
+
+#customModal .modal-content{
+    width: 700px;
+}    
+
+#customModal th{
+    background-color: #5a4f95 !important;
+    color: white;
+}
+
+#customModal tr{
+    background-color: #999;
 }
 
 @media (max-width: 850px) {

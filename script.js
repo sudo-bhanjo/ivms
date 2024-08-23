@@ -14,10 +14,9 @@ function updateRatingValue(value, elementId) {
 
 // ---- Smooth loading ----
 
-document.addEventListener("DOMContentLoaded", function() {
-  document.body.classList.add('loaded');
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.classList.add("loaded");
 });
-
 
 // --- Pop Up ---
 
@@ -461,7 +460,68 @@ document.addEventListener("DOMContentLoaded", function () {
           <td><button class="platform-link"><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09" class="meeting-link">${
             application.platform
           }</a></button></td>
-          <td>${application.meetingRound || "N/A"}</td>
+          <td>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#customModal">
+          ${application.meetingRound || "N/A"}
+          </button>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="customModal" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="customModalLabel">Meeting Data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form>
+                            <div class="form-group">
+                                <table class="table table-bordered">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col">Date and Time</th>
+                                            <th scope="col">Feedback</th>
+                                            <th scope="col">Admin Member</th>
+                                            <th scope="col">Platform</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2024-08-22 10:00 AM</td>
+                                            <td>Excellent work on the project!</td>
+                                            <td>Simran Sharma</td>
+                                            <td>Zoom</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-08-21 03:45 PM</td>
+                                            <td>Need to improve the UI design.</td>
+                                            <td>Dinesh Agarwal</td>
+                                            <td>Google meet</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-08-20 11:30 AM</td>
+                                            <td>Great team collaboration.</td>
+                                            <td>Ashish Sharma</td>
+                                            <td>Zoom</td>
+                                        </tr>
+                                            <tr>
+                                            <td>2024-08-23 10:30 AM</td>
+                                            <td>Good Communication skill</td>
+                                            <td>Aishwarya Singh</td>
+                                            <td>Zoom</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+          
+          </td>
           <td id="status-${index}"> 
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -529,9 +589,9 @@ document.addEventListener("DOMContentLoaded", function () {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" id="styling1">
-        <p class="name-link" data-index="${index}">Name : ${
+        <a><p class="name-link" data-index="${index}">Name : ${
         application.name
-      }</p>
+      }</p></a>
         <p>Id : ${application.id || N / A}</p>
       </div>
       <div class="modal-footer">
@@ -691,7 +751,6 @@ document.addEventListener("DOMContentLoaded", function () {
         zoomConferences.style.display = "none";
       }
     });
-
   }
 
   function showPopup(index) {
@@ -713,9 +772,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p>Meeting Time:</strong> ${application["meeting-time"]}</p>
         <p>Meeting Date:</strong> ${application["meeting-date"]}</p>
         <p>Platform:</strong> ${application.platform}</p>
-        <p>Meeting Round:</strong> ${
-          application.meetingRound || "N/A"
-        }</p>
+        <p>Meeting Round:</strong> ${application.meetingRound || "N/A"}</p>
         <p>Remarks:</strong> ${application.remarks || "N/A"}</p>
         <p>Status:</strong> ${application.status || "inprocess"}</p>
       `;
