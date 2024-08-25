@@ -120,14 +120,15 @@ header img {
 
 #searchBox {
     position: relative;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%;
+    /* top: 100%; */
+    left: 85%;
+    transform: translate(-50%, -30%);
+    width: 300px;
     padding: 10px;
     margin-left: -10px;
     margin-bottom: 20px;
-    border: 1px solid #999;
+    border: 2px solid #999;
+    border-style: ridge;
     border-radius: 12px;
 }
 
@@ -598,6 +599,11 @@ p {
         justify-content: center;
         align-self: center;
         padding: 20px;
+    }
+
+    input {
+        width: 60% !important;
+        margin-left: -34% !important;
     }
 
     #responsive-sidebar {

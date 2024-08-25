@@ -625,7 +625,6 @@ document.addEventListener("DOMContentLoaded", function () {
               <select id="platform-select">
                 <option value="gmeet">Google meet</option>
                 <option value="zoom">Zoom</option>
-                <option value="skype">Skype</option>
               </select>
         </div>
         <div id="zoom-conferences">
@@ -720,6 +719,9 @@ document.addEventListener("DOMContentLoaded", function () {
   <option value="Dinesh Agarwal">Dinesh Agarwal</option>                  
       </select>
       </div>
+      <div class="form-group">
+            <input id="gmeet" name="gmeet" placeholder="link" required>
+      </div>
       <div class="feedback-container">
         <h6>Feedback </h6>
         <textarea rows="4" placeholder="I think you did a great job when you..."></textarea>
@@ -743,12 +745,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const platformSelect = document.getElementById("platform-select");
     const zoomConferences = document.getElementById("zoom-conferences");
+    const gmeetConferences = document.getElementById("gmeet");
 
     platformSelect.addEventListener("change", function () {
       if (this.value === "zoom") {
         zoomConferences.style.display = "block";
       } else {
         zoomConferences.style.display = "none";
+      }
+    });
+
+    platformSelect.addEventListener("change", function(){
+      if (this.value === "gmeet"){
+        gmeetConferences.style.display ="block";
+      } else {
+        gmeetConferences.style.display = "none";
+        gmeetConferences.style.input.display = "none";
       }
     });
   }
