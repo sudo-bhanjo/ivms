@@ -589,13 +589,11 @@ document.addEventListener("DOMContentLoaded", function () {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" id="styling1">
-        <a href="#" class="name-link" data-index="${index}">${
-        application.name
-      }</a>
-        <p data-index="${index}">Id : ${application.id || N/A}</p>
+        <a href="#" data-index="${index}">Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${application.name}</a>
+        <p data-index="${index}">ID Number : &nbsp;&nbsp;<input placeholder="11503"/></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary mx-auto">Save changes</button>
       </div>
     </div>
   </div>
@@ -666,11 +664,11 @@ document.addEventListener("DOMContentLoaded", function () {
                   <option value="Young Leaders-1">Young Leaders-1</option>
                   <option value="Young Leaders-2">Young Leaders-2</option>
                   <option value="Young Leaders-3">Young Leaders-3</option>
-  <option value="VidyaKiran">VidyaKiran</option>
-  <option value="Spearhead 1">Spearhead 1</option>
-  <option value="Spearhead 2">Spearhead 2</option>
-  <option value="Spearhead 3">Spearhead 3</option>
-  <option value="Spearhead 4">Spearhead 4</option>
+                  <option value="VidyaKiran">VidyaKiran</option>
+                  <option value="Spearhead 1">Spearhead 1</option>
+                  <option value="Spearhead 2">Spearhead 2</option>
+                  <option value="Spearhead 3">Spearhead 3</option>
+                  <option value="Spearhead 4">Spearhead 4</option>
   <option value="Infovue Solutions">Infovue Solutions</option>
   <option value="Storewise">Storewise</option>
   <option value="Storewise Managers">Storewise Managers</option>
@@ -729,7 +727,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success">Submit</button>
+        <button type="button" class="btn btn-success mx-auto">Submit</button>
       </div>
     </div>
   </div>

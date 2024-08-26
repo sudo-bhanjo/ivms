@@ -390,7 +390,18 @@ td button:nth-child(2) {
     border-radius: 12px;
     margin: 20px;
     padding: 20px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#styling1 a {
+    text-decoration: none;
+}
+
+#styling1 input{
+    margin-top: 10px;
+    width: 30%;
+    border: 1px solid #7e7c7c;
+    border-radius: 8px;
 }
 
 #id {
@@ -452,13 +463,14 @@ td button:nth-child(2) {
 
 #zoom-conferences {
     display: none;
-    margin: 24px 0px;
+    margin: 10px;
+    padding: 10px;
 }
 
 #zoom-options {
     width: 50%;
     padding: 10px;
-    border-radius: 16px;
+    border-radius: 12px;
     color: black;
     border: 1px solid #999;
     cursor: pointer;
@@ -601,11 +613,6 @@ p {
         padding: 20px;
     }
 
-    input {
-        width: 60% !important;
-        margin-left: -34% !important;
-    }
-
     #responsive-sidebar {
         display: none;
     }
@@ -644,5 +651,11 @@ p {
     #customModal .modal-content form {
         overflow-x: scroll !important;
         box-shadow: none;
+    }
+
+    #styling1 input{
+        width: 140px !important;
+        border: 1px solid #7e7c7c;
+        border-radius: 8px;
     }
 }
