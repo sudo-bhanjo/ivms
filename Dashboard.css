@@ -37,7 +37,7 @@ body.loaded {
   bottom: 0;
   width: 240px;
   height: 100vh;
-  padding: 0 2rem;
+  padding: 0 1.7rem;
   color: #fff;
   overflow: hidden;
   transition: all 0.5s linear;
@@ -342,11 +342,16 @@ tfoot td {
     display: none;
   }
 
+  .search--box input{
+    width: 80% !important;
+  }
+
   #toggle {
     display: inline;
-    left: 8%;
+    left: 80%;
     top: 2%;
     position: absolute;
+    border: none;
     transition: all 0.5s linear;
     background: rgba(113, 99, 186, 255);
   }

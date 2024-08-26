@@ -589,8 +589,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" id="styling1">
-        <a href="#" data-index="${index}">Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${application.name}</a>
-        <p data-index="${index}">ID Number : &nbsp;&nbsp;<input placeholder="11503"/></p>
+        <a href="#" data-index="${index}">Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${application.name}</a>
+        <p data-index="${index}">ID Number:  &nbsp;&nbsp;<input placeholder="11503"/></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary mx-auto">Save changes</button>
@@ -766,25 +766,25 @@ document.addEventListener("DOMContentLoaded", function () {
   function showPopup(index) {
     const application = filteredApplications[index];
     popupContent.innerHTML = `
-        <p>Name:</strong> ${application.name}</p>
-        <p>Email:</strong> ${application.email}</p>
-        <p>Contact Number:</strong> ${application.contact}</p>
-        <p>WhatsApp Number:</strong> ${application.whatsapp}</p>
-        <p>City:</strong> ${application.city}</p>
-        <p>State:</strong> ${application.state}</p>
-        <p>Country:</strong> ${application.country}</p>
-        <p>Language:</strong> ${application.language}</p>
-        <p>Fluency:</strong> ${application.fluency}</p>
-        <p>Writing:</strong> ${application.writing}</p>
-        <p>Introduction:</strong> ${application.intro}</p>
-        <p>Source:</strong> ${application.source}</p>
-        <p>Motivation:</strong> ${application.motivation}</p>
-        <p>Meeting Time:</strong> ${application["meeting-time"]}</p>
-        <p>Meeting Date:</strong> ${application["meeting-date"]}</p>
-        <p>Platform:</strong> ${application.platform}</p>
-        <p>Meeting Round:</strong> ${application.meetingRound || "N/A"}</p>
-        <p>Remarks:</strong> ${application.remarks || "N/A"}</p>
-        <p>Status:</strong> ${application.status || "inprocess"}</p>
+        <p>Name: ${application.name}</p>
+        <p>Email: ${application.email}</p>
+        <p>Contact Number: ${application.contact}</p>
+        <p>WhatsApp Number: ${application.whatsapp}</p>
+        <p>City: ${application.city}</p>
+        <p>State: ${application.state}</p>
+        <p>Country: ${application.country}</p>
+        <p>Language: ${application.language}</p>
+        <p>Fluency: ${application.fluency}</p>
+        <p>Writing: ${application.writing}</p>
+        <p>Introduction: ${application.intro}</p>
+        <p>Source: ${application.source}</p>
+        <p>Motivation: ${application.motivation}</p>
+        <p>Meeting Time: ${application["meeting-time"]}</p>
+        <p>Meeting Date: ${application["meeting-date"]}</p>
+        <p>Platform: ${application.platform}</p>
+        <p>Meeting Round: ${application.meetingRound || "N/A"}</p>
+        <p>Remarks: ${application.remarks || "N/A"}</p>
+        <p>Status: ${application.status || "inprocess"}</p>
       `;
     popup.classList.add("active");
     overlay.classList.add("active");
