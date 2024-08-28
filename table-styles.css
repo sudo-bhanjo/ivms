@@ -211,7 +211,6 @@ td button:nth-child(2) {
 .name-link {
     text-decoration: none;
     color: white;
-    /* font-style: italic; */
 }
 
 .platform-link a {
@@ -219,42 +218,18 @@ td button:nth-child(2) {
     text-decoration: none;
 }
 
-.popup {
-    display: none;
-    position: fixed;
-    height: 80%;
-    width: 100%;
-    max-width: 700px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0;
-    /* background-color: #634c9e; */
-    background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(49, 49, 49);
-    text-align: center;
+#popup{
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    overflow-y: auto;
 }
 
-.popup p{
-    font-weight: 500;
-    font-size: 1rem;
-    text-align: start;
-    line-height: 1.5;
+#popup span{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
-.popup.active {
-    display: block;
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
+#popup p{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .popup .close {
@@ -262,15 +237,13 @@ td button:nth-child(2) {
     top: 2% !important;
     right: 8%;
     cursor: pointer;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: gray;
-    transition: all 0.5s;
-    font-weight: normal;
+    transition: all 0.4s;
 }
 
 .popup .close:hover {
     color: #000;
-    transition: all 0.5s ease-in-out;
 }
 
 .overlay {
@@ -289,14 +262,6 @@ td button:nth-child(2) {
 .overlay.active {
     display: block;
     opacity: 1;
-}
-
-#popupContent {
-    font: 0.8em sans-serif;
-    cursor: pointer;
-    padding: 20px;
-    margin: 10px;
-    font-weight: 600 !important;
 }
 
 .btn-close {
@@ -402,7 +367,7 @@ td button:nth-child(2) {
     text-decoration: none;
 }
 
-#styling1 input{
+#styling1 input {
     margin-top: 10px;
     width: 30%;
     border: 1px solid #7e7c7c;
@@ -589,7 +554,7 @@ p {
         width: auto !important;
     }
 
-    #searchBox{
+    #searchBox {
         margin-left: -10%;
     }
 
@@ -638,7 +603,7 @@ p {
         width: 100% !important;
     }
 
-    .navbar{
+    .navbar {
         /* background-color: rgb(210, 208, 208); */
     }
 
@@ -658,7 +623,16 @@ p {
     }
 
     .popup {
-        width: 80%;
+        width: 90%;
+        background-color: rgb(255, 255, 255) !important;
+    }
+
+    .container{
+        background-color: white !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 0.8rem !important;
     }
 
     #customModal .modal-content form {
@@ -666,13 +640,13 @@ p {
         box-shadow: none;
     }
 
-    #styling1 input{
+    #styling1 input {
         width: 140px !important;
         border: 1px solid #7e7c7c;
         border-radius: 8px;
     }
 
-    #searchBox{
+    #searchBox {
         width: 80% !important;
         margin: 20px auto;
         position: relative;

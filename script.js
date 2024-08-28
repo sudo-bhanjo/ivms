@@ -452,9 +452,49 @@ document.addEventListener("DOMContentLoaded", function () {
     paginatedApplications.forEach((application, index) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-          <td><button><a href="#" class="name-link" data-index="${index}">${
-        application.name
-      }</a></button></td>
+          <td>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uniqueModalForm">
+              <a href="#" class="name-link" data-index="${index}">${application.name}</a>
+          </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="uniqueModalForm" tabindex="-1" aria-labelledby="modalFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFormLabel">Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="popup">
+          <p>Name: <span>${application.name}</span></p>
+<p>Email: <span>${application.email}</span></p>
+<p>Contact Number: <span>${application.contact}</span></p>
+<p>WhatsApp Number: <span>${application.whatsapp}</span></p>
+<p>City: <span>${application.city}</span></p>
+<p>State: <span>${application.state}</span></p>
+<p>Country: <span>${application.country}</span></p>
+<p>Language: <span>${application.language}</span></p>
+<p>Fluency: <span>${application.fluency}</span></p>
+<p>Writing: <span>${application.writing}</span></p>
+<p>Introduction: <span>${application.intro}</span></p>
+<p>Source: <span>${application.source}</span></p>
+<p>Motivation: <span>${application.motivation}</span></p>
+<p>Meeting Time: <span>${application["meeting-time"]}</span></p>
+<p>Meeting Date: <span>${application["meeting-date"]}</span></p>
+<p>Platform: <span>${application.platform}</span></p>
+<p>Meeting Round: <span>${application.meetingRound || "N/A"}</span></p>
+<p>Remarks: <span>${application.remarks || "N/A"}</span></p>
+<p>Status: <span>${application.status || "inprocess"}</span></p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+          </td>
           <td>
           ${application["meeting-date"]} ${application["meeting-time"]}</td>
           <td><button class="platform-link"><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09" class="meeting-link">${
@@ -761,33 +801,6 @@ document.addEventListener("DOMContentLoaded", function () {
         gmeetConferences.style.input.display = "none";
       }
     });
-  }
-
-  function showPopup(index) {
-    const application = filteredApplications[index];
-    popupContent.innerHTML = `
-        <p>Name: ${application.name}</p>
-        <p>Email: ${application.email}</p>
-        <p>Contact Number: ${application.contact}</p>
-        <p>WhatsApp Number: ${application.whatsapp}</p>
-        <p>City: ${application.city}</p>
-        <p>State: ${application.state}</p>
-        <p>Country: ${application.country}</p>
-        <p>Language: ${application.language}</p>
-        <p>Fluency: ${application.fluency}</p>
-        <p>Writing: ${application.writing}</p>
-        <p>Introduction: ${application.intro}</p>
-        <p>Source: ${application.source}</p>
-        <p>Motivation: ${application.motivation}</p>
-        <p>Meeting Time: ${application["meeting-time"]}</p>
-        <p>Meeting Date: ${application["meeting-date"]}</p>
-        <p>Platform: ${application.platform}</p>
-        <p>Meeting Round: ${application.meetingRound || "N/A"}</p>
-        <p>Remarks: ${application.remarks || "N/A"}</p>
-        <p>Status: ${application.status || "inprocess"}</p>
-      `;
-    popup.classList.add("active");
-    overlay.classList.add("active");
   }
 
   searchBox.addEventListener("input", function () {
