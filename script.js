@@ -459,17 +459,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <!-- Modal -->
   <div class="modal fade" id="uniqueModalForm" tabindex="-1" aria-labelledby="modalFormLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog custom-modal-width">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="modalFormLabel">Details</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" id="popup">
+        <div class="grid-container">
           <p>Name: <span>${application.name}</span></p>
 <p>Email: <span>${application.email}</span></p>
-<p>Contact Number: <span>${application.contact}</span></p>
-<p>WhatsApp Number: <span>${application.whatsapp}</span></p>
+<p>Contact no: <span>${application.contact}</span></p>
+<p>WhatsApp no: <span>${application.whatsapp}</span></p>
 <p>City: <span>${application.city}</span></p>
 <p>State: <span>${application.state}</span></p>
 <p>Country: <span>${application.country}</span></p>
@@ -485,7 +486,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <p>Meeting Round: <span>${application.meetingRound || "N/A"}</span></p>
 <p>Remarks: <span>${application.remarks || "N/A"}</span></p>
 <p>Status: <span>${application.status || "inprocess"}</span></p>
-
+        </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>

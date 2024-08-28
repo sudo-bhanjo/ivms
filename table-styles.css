@@ -172,7 +172,7 @@ table th {
 }
 
 .pagination button {
-    padding: 10px 20px;
+    padding: 8px 10px;
     border: none;
     background-color: #4CAF50;
     color: #fff;
@@ -222,6 +222,22 @@ td button:nth-child(2) {
     padding: 20px;
 }   
 
+.custom-modal-width {
+    max-width: 960px !important;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px;
+}
+
+.grid-item {
+    padding: 5px;
+    font-size: 14px;
+}
+
 #popup span{
     display: flex;
     justify-content: space-between;
@@ -229,7 +245,7 @@ td button:nth-child(2) {
 
 #popup p{
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .popup .close {
@@ -595,6 +611,16 @@ p {
     .toggle {
         display: flex;
         width: 100%;
+    }
+
+    #popup{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .grid-container{
+        display: flex;
+        flex-direction: column !important;
     }
 
     .container {
