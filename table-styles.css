@@ -218,9 +218,9 @@ td button:nth-child(2) {
     text-decoration: none;
 }
 
-#popup{
-    padding: 30px;
-}
+#popup {
+    padding: 20px;
+}   
 
 #popup span{
     display: flex;
@@ -229,7 +229,7 @@ td button:nth-child(2) {
 
 #popup p{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 2fr;
 }
 
 .popup .close {
