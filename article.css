@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    font-size: 0.8rem !important;
+    width: 220px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgba(113, 99, 186, 255);
+}
+
+.logo {
+    height: 80px;
+    padding: 16px;
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.active {
+    background: #e0e0e058;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+}
+
+.logout {
+    position: absolute;
+    bottom: 3;
+    left: 0;
+    width: 100%;
+}
+
+.toggle {
+    display: none;
+}
+
+/* --- Upload article ---- */
+
+.modal-title{
+    display: block;
+    color: black;
+    font-weight: 500;
+}
+
+.form-label{
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px !important;
+    margin: auto;
+}
+
+.header {
+    background-color: #007bff;
+    background-color: rgba(113, 99, 186, 255);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.internship-btn {
+    background-color: #dc3545;
+}
+
+.content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.task-data,
+.journal-data {
+    margin-top: 20px;
+    color: black;
+}
+
+.tasks-data, .leave-data, .review-data{
+    color: black;
+}
+
+.main-content {
+    flex: 3;
+    margin-left: 20px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    /* background-color: #007bff; */
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+    /* background-color: #007bff; */
+    background-color: rgba(113, 99, 186, 255);
+    color: white;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* ----- Right ----- */
+
+.right-sidebar {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.data-section {
+    font-size: 14px;
+}
+
+.data-section h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.data-section p {
+    margin: 5px 0;
+}
+
+@media (max-width:768px) {
+
+    html,
+    body {
+        display: flex;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .header{
+        max-width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 10px;
+        position: fixed;
+        margin: 0;
+    }
+
+    .tab-btn{
+        display: none;
+    }
+
+    .container{
+        margin-top: 20%;
+        overflow-x: scroll;
+        margin-left: -12px !important;
+    }
+
+    .content{
+        margin-top: 50%;
+        margin-left: -24px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    #toggle {
+        display: inline;
+        left: 80%;
+        top: 2%;
+        position: absolute;
+        border: none;
+        transition: all 0.5s linear;
+        background: rgba(113, 99, 186, 255);
+    }
+
+}
