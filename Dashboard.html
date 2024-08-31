@@ -150,42 +150,66 @@
     <div class="card--container">
       <h3 class="main--title"> Today's Data</h3>
       <div class="card--wrapper">
-        <div class="card">
           <div class="card-header" style="color: #1461b4;">
             Dashboard Overview
           </div>
           <div class="dashboard-container">
-            <div class="dashboard-button">
-              <i class="fas fa-user-tie"></i>
-              Total Manager
-              <span id="manager-count">15</span>
+            <div class="card">
+                <div class="dashboard-button">
+                    <i class="fas fa-user-tie"></i>
+                    Total Manager
+                    <span id="manager-count">15</span>
+                </div>
             </div>
-            <div class="dashboard-button">
-              <i class="fas fa-users"></i>
-              Total Volunteers
-              <span id="volunteers-count">50</span>
+            <div class="card">
+                <div class="dashboard-button">
+                    <i class="fas fa-users"></i>
+                    Total Volunteers
+                    <span id="volunteers-count">250</span>
+                </div>
             </div>
-            <div class="dashboard-button">
-              <i class="fas fa-file-alt"></i>
-              Total Articles
-              <span id="articles-count">120</span>
+            <div class="card">
+              <div class="dashboard-button">
+                  <i class="fas fa-video"></i>
+                  Total Meetings
+                  <span id="meeting-count">5</span>
+              </div>
             </div>
-            <div class="dashboard-button">
-              <i class="fas fa-star"></i>
-              Total Reviews
-              <span id="reviews-count">85</span>
-            </div>
-            <div class="dashboard-button">
-              <i class="fas fa-calendar-alt"></i>
-              Total Leave
-              <span id="leave-count">5</span>
-            </div>
-            <div class="dashboard-button">
-              <i class="fas fa-video"></i>
-              Total Meetings
-              <span id="meeting-count">1</span>
-            </div>
+            <div class="card">
+              <div class="dashboard-button">
+                  <i class="fas fa-calendar-alt"></i>
+                  Total Leave
+                  <span id="leave-count">5</span>
+              </div>
           </div>
+            <div class="card">
+                <div class="dashboard-button">
+                    <i class="fas fa-file-alt"></i>
+                    Total Articles
+                    <span id="articles-count">120</span>
+                </div>
+            </div>
+            <div class="card">
+              <div class="dashboard-button">
+                  <i class="fas fa-check"></i>
+                  Approved Articles
+                  <span id="approved-articles-count">80</span>
+              </div>
+          </div>
+          <div class="card">
+              <div class="dashboard-button">
+                  <i class="fas fa-times"></i>
+                  Disapproved Articles
+                  <span id="disapproved-articles-count">40</span>
+              </div>
+          </div>
+            <div class="card">
+                <div class="dashboard-button">
+                    <i class="fas fa-star"></i>
+                    Total Reviews
+                    <span id="reviews-count">85</span>
+                </div>
+            </div>
         </div>
         <!-- <div class="payment--card
         light-purple">
@@ -343,6 +367,8 @@
     let reviewsCount = 85;
     let leaveCount = 5;
     let meetingCount = 1;
+    let articleapprovedCount = 100;
+    let articlesdrawnCount = 17;
 
     // Update function to increment counts
     function updateCounts() {
@@ -352,6 +378,8 @@
       document.getElementById("reviews-count").textContent = ++reviewsCount;
       document.getElementById("leave-count").textContent = ++leaveCount;
       document.getElementById("meeting-count").textContent = ++meetingCount; 
+      document.getElementById("approved-articles-count").textContent = ++articleapprovedCount;
+      document.getElementById("disapproved-articles-count").textContent = ++articlesdrawnCount;
     }
 
     // Call updateCounts every 2 seconds
