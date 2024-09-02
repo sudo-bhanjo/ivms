@@ -259,6 +259,7 @@
           <thead>
             <tr>
               <th>Date</th>
+              <th>Meetings</th>
               <th>Transaction Type</th>
               <th>Description</th>
               <th>Amount</th>
@@ -269,6 +270,10 @@
           <tbody>
             <tr>
               <td>2023-05-01</td>
+              <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
+                  Schedule 
+                </button>
+              </td>
               <td>Expenses</td>
 
               <td>office
@@ -283,6 +288,10 @@
             </tr>
             <tr>
               <td>2023-05-01</td>
+              <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
+                  Schedule 
+                </button>
+              </td>
               <td>Income</td>
 
               <td>Client Payment
@@ -295,6 +304,10 @@
             </tr>
             <tr>
               <td>2023-05-01</td>
+              <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
+                Schedule 
+              </button>
+            </td>
               <td>Expenses</td>
 
               <td>Travel Expenses
@@ -308,6 +321,10 @@
             </tr>
             <tr>
               <td>2023-05-01</td>
+              <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
+                Schedule
+              </button>
+            </td>
               <td>Expenses</td>
 
               <td>office
@@ -322,6 +339,10 @@
             </tr>
             <tr>
               <td>2023-05-01</td>
+              <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
+                Schedule
+              </button>
+            </td>
               <td>Expenses</td>
 
               <td>office
@@ -336,6 +357,10 @@
             </tr>
             <tr>
               <td>2023-05-01</td>
+              <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
+                Schedule 
+              </button>
+            </td>
               <td>Expenses</td>
 
               <td>office
@@ -359,6 +384,53 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal for scheduling a meeting -->
+  <div class="modal fade" id="meetingSchedulerModal" tabindex="-1" aria-labelledby="meetingSchedulerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="meetingSchedulerModalLabel">Schedule a Meeting</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <form id="meetingSchedulerForm">
+            <div class="mb-3">
+              <label for="meetingTitle" class="form-label">Meeting Title</label>
+              <input type="text" class="form-control" id="meetingTitle" placeholder="Enter meeting title" required>
+            </div>
+            <div class="mb-3">
+              <label for="meetingDate" class="form-label">Date</label>
+              <input type="date" class="form-control" id="meetingDate" required>
+            </div>
+            <div class="mb-3">
+              <label for="meetingTime" class="form-label">Time</label>
+              <input type="time" class="form-control" id="meetingTime" required>
+            </div>
+            <div class="mb-3">
+              <label for="meetingParticipants" class="form-label">Participants</label>
+              <input type="email" class="form-control" id="meetingParticipants" placeholder="Enter participant emails" required>
+              <small class="form-text text-muted">Separate emails with commas</small>
+            </div>
+            <div class="mb-3">
+              <label for="meetingDescription" class="form-label">Description</label>
+              <textarea class="form-control" id="meetingDescription" rows="3" placeholder="Enter meeting description" required></textarea>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" form="meetingSchedulerForm">Schedule Meeting</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     // Initial counts
     let managerCount = 50;
