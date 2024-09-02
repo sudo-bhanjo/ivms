@@ -271,7 +271,7 @@
             <tr>
               <td>2023-05-01</td>
               <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
-                  Schedule 
+                  Schedule
                 </button>
               </td>
               <td>Expenses</td>
@@ -289,7 +289,7 @@
             <tr>
               <td>2023-05-01</td>
               <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
-                  Schedule 
+                  Schedule
                 </button>
               </td>
               <td>Income</td>
@@ -305,9 +305,9 @@
             <tr>
               <td>2023-05-01</td>
               <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
-                Schedule 
-              </button>
-            </td>
+                  Schedule
+                </button>
+              </td>
               <td>Expenses</td>
 
               <td>Travel Expenses
@@ -322,9 +322,9 @@
             <tr>
               <td>2023-05-01</td>
               <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
-                Schedule
-              </button>
-            </td>
+                  Schedule
+                </button>
+              </td>
               <td>Expenses</td>
 
               <td>office
@@ -340,9 +340,9 @@
             <tr>
               <td>2023-05-01</td>
               <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
-                Schedule
-              </button>
-            </td>
+                  Schedule
+                </button>
+              </td>
               <td>Expenses</td>
 
               <td>office
@@ -358,9 +358,9 @@
             <tr>
               <td>2023-05-01</td>
               <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
-                Schedule 
-              </button>
-            </td>
+                  Schedule
+                </button>
+              </td>
               <td>Expenses</td>
 
               <td>office
@@ -376,7 +376,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <td colspan="7">Total: $1,000</td>
+              <td colspan="8">Total: $1,000</td>
             </tr>
           </tfoot>
           </thead>
@@ -397,29 +397,27 @@
 
         <!-- Modal Body -->
         <div class="modal-body">
-          <form id="meetingSchedulerForm">
-            <div class="mb-3">
-              <label for="meetingTitle" class="form-label">Meeting Title</label>
-              <input type="text" class="form-control" id="meetingTitle" placeholder="Enter meeting title" required>
-            </div>
-            <div class="mb-3">
-              <label for="meetingDate" class="form-label">Date</label>
-              <input type="date" class="form-control" id="meetingDate" required>
-            </div>
-            <div class="mb-3">
-              <label for="meetingTime" class="form-label">Time</label>
-              <input type="time" class="form-control" id="meetingTime" required>
-            </div>
-            <div class="mb-3">
-              <label for="meetingParticipants" class="form-label">Participants</label>
-              <input type="email" class="form-control" id="meetingParticipants" placeholder="Enter participant emails" required>
-              <small class="form-text text-muted">Separate emails with commas</small>
-            </div>
-            <div class="mb-3">
-              <label for="meetingDescription" class="form-label">Description</label>
-              <textarea class="form-control" id="meetingDescription" rows="3" placeholder="Enter meeting description" required></textarea>
-            </div>
-          </form>
+          <div class="meeting-summary">
+            <h2>Meeting Summary</h2>
+            <p><strong>Meeting Title:</strong> Project Kickoff</p>
+            <p><strong>Date:</strong> September 5, 2024</p>
+            <p><strong>Time:</strong> 10:00 AM - 11:30 AM</p>
+            <p><strong>Participants:</strong></p>
+            <ul>
+              <li><strong>John Doe (Volunteer)</strong></li>
+              <li><strong>Shahid Sir (Manager)</strong></li>
+              <li><strong>Ashish Sir (Admin)</strong></li>
+            </ul>
+            <p><strong>Time Taken:</strong></p>
+            <ul>
+              <li><strong>John Doe:</strong> 20 minutes (Presentation)</li>
+              <li><strong>Shahid Sir:</strong> 40 minutes (Discussion)</li>
+              <li><strong>Ashish Sir:</strong> 30 minutes (Q&A)</li>
+            </ul>
+            <p><strong>Description:</strong></p>
+            <p>The meeting was focused on the project kickoff, covering the initial project plan, role assignments, and next steps.</p>
+          </div>
+
         </div>
 
         <!-- Modal Footer -->
