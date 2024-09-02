@@ -150,66 +150,66 @@
     <div class="card--container">
       <h3 class="main--title"> Today's Data</h3>
       <div class="card--wrapper">
-          <div class="card-header" style="color: #1461b4;">
-            Dashboard Overview
-          </div>
-          <div class="dashboard-container">
-            <div class="card">
-                <div class="dashboard-button">
-                    <i class="fas fa-user-tie"></i>
-                    Total Manager
-                    <span id="manager-count">15</span>
-                </div>
+        <div class="card-header" style="color: #1461b4;">
+          Dashboard Overview
+        </div>
+        <div class="dashboard-container">
+          <div class="card">
+            <div class="dashboard-button">
+              <i class="fas fa-user-tie"></i>
+              Total Manager
+              <span id="manager-count">15</span>
             </div>
-            <div class="card">
-                <div class="dashboard-button">
-                    <i class="fas fa-users"></i>
-                    Total Volunteers
-                    <span id="volunteers-count">250</span>
-                </div>
-            </div>
-            <div class="card">
-              <div class="dashboard-button">
-                  <i class="fas fa-video"></i>
-                  Total Meetings
-                  <span id="meeting-count">5</span>
-              </div>
-            </div>
-            <div class="card">
-              <div class="dashboard-button">
-                  <i class="fas fa-calendar-alt"></i>
-                  Total Leave
-                  <span id="leave-count">5</span>
-              </div>
-          </div>
-            <div class="card">
-                <div class="dashboard-button">
-                    <i class="fas fa-file-alt"></i>
-                    Total Articles
-                    <span id="articles-count">120</span>
-                </div>
-            </div>
-            <div class="card">
-              <div class="dashboard-button">
-                  <i class="fas fa-check"></i>
-                  Approved Articles
-                  <span id="approved-articles-count">80</span>
-              </div>
           </div>
           <div class="card">
-              <div class="dashboard-button">
-                  <i class="fas fa-times"></i>
-                  Disapproved Articles
-                  <span id="disapproved-articles-count">40</span>
-              </div>
-          </div>
-            <div class="card">
-                <div class="dashboard-button">
-                    <i class="fas fa-star"></i>
-                    Total Reviews
-                    <span id="reviews-count">85</span>
-                </div>
+            <div class="dashboard-button">
+              <i class="fas fa-users"></i>
+              Total Volunteers
+              <span id="volunteers-count">250</span>
             </div>
+          </div>
+          <div class="card">
+            <div class="dashboard-button">
+              <i class="fas fa-video"></i>
+              Total Meetings
+              <span id="meeting-count">5</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="dashboard-button">
+              <i class="fas fa-calendar-alt"></i>
+              Total Leave
+              <span id="leave-count">5</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="dashboard-button">
+              <i class="fas fa-file-alt"></i>
+              Total Articles
+              <span id="articles-count">120</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="dashboard-button">
+              <i class="fas fa-check"></i>
+              Approved Articles
+              <span id="approved-articles-count">80</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="dashboard-button">
+              <i class="fas fa-times"></i>
+              Disapproved Articles
+              <span id="disapproved-articles-count">40</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="dashboard-button">
+              <i class="fas fa-star"></i>
+              Total Reviews
+              <span id="reviews-count">85</span>
+            </div>
+          </div>
         </div>
         <!-- <div class="payment--card
         light-purple">
@@ -361,29 +361,45 @@
   </div>
   <script>
     // Initial counts
-    let managerCount = 15;
-    let volunteersCount = 250;
-    let articlesCount = 120;
+    let managerCount = 50;
+    let volunteersCount = 100;
+    let articlesCount = 100;
     let reviewsCount = 85;
     let leaveCount = 5;
-    let meetingCount = 1;
-    let articleapprovedCount = 100;
-    let articlesdrawnCount = 17;
+    let meetingCount = 12;
+    let articleapprovedCount = 80;
+    let articlesdrawnCount = 15;
 
-    // Update function to increment counts
-    function updateCounts() {
-      document.getElementById("manager-count").textContent = ++managerCount;
-      document.getElementById("volunteers-count").textContent = ++volunteersCount;
-      document.getElementById("articles-count").textContent = ++articlesCount;
-      document.getElementById("reviews-count").textContent = ++reviewsCount;
-      document.getElementById("leave-count").textContent = ++leaveCount;
-      document.getElementById("meeting-count").textContent = ++meetingCount; 
-      document.getElementById("approved-articles-count").textContent = ++articleapprovedCount;
-      document.getElementById("disapproved-articles-count").textContent = ++articlesdrawnCount;
+    // Animation function for counting
+    function animateCount(id, start, end, duration) {
+      let range = end - start;
+      let current = start;
+      let increment = range / (duration / 20); // adjust 20 to make it smoother
+      let obj = document.getElementById(id);
+
+      function step() {
+        current += increment;
+        if (current >= end) {
+          current = end;
+          obj.textContent = Math.floor(current);
+        } else {
+          obj.textContent = Math.floor(current);
+          setTimeout(step, 20); // adjust 20 for speed
+        }
+      }
+
+      step();
     }
 
-    // Call updateCounts every 2 seconds
-    setInterval(updateCounts, 2000);
+    // Start all animations
+    animateCount("manager-count", 0, managerCount, 2000);
+    animateCount("volunteers-count", 0, volunteersCount, 2000);
+    animateCount("articles-count", 0, articlesCount, 2000);
+    animateCount("reviews-count", 0, reviewsCount, 2000);
+    animateCount("leave-count", 0, leaveCount, 2000);
+    animateCount("meeting-count", 0, meetingCount, 2000);
+    animateCount("approved-articles-count", 0, articleapprovedCount, 2000);
+    animateCount("disapproved-articles-count", 0, articlesdrawnCount, 2000);
   </script>
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
