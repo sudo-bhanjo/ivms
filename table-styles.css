@@ -179,7 +179,7 @@ table th {
 .pagination button {
     padding: 8px 10px;
     border: none;
-    background-color: #4CAF50;
+    /* background-color: #4CAF50; */
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
@@ -196,8 +196,8 @@ table th {
 }
 
 td button:nth-child(1) {
-    background-color: #4CAF50;
-    /* background-color: #5a4f95; */
+    /* background-color: #4CAF50; */
+    background-color: #007bff;
     color: white;
     border-radius: 8px;
     height: 32px;
@@ -368,7 +368,7 @@ td button:nth-child(2) {
 }
 
 .form-group1 button:hover {
-    background-color: #038820;
+    background-color: #0754a6;
     transition: all 0.3s ease-in-out;
 }
 
@@ -539,7 +539,7 @@ p {
 }
 
 #customModal th {
-    background-color: #5a4f95 !important;
+    background-color: #0450a2 !important;
     color: white;
 }
 
