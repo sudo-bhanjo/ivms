@@ -26,6 +26,7 @@ body {
     overflow: hidden;
     transition: all 0.5s linear;
     background: rgba(113, 99, 186, 255);
+    background-color: #0056b3;
 }
 
 .logo {
@@ -107,6 +108,7 @@ body {
 
 .header--title {
     color: rgba(113, 99, 186, 255);
+    color: #0056b3;
 }
 
 .user--info {
@@ -145,8 +147,9 @@ body {
 
 .main--title {
     color: rgba(113, 99, 186, 255);
+    color: #09519e;
     padding-bottom: 10px;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .profile--detail {
@@ -157,11 +160,13 @@ body {
 
 .detail--label {
     font-weight: 600;
-    color: rgba(113, 99, 186, 255);
+    /* color: rgba(113, 99, 186, 255); */
+    color: #0056b3;
 }
 
 .detail--value {
     color: #333;
+    font-weight: bold;
 }
 
 .profile--actions {
@@ -171,6 +176,7 @@ body {
 .edit-btn,
 .change-password-btn {
     background: rgba(113, 99, 186, 255);
+    background-color: #0056b3;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -183,6 +189,7 @@ body {
 .edit-btn:hover,
 .change-password-btn:hover {
     background: rgba(113, 99, 186, 200);
+    background-color: #024388;
 }
 
 @media (max-width: 768px) {
@@ -228,12 +235,13 @@ body {
         top: 2%;
         position: absolute;
         transition: all 0.5s linear;
-        background: rgba(113, 99, 186, 255);
+        /* background: rgba(113, 99, 186, 255); */
     }
 
     .offcanvas-body {
         transition: all 0.5s linear;
-        background: rgba(113, 99, 186, 255);
+        background-color: rgb(17, 81, 155);
+        /* background: rgba(113, 99, 186, 255); */
     }
 
     .profile--detail{

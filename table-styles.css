@@ -1,7 +1,10 @@
 html,
 body {
     font-family: Arial, sans-serif;
-    background-color: #5a4f95 !important;
+    /* background-color: #5a4f95 !important; */
+    background: url("https://hookagency.com/wp-content/uploads/2015/11/light-blue-gradient-ui-gradient.jpg");
+    background-size: cover;
+    background-color: #7CB9E8 !important;
     margin: 0;
     padding: 0;
 }
@@ -31,6 +34,7 @@ body.loaded {
     overflow: hidden;
     transition: all 0.5s linear;
     background: rgba(113, 99, 186, 255);
+    background-color: #0056b3;
 }
 
 .logo {
@@ -148,7 +152,8 @@ table td {
 }
 
 table thead {
-    background-color: #5a4f95;
+    /* background-color: #5a4f95; */
+    background-color: rgb(17, 81, 155);
     color: #fff;
 }
 
@@ -175,6 +180,7 @@ table th {
     padding: 8px 10px;
     border: none;
     background-color: #4CAF50;
+    background-color: #007bff;
     color: #fff;
     cursor: pointer;
     border-radius: 8px;
@@ -199,6 +205,10 @@ td button:nth-child(1) {
     border: none;
 }
 
+.btn {
+    background-color: #007bff;
+}
+
 td button:nth-child(2) {
     background-color: red;
     color: white;
@@ -220,7 +230,7 @@ td button:nth-child(2) {
 
 #popup {
     padding: 20px;
-}   
+}
 
 .custom-modal-width {
     max-width: 960px !important;
@@ -238,12 +248,12 @@ td button:nth-child(2) {
     font-size: 14px;
 }
 
-#popup span{
+#popup span {
     display: flex;
     justify-content: space-between;
 }
 
-#popup p{
+#popup p {
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
@@ -613,12 +623,12 @@ p {
         width: 100%;
     }
 
-    #popup{
+    #popup {
         display: flex !important;
         flex-direction: column !important;
     }
 
-    .grid-container{
+    .grid-container {
         display: flex;
         flex-direction: column !important;
     }
@@ -640,12 +650,12 @@ p {
         width: 50px;
         border: 1px solid white;
         transition: all 0.5s ease-in-out;
-        background-color: #5a4f95;
     }
 
     .offcanvas-body {
         transition: all 0.5s linear;
-        background: rgba(113, 99, 186, 255);
+        /* background: rgba(113, 99, 186, 255); */
+        background-color: rgb(17, 81, 155);
     }
 
     .popup {
@@ -653,7 +663,7 @@ p {
         background-color: rgb(255, 255, 255) !important;
     }
 
-    .container{
+    .container {
         background-color: white !important;
         display: flex;
         flex-direction: column;

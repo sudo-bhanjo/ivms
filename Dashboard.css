@@ -12,20 +12,6 @@
 body {
   display: flex;
 }
-
-/* body {
-  background-color: rgb(0, 0, 33);
-  color: white;
-  font-family: "Poppins", sans-serif;
-  flex-wrap: wrap;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-body.loaded {
-  opacity: 1;
-} */
-
 #toggle {
   display: none;
 }
@@ -42,6 +28,8 @@ body.loaded {
   overflow: hidden;
   transition: all 0.5s linear;
   background: rgba(113, 99, 186, 255);
+  background-color: #0056b3;
+
 }
 
 .logo {
@@ -111,6 +99,7 @@ body.loaded {
 
 .header--title {
   color: rgba(113, 99, 186, 255);
+  color: rgb(17, 81, 155);
 }
 
 .user--info {
@@ -538,14 +527,13 @@ button[type="submit"]:hover {
     position: absolute;
     border: none;
     transition: all 0.5s linear;
-    background: rgba(113, 99, 186, 255);
     background-color: #1072db;
   }
 
   .offcanvas-body {
     transition: all 0.5s linear;
-    background: rgba(113, 99, 186, 255);
-    /* background-color: #0056b3; */
+    /* background: rgba(113, 99, 186, 255); */
+    background-color: #0056b3;
   }
 
 }
