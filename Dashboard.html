@@ -259,119 +259,72 @@
           <thead>
             <tr>
               <th>Date</th>
-              <th>Meetings</th>
-              <th>Transaction Type</th>
-              <th>Description</th>
-              <th>Amount</th>
-              <th>Category</th>
+              <th>Meetings Date</th>
+              <th>Meetings Time</th>
+              <th>Taken by</th>
               <th>Status</th>
               <th>Action</th>
             </tr>
           <tbody>
             <tr>
               <td>2023-05-01</td>
-              <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
-                  Schedule
-                </button>
-              </td>
-              <td>Expenses</td>
-
-              <td>office
-                Supplies
-              </td>
-              <td>$250</td>
-              <td>office
-                Expenses </td>
-              <td>Pending</td>
-              <td><button>Edit</button></td>
-
+              <td>10:00 AM - 11:30 AM</td>
+              <td>September 5, 2024</td>
+              <td>Simran Sharma</td>
+              <td>Approved</td>
+              <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Update
+              </button></td>
             </tr>
             <tr>
               <td>2023-05-01</td>
-              <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
-                  Schedule
-                </button>
-              </td>
-              <td>Income</td>
-
-              <td>Client Payment
-              </td>
-              <td>$550</td>
-              <td>Sales </td>
-              <td>Completed</td>
-              <td><button>Edit</button></td>
-
+              <td>10:00 AM - 11:30 AM</td>
+              <td>September 5, 2024</td>
+              <td>Simran Sharma</td>
+              <td>Approved</td>
+              <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Update
+              </button></td>
             </tr>
             <tr>
               <td>2023-05-01</td>
-              <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
-                  Schedule
-                </button>
-              </td>
-              <td>Expenses</td>
-
-              <td>Travel Expenses
-              </td>
-              <td>$250</td>
-              <td>Travel
-              </td>
-              <td>Pending</td>
-              <td><button>Edit</button></td>
-
+              <td>10:00 AM - 11:30 AM</td>
+              <td>September 5, 2024</td>
+              <td>Simran Sharma</td>
+              <td>Inprocess</td>
+              <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Update
+              </button></td>
             </tr>
             <tr>
               <td>2023-05-01</td>
-              <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
-                  Schedule
-                </button>
-              </td>
-              <td>Expenses</td>
-
-              <td>office
-                Supplies
-              </td>
-              <td>$250</td>
-              <td>office
-                Expenses </td>
-              <td>Pending</td>
-              <td><button>Edit</button></td>
-
+              <td>10:00 AM - 11:30 AM</td>
+              <td>September 5, 2024</td>
+              <td>Simran Sharma</td>
+              <td>Disapproved</td>
+              <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Update
+              </button></td>
             </tr>
             <tr>
               <td>2023-05-01</td>
-              <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
-                  Schedule
-                </button>
-              </td>
-              <td>Expenses</td>
-
-              <td>office
-                Supplies
-              </td>
-              <td>$250</td>
-              <td>office
-                Expenses </td>
-              <td>Pending</td>
-              <td><button>Edit</button></td>
-
+              <td>10:00 AM - 11:30 AM</td>
+              <td>September 5, 2024</td>
+              <td>Simran Sharma</td>
+              <td>Approved</td>
+              <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Update
+              </button></td>
             </tr>
             <tr>
               <td>2023-05-01</td>
-              <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meetingSchedulerModal">
-                  Schedule
-                </button>
-              </td>
-              <td>Expenses</td>
-
-              <td>office
-                Supplies
-              </td>
-              <td>$250</td>
-              <td>office
-                Expenses </td>
-              <td>Pending</td>
-              <td><button>Edit</button></td>
-
+              <td>10:00 AM - 11:30 AM</td>
+              <td>September 5, 2024</td>
+              <td>Simran Sharma</td>
+              <td>Inprocess</td>
+              <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Update
+              </button></td>
             </tr>
           </tbody>
           <tfoot>
@@ -385,94 +338,92 @@
     </div>
   </div>
 
-  <!-- Modal for scheduling a meeting -->
-  <div class="modal fade" id="meetingSchedulerModal" tabindex="-1" aria-labelledby="meetingSchedulerModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h5 class="modal-title" id="meetingSchedulerModalLabel">Schedule a Meeting</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-
-        <!-- Modal Body -->
-        <div class="modal-body">
-          <div class="meeting-summary">
-            <h2>Meeting Summary</h2>
-            <p><strong>Meeting Title:</strong> Project Kickoff</p>
-            <p><strong>Date:</strong> September 5, 2024</p>
-            <p><strong>Time:</strong> 10:00 AM - 11:30 AM</p>
-            <p><strong>Participants:</strong></p>
-            <ul>
-              <li><strong>John Doe (Volunteer)</strong></li>
-              <li><strong>Shahid Sir (Manager)</strong></li>
-              <li><strong>Ashish Sir (Admin)</strong></li>
-            </ul>
-            <p><strong>Time Taken:</strong></p>
-            <ul>
-              <li><strong>John Doe:</strong> 20 minutes (Presentation)</li>
-              <li><strong>Shahid Sir:</strong> 40 minutes (Discussion)</li>
-              <li><strong>Ashish Sir:</strong> 30 minutes (Q&A)</li>
-            </ul>
-            <p><strong>Description:</strong></p>
-            <p>The meeting was focused on the project kickoff, covering the initial project plan, role assignments, and next steps.</p>
+  <!-- Action button -->
+  <div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Rendon Feedback</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-
-        </div>
-
-        <!-- Modal Footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary" form="meetingSchedulerForm">Schedule Meeting</button>
+          <div class="modal-body">
+            <div>
+              <div class="form-container">
+                <form>
+                  <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" required>
+                      <option value="approved">Approved</option>
+                      <option value="disapproved">Disapproved</option>
+                      <option value="inprogress">Inprocess</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="leaderRemarks">Leader Remarks</label>
+                    <textarea id="leaderRemarks" name="leaderRemarks" placeholder="Enter leader's remarks here..." required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="adminRemarks">Admin Remarks</label>
+                    <textarea id="adminRemarks" name="adminRemarks" placeholder="Enter admin's remarks here..." required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
-  </div>
 
-  <script>
-    // Initial counts
-    let managerCount = 50;
-    let volunteersCount = 100;
-    let articlesCount = 100;
-    let reviewsCount = 85;
-    let leaveCount = 5;
-    let meetingCount = 12;
-    let articleapprovedCount = 80;
-    let articlesdrawnCount = 15;
+    <script>
+      // Initial counts
+      let managerCount = 50;
+      let volunteersCount = 100;
+      let articlesCount = 100;
+      let reviewsCount = 85;
+      let leaveCount = 5;
+      let meetingCount = 12;
+      let articleapprovedCount = 80;
+      let articlesdrawnCount = 15;
 
-    // Animation function for counting
-    function animateCount(id, start, end, duration) {
-      let range = end - start;
-      let current = start;
-      let increment = range / (duration / 20); // adjust 20 to make it smoother
-      let obj = document.getElementById(id);
+      // Animation function for counting
+      function animateCount(id, start, end, duration) {
+        let range = end - start;
+        let current = start;
+        let increment = range / (duration / 20); // adjust 20 to make it smoother
+        let obj = document.getElementById(id);
 
-      function step() {
-        current += increment;
-        if (current >= end) {
-          current = end;
-          obj.textContent = Math.floor(current);
-        } else {
-          obj.textContent = Math.floor(current);
-          setTimeout(step, 20); // adjust 20 for speed
+        function step() {
+          current += increment;
+          if (current >= end) {
+            current = end;
+            obj.textContent = Math.floor(current);
+          } else {
+            obj.textContent = Math.floor(current);
+            setTimeout(step, 20); // adjust 20 for speed
+          }
         }
+
+        step();
       }
 
-      step();
-    }
-
-    // Start all animations
-    animateCount("manager-count", 0, managerCount, 2000);
-    animateCount("volunteers-count", 0, volunteersCount, 2000);
-    animateCount("articles-count", 0, articlesCount, 2000);
-    animateCount("reviews-count", 0, reviewsCount, 2000);
-    animateCount("leave-count", 0, leaveCount, 2000);
-    animateCount("meeting-count", 0, meetingCount, 2000);
-    animateCount("approved-articles-count", 0, articleapprovedCount, 2000);
-    animateCount("disapproved-articles-count", 0, articlesdrawnCount, 2000);
-  </script>
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      // Start all animations
+      animateCount("manager-count", 0, managerCount, 2000);
+      animateCount("volunteers-count", 0, volunteersCount, 2000);
+      animateCount("articles-count", 0, articlesCount, 2000);
+      animateCount("reviews-count", 0, reviewsCount, 2000);
+      animateCount("leave-count", 0, leaveCount, 2000);
+      animateCount("meeting-count", 0, meetingCount, 2000);
+      animateCount("approved-articles-count", 0, articleapprovedCount, 2000);
+      animateCount("disapproved-articles-count", 0, articlesdrawnCount, 2000);
+    </script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
