@@ -408,7 +408,9 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   ];
 
-  const tableData = [];
+  const tableData = [
+    
+  ];
   for (let i = 1; i <= 100; i++) {
     tableData.push({ id: i, name: `Name ${i}` });
   }

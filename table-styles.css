@@ -593,31 +593,6 @@ p {
     color: white;
 }
 
-
-@media (max-width: 850px) {
-
-    html,
-    body {
-        display: block;
-        width: 100%;
-    }
-
-    input {
-        width: auto !important;
-    }
-
-    .container {
-        margin-top: -600px !important;
-        margin-left: -40% !important;
-        /* width: 55% !important; */
-    }
-
-    #customModal .modal-content form {
-        overflow-x: scroll !important;
-        box-shadow: none;
-    }
-}
-
 @media (max-width: 1350px) {
 
     html,
@@ -637,7 +612,7 @@ p {
     .container {
         margin-top: -600px !important;
         margin-left: 20% !important;
-        width: 78% !important;
+        width: auto !important;
         padding: 20px !important;
     }
 
@@ -646,6 +621,31 @@ p {
         box-shadow: none;
     }
 }
+
+@media (max-width: 1000px) {
+
+    html,
+    body {
+        display: block;
+        width: 100%;
+    }
+
+    input {
+        width: auto !important;
+    }
+
+    .container {
+        /* margin-top: -600px !important; */
+        margin-left: 24% !important;
+        width: 80% !important;
+    }
+
+    #customModal .modal-content form {
+        overflow-x: scroll !important;
+        box-shadow: none;
+    }
+}
+
 
 @media (max-width: 768px) {
 
