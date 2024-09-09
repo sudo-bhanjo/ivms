@@ -20,14 +20,13 @@ body {
     left: 0;
     bottom: 0;
     font-size: 0.8rem !important;
-    width: 220px;
+    width: 240px;
     height: 100vh;
-    padding: 0 1.7rem;
+    padding: 0 1.2rem;
     color: #fff;
     overflow: hidden;
     transition: all 0.5s linear;
-    background: rgba(113, 99, 186, 255);
-    background-color:#034e9e;
+    background-color: #007bff;
 }
 
 .logo {
@@ -56,7 +55,7 @@ body {
 
 .menu a {
     color: #fff;
-    font-size: 12px;
+    font-size: 13px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -283,11 +282,12 @@ table tbody tr:hover {
         border: 1px solid white;
         transition: all 0.5s ease-in-out;
         background-color: #5a4f95;
+        background-color: #007bff;
     }
 
     .offcanvas-body {
         transition: all 0.5s linear;
-        background: rgba(113, 99, 186, 255);
+        background-color: #007bff;
     }
 
     .header {

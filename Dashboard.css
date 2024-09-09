@@ -12,6 +12,7 @@
 body {
   display: flex;
 }
+
 #toggle {
   display: none;
 }
@@ -27,9 +28,7 @@ body {
   color: #fff;
   overflow: hidden;
   transition: all 0.5s linear;
-  background: rgba(113, 99, 186, 255);
-  background-color: #0056b3;
-
+  background-color: #007bff;
 }
 
 .logo {
@@ -58,7 +57,7 @@ body {
 
 .menu a {
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -98,8 +97,8 @@ body {
 }
 
 .header--title {
-  color: rgba(113, 99, 186, 255);
   color: rgb(17, 81, 155);
+  font-weight: 700 !important;
 }
 
 .user--info {
@@ -111,7 +110,8 @@ body {
 .search--box {
   background: rgba(237, 237, 237);
   border-radius: 15px;
-  color: rgba(113, 99, 186, 255);
+  /* color: rgba(113, 99, 186, 255); */
+  color: #0056b3;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -162,11 +162,10 @@ body {
 
 .card-header {
   font-size: 24px;
-  font-weight: bold;
   margin-bottom: 20px;
-  text-align: center;
-  color: rgba(113, 99, 186, 255);
-  ;
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .dashboard-container {
@@ -208,9 +207,9 @@ body {
 }
 
 .main--title {
-  color: rgba(113, 99, 186, 255);
-  padding-bottom: 10px;
-  font-size: 15px;
+  color: #0056b3;
+  font-size: 14px;
+  font-weight: 550;
 }
 
 .payment--card {
@@ -229,11 +228,16 @@ body {
   cursor: pointer;
 }
 
-.card--header {
+.card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.card-header p {
+  color: #0056b3;
+  font-weight: 550;
 }
 
 .amount {
@@ -269,38 +273,6 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
-.light-red {
-  background: rgb(251, 233, 233);
-}
-
-.light-purple {
-  background: rgba(254, 226, 254);
-}
-
-.light-green {
-  background: rgba(235, 254, 235);
-}
-
-.light-blue {
-  background: rgba(236, 236, 254);
-}
-
-.dark-red {
-  background: red;
-}
-
-.dark-purple {
-  background: purple;
-}
-
-.dark-green {
-  background: green;
-}
-
-.dark-blue {
-  background: blue;
-}
-
 .tabular--wrapper {
   background: #fff;
   margin-top: 1rem;
@@ -320,6 +292,7 @@ table {
 thead {
   background: rgba(113, 99, 186, 255);
   background-color: #0056b3;
+  background-color: #007bff;
   color: #fff;
 }
 
@@ -345,6 +318,7 @@ tr:nth-child(even) {
 tfoot {
   background: rgba(113, 99, 186, 255);
   background-color: #0056b3;
+  background-color: #007bff;
   font-weight: bold;
   color: #fff;
 }
@@ -428,9 +402,9 @@ form {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f4f7f8;
+  /* background-color: #f4f7f8; */
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .form-group {
@@ -450,7 +424,7 @@ textarea {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
   background-color: #fff;
   color: #333;
 }
@@ -469,6 +443,7 @@ textarea {
 
 button[type="submit"] {
   background-color: #007bff;
+  /* background-color: green; */
   color: #fff;
   padding: 10px 16px;
   font-size: 16px;
@@ -482,6 +457,12 @@ button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
+td .btn-primary {
+  color: white;
+  font-weight: bold;
+  border: none;
+  background-color: #288ffc;
+}
 
 @media (max-width: 1100px) {
 
@@ -532,8 +513,7 @@ button[type="submit"]:hover {
 
   .offcanvas-body {
     transition: all 0.5s linear;
-    /* background: rgba(113, 99, 186, 255); */
-    background-color: #0056b3;
+    background-color: #007bff;
   }
 
 }

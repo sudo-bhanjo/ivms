@@ -18,15 +18,13 @@ body {
     top: 0;
     left: 0;
     bottom: 0;
-    font-size: 0.8rem !important;
     width: 240px;
     height: 100vh;
     padding: 0 1.7rem;
     color: #fff;
     overflow: hidden;
     transition: all 0.5s linear;
-    background: rgba(113, 99, 186, 255);
-    background-color: #0056b3;
+    background-color: #007bff;
 }
 
 .logo {
@@ -55,24 +53,16 @@ body {
 
 .menu a {
     color: #fff;
-    font-size: 12px;
+    font-size: 13px;
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
 
-.menu a span {
-    overflow: hidden;
-}
-
-.menu a i {
-    font-size: 1.2rem;
-}
-
 .logout {
     position: absolute;
-    bottom: 3;
+    bottom: 10;
     left: 0;
     width: 100%;
 }
@@ -210,7 +200,7 @@ body {
         flex-direction: column-reverse;
     }
 
-    .profile--container img{
+    .profile--container img {
         position: relative;
         left: 120% !important;
         bottom: 20px !important;
@@ -240,21 +230,20 @@ body {
 
     .offcanvas-body {
         transition: all 0.5s linear;
-        background-color: rgb(17, 81, 155);
-        /* background: rgba(113, 99, 186, 255); */
+        background-color: #007bff;
     }
 
-    .profile--detail{
+    .profile--detail {
         display: flex;
         flex-direction: column;
     }
 
-    .detail--label{
+    .detail--label {
         width: 200% !important;
         display: block;
     }
 
-    .profile--actions{
+    .profile--actions {
         display: flex;
         justify-content: center;
         align-items: center;

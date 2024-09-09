@@ -1,10 +1,7 @@
 html,
 body {
     font-family: Arial, sans-serif;
-    /* background-color: #5a4f95 !important; */
-    background: url("https://hookagency.com/wp-content/uploads/2015/11/light-blue-gradient-ui-gradient.jpg");
-    background-size: cover;
-    background-color: #7CB9E8 !important;
+    background-color: #ccc;
     margin: 0;
     padding: 0;
 }
@@ -22,19 +19,73 @@ body.loaded {
     opacity: 1;
 }
 
+
 .sidebar {
     position: sticky;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 190px;
+    width: 240px;
     height: 100vh;
     padding: 0 1.7rem;
     color: #fff;
     overflow: hidden;
     transition: all 0.5s linear;
-    background: rgba(113, 99, 186, 255);
-    background-color: #0056b3;
+    background-color: #007bff;
+}
+
+.logo {
+    height: 80px;
+    padding: 16px;
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.active {
+    background: #e0e0e058;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logout {
+    position: absolute;
+    bottom: 10;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 210px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background-color: #007bff;
 }
 
 .logo {
@@ -78,14 +129,12 @@ body.loaded {
 }
 
 .container {
-    width: 90% !important;
-    margin-left: 15% !important;
-    margin-top: -44% !important;
+    width: 100%;
+    margin-left: 15.5% !important;
+    margin-top: -47% !important;
     max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    padding: 30px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     transition: width 0.3s;
 }
@@ -154,6 +203,7 @@ table td {
 table thead {
     /* background-color: #5a4f95; */
     background-color: rgb(17, 81, 155);
+    background-color: #007bff;
     color: #fff;
 }
 
@@ -654,8 +704,7 @@ p {
 
     .offcanvas-body {
         transition: all 0.5s linear;
-        /* background: rgba(113, 99, 186, 255); */
-        background-color: rgb(17, 81, 155);
+        background-color: #007bff;
     }
 
     .popup {

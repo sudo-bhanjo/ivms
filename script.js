@@ -441,7 +441,7 @@ document.addEventListener("DOMContentLoaded", function () {
   localStorage.setItem("applications", JSON.stringify(applications));
   let filteredApplications = applications;
   let currentPage = 1;
-  const rowsPerPage = 5;
+  const rowsPerPage = 7;
 
   function displayTable(applications, page = 1) {
     responsesBody.innerHTML = "";
