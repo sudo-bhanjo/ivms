@@ -208,8 +208,9 @@ body {
 
 .main--title {
   color: #0056b3;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 550;
+  margin-bottom: 1rem;
 }
 
 .payment--card {
