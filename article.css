@@ -108,12 +108,16 @@ body {
 
 .header {
     background-color: #007bff;
-    /* background-color: rgba(113, 99, 186, 255); */
     color: white;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.articleupload button{
+    /* margin-right: 50% !important; */
+    background-color: #dc3545;
 }
 
 .header h1 {
@@ -129,11 +133,6 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
-
-.internship-btn {
-    background-color: #dc3545;
-}
-
 .content {
     display: flex;
     margin-top: 20px;
@@ -245,9 +244,20 @@ table tbody tr:hover {
     margin: 5px 0;
 }
 
+.dropdown-menu textarea{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
 @media (max-width: 950px) {
     .container {
         width: 70% !important;
+    }
+
+    .articleupload{
+        margin-left: -50% !important;
     }
 }
 

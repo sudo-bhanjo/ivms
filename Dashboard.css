@@ -29,6 +29,8 @@ body {
   overflow: hidden;
   transition: all 0.5s linear;
   background-color: #007bff;
+  background-color: #0056b3;
+  background-color: #0066d4;
 }
 
 .logo {
