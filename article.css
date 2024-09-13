@@ -12,6 +12,12 @@
 body {
     display: flex;
     background-color: #cfcece;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
 }
 
 .sidebar {
@@ -115,14 +121,12 @@ body {
     align-items: center;
 }
 
-.articleupload button{
-    /* margin-right: 50% !important; */
-    background-color: #dc3545;
+#articleuploadbtn {
+    position: relative;
+    left: 300px;
+    /* background-color: #dc3545; */
 }
 
-.header h1 {
-    margin: 0;
-}
 
 .btn {
     background-color: #28a745;
@@ -133,6 +137,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
+
 .content {
     display: flex;
     margin-top: 20px;
@@ -244,20 +249,20 @@ table tbody tr:hover {
     margin: 5px 0;
 }
 
-.dropdown-menu textarea{
+.dropdown-menu textarea {
     padding: 10px;
     margin: 10px;
     border: 2px solid #333 !important;
     border-radius: 8px;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1150px) {
     .container {
         width: 70% !important;
     }
 
-    .articleupload{
-        margin-left: -50% !important;
+    #articleuploadbtn {
+        left: 10px;
     }
 }
 
@@ -317,5 +322,9 @@ table tbody tr:hover {
         width: 150%;
         margin-left: -30%;
         overflow-x: scroll;
+    }
+
+    #articleuploadbtn {
+        left: 0px;
     }
 }
