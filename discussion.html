@@ -1,120 +1,192 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discussion Form</title>
-  <link rel="stylesheet" href="discussion.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Form</title>
+    <link rel="stylesheet" href="discussion.css">
 </head>
 
 <body>
-  <div class="min-h-screen flex items-center justify-center bg-blue-500 top-2">
-    <div class="w-full max-w-2xl mt-5 bg-slate-200 opacity-90 p-8 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-105">
-      <h2 class="text-2xl font-extrabold text-center mb-6 text-gray-700 animate-fade-in-down">
-        Discussion Form
-      </h2>
+    <div class="min-h-screen flex items-center justify-center bg-blue-500 top-2">
+        <div class="w-full max-w-2xl mt-5 bg-slate-200 opacity-90 p-8 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-105">
+            <h2 class="text-2xl font-extrabold text-center mb-6 text-gray-700 animate-fade-in-down">
+                Discussion Form
+            </h2>
 
-      <form class="space-y-4">
-        <div class="animate-fade-in-up">
-          <label class="block text-gray-700 font-bold">Title</label>
-          <input type="text" placeholder="Enter your title" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
-        </div>
+            <form class="space-y-4">
+                <!-- Title Field -->
+                <div class="animate-fade-in-up">
+                    <label class="block text-gray-700 font-bold">Title</label>
+                    <input type="text" placeholder="Enter your title" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+                </div>
 
-        <div class="animate-fade-in-up">
-          <label class="block text-gray-700 font-bold">Name</label>
-          <input type="text" placeholder="Enter your name" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
-        </div>
+                <!-- Name Field -->
+                <div class="animate-fade-in-up">
+                    <label class="block text-gray-700 font-bold">Name</label>
+                    <input type="text" placeholder="Enter your name" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+                </div>
 
-        <div class="animate-fade-in-up delay-100">
-          <label class="block text-gray-700 font-bold">Email</label>
-          <input type="email" placeholder="Enter your email" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
-        </div>
+                <!-- Email Field -->
+                <div class="animate-fade-in-up delay-100">
+                    <label class="block text-gray-700 font-bold">Email</label>
+                    <input type="email" placeholder="Enter your email" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+                </div>
 
-        <div class="animate-fade-in-up delay-200">
-          <label class="block text-gray-700 font-bold">City</label>
-          <input type="text" placeholder="Enter your city" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
-        </div>
+                <!-- City Field -->
+                <div class="animate-fade-in-up delay-200">
+                    <label class="block text-gray-700 font-bold">City</label>
+                    <input type="text" placeholder="Enter your city" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+                </div>
 
-        <div class="animate-fade-in-up delay-300">
-          <label class="block text-gray-700 font-bold">College</label>
-          <input type="text" placeholder="Enter your college name" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
-        </div>
+                <!-- College Field -->
+                <div class="animate-fade-in-up delay-300">
+                    <label class="block text-gray-700 font-bold">College</label>
+                    <input type="text" placeholder="Enter your college name" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+                </div>
 
-        <div class="animate-fade-in-up delay-400">
-          <label class="block text-gray-700 font-bold">Hobbies</label>
-          <input type="text" placeholder="Enter your hobbies" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
-        </div>
+                <!-- Hobbies Field -->
+                <div class="animate-fade-in-up delay-400">
+                    <label class="block text-gray-700 font-bold">Hobbies</label>
+                    <input type="text" placeholder="Enter your hobbies" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+                </div>
 
-        <div class="animate-fade-in-up delay-500">
-          <label class="block text-gray-700 font-bold">Working Time</label>
-          <input type="text" placeholder="Enter your working hours" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
-        </div>
+                <!-- Working Time Field -->
+                <div class="animate-fade-in-up delay-500">
+                    <label class="block text-gray-700 font-bold">Working Time</label>
+                    <input type="text" placeholder="Enter your working hours" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+                </div>
 
-        <div class="animate-fade-in-up delay-600">
-          <label class="block text-gray-700 font-bold">Language</label>
-          <input type="text" placeholder="Enter languages you know" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
-        </div>
+                <!-- Phone Number Field -->
+                <div class="animate-fade-in-up delay-600">
+                    <label class="block text-gray-700 font-bold">Phone Number</label>
+                    <input type="tel" placeholder="Enter your phone number" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+                </div>
 
-        <div class="animate-fade-in-up delay-700">
-          <label class="block text-gray-700 font-bold">How Much English You Know</label>
-          <select required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
-            <option value="">Select an option</option>
-            <option value="reading">Reading</option>
-            <option value="writing">Writing</option>
-            <option value="education">Education</option>
-          </select>
-        </div>
+                <!-- LinkedIn Field -->
+                <div class="animate-fade-in-up delay-700">
+                    <label class="block text-gray-700 font-bold">LinkedIn</label>
+                    <input type="url" placeholder="Enter your LinkedIn profile" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+                </div>
 
-        <div class="animate-fade-in-up delay-800">
-          <label class="block text-gray-700 font-bold">Other Languages</label>
-          <input type="text" placeholder="Enter other languages you know" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
-        </div>
+                <!-- Other Languages Field -->
+                <div class="animate-fade-in-up delay-800">
+                    <label class="block text-gray-700 font-bold">Other Languages</label>
+                    <input type="text" placeholder="Enter other languages you know" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+                </div>
 
-        <div class="animate-fade-in-up delay-900">
-          <label class="block text-gray-700 font-bold">Phone Number</label>
-          <input type="tel" placeholder="Enter your phone number" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
-        </div>
+                <!-- Already Working Field -->
+                <div class="animate-fade-in-up delay-900">
+                    <label class="block text-gray-700 font-bold">Already Working</label>
+                    <select required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
 
-        <div class="animate-fade-in-up delay-1000">
-          <label class="block text-gray-700 font-bold">LinkedIn</label>
-          <input type="url" placeholder="Enter your LinkedIn profile" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
-        </div>
+                <!-- How Much English You Know -->
+                <div class="animate-fade-in-up delay-1000">
+                    <label class="block text-gray-700 font-bold">How Much English You Know</label>
+                    <select required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
+                        <option value="">Select an option</option>
+                        <option value="reading">Reading</option>
+                        <option value="writing">Writing</option>
+                        <option value="education">Education</option>
+                    </select>
+                </div>
 
-        <div class="animate-fade-in-up delay-1100">
-          <label class="block text-gray-700 font-bold">Already Working</label>
-          <select required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
-            <option value="Select">Select</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </div>
+                <!-- Dynamic Language Selection -->
+                <div class="animate-fade-in-up delay-1100">
+                    <label class="block text-gray-700 font-bold">Languages Known</label>
+                    <div id="language-container" class="space-y-2 mt-1">
+                        <!-- JavaScript will insert language fields here -->
+                    </div>
+                    <button type="button" id="add-language" class="mt-2 bg-indigo-600 text-white py-1 px-3 rounded-md hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-105">
+                        Add Language
+                    </button>
+                </div>
 
-        <div class="animate-fade-in-up delay-1200">
-          <label class="block text-gray-700 font-bold">Discussion Body</label>
-          <textarea placeholder="Write your discussion here..." required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" rows="4"></textarea>
-        </div>
+                <!-- Discussion Body Field -->
+                <div class="animate-fade-in-up delay-1200">
+                    <label class="block text-gray-700 font-bold">Discussion Body</label>
+                    <textarea placeholder="Write your discussion here..." required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" rows="4"></textarea>
+                </div>
 
-        <div class="animate-fade-in-up delay-1300">
-          <label class="block text-gray-700 font-bold">Attachment</label>
-          <input type="file" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
-        </div>
+                <!-- Attachment Field -->
+                <div class="animate-fade-in-up delay-1300">
+                    <label class="block text-gray-700 font-bold">Attachment</label>
+                    <input type="file" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+                </div>
 
-        <div class="flex items-center animate-fade-in-up delay-1400">
-          <input type="checkbox" required class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
-          <label class="ml-2 block text-gray-700 font-bold">
-            Agree to Terms and Conditions
-          </label>
-        </div>
+                <!-- Terms and Conditions -->
+                <div class="flex items-center animate-fade-in-up delay-1400">
+                    <input type="checkbox" required class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+                    <label class="ml-2 block text-gray-700 font-bold">
+                        Agree to Terms and Conditions
+                    </label>
+                </div>
 
-        <div class="text-center animate-fade-in-up delay-1500">
-          <button type="submit" class="mt-4 w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-105">
-            Submit
-          </button>
+                <!-- Submit Button -->
+                <div class="text-center animate-fade-in-up delay-1500">
+                    <button type="submit" class="mt-4 w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-105">
+                        Submit
+                    </button>
+                </div>
+            </form>
         </div>
-      </form>
     </div>
-  </div>
+
+    
+    <!-- JavaScript to handle dynamic language selection -->
+    <script>
+        let languageCount = 0;
+
+        document.getElementById('add-language').addEventListener('click', function () {
+            if (languageCount < 5) {
+                languageCount++;
+
+                const container = document.getElementById('language-container');
+                const languageDiv = document.createElement('div');
+                languageDiv.classList.add('flex', 'space-x-2', 'items-center');
+
+                const selectLanguage = document.createElement('select');
+                selectLanguage.required = true;
+                selectLanguage.name = `language-${languageCount}`;
+                selectLanguage.classList.add('w-full', 'p-2', 'border', 'rounded-md', 'focus:ring-indigo-500', 'focus:border-indigo-500', 'transition', 'duration-300', 'ease-in-out', 'transform', 'hover:scale-105');
+                selectLanguage.innerHTML = `
+                    <option value="">Select a language</option>
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Mandarin">Mandarin</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="Arabic">Arabic</option>
+                    <!-- Add more languages as needed -->
+                `;
+
+                const selectProficiency = document.createElement('select');
+                selectProficiency.required = true;
+                selectProficiency.name = `proficiency-${languageCount}`;
+                selectProficiency.classList.add('w-full', 'p-2', 'border', 'rounded-md', 'focus:ring-indigo-500', 'focus:border-indigo-500', 'transition', 'duration-300', 'ease-in-out', 'transform', 'hover:scale-105');
+                selectProficiency.innerHTML = `
+                    <option value="">Select proficiency</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Advanced">Advanced</option>
+                `;
+
+                languageDiv.appendChild(selectLanguage);
+                languageDiv.appendChild(selectProficiency);
+                container.appendChild(languageDiv);
+            } else {
+                alert("You can add up to 5 languages only.");
+            }
+        });
+    </script>
 </body>
 
 </html>
