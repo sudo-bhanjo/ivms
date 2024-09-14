@@ -155,10 +155,12 @@ button {
 }
 
 .modal-content {
-    background: #1c1e22;
+    /* background: #1c1e22; */
+    background-color: #d1d5db;
     padding: 20px;
+    border: none;
     border-radius: 8px;
-    color: #fff;
+    color: #333;
     width: 800px;
 }
 
@@ -177,10 +179,11 @@ label {
     width: 100%;
     padding: 10px;
     border-radius: 4px;
-    border: 1px solid #444;
+    border: 1px solid #7c7c7c;
     margin-bottom: 20px;
     background-color: #2a2c30;
-    color: #fff;
+    background-color: white !important;
+    color: #333;
 }
 
 .suggestions {
@@ -208,7 +211,7 @@ label {
 
 .save-btn {
     padding: 10px 20px;
-    background-color: #149223;
+    /* background-color: #149223; */
     color: white;
     border: none;
     border-radius: 6px;
