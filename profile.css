@@ -30,7 +30,8 @@ body.loaded {
     color: #fff;
     overflow: hidden;
     transition: all 0.5s linear;
-    background-color: #007bff;
+    /* background-color: #007bff; */
+    background-color: #0056b3;
 }
 
 .logo {

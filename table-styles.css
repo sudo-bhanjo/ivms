@@ -30,7 +30,8 @@ body.loaded {
     color: #fff;
     overflow: hidden;
     transition: all 0.5s linear;
-    background-color: #007bff;
+    /* background-color: #007bff; */
+    background-color: #0056b3 !important;
 }
 
 .logo {
@@ -200,10 +201,8 @@ table td {
 }
 
 table thead {
-    /* background-color: #5a4f95; */
-    background-color: rgb(17, 81, 155);
-    background-color: #007bff;
     color: #fff;
+    background-color: #0062cc;
 }
 
 table tbody tr:nth-child(even) {

@@ -32,7 +32,8 @@ body.loaded {
     color: #fff;
     overflow: hidden;
     transition: all 0.5s linear;
-    background-color: #007bff;
+    /* background-color: #007bff; */
+    background-color: #0056b3;
 }
 
 .logo {
@@ -114,6 +115,7 @@ body.loaded {
 
 .header {
     background-color: #007bff;
+    background-color: #0062cc;
     color: white;
     padding: 20px;
     display: flex;
@@ -192,7 +194,7 @@ table {
 
 table thead {
     background-color: #007bff;
-    /* background-color: rgba(113, 99, 186, 255); */
+    background-color: #0062cc;
     color: white;
 }
 
@@ -249,11 +251,24 @@ table tbody tr:hover {
     margin: 5px 0;
 }
 
+.dropdown-menu li a{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
 .dropdown-menu textarea {
     padding: 10px;
     margin: 10px;
     border: 2px solid #333 !important;
     border-radius: 8px;
+}
+
+.dropdown-menu p {
+    margin: 10px 80px 0px 14px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
 }
 
 @media (max-width: 1150px) {
