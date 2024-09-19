@@ -126,7 +126,8 @@ body.loaded {
 
 #articleuploadbtn {
     position: relative;
-    left: 300px;
+    /* left: 300px; */
+    left: 200%;
     /* background-color: #dc3545; */
 }
 
@@ -337,6 +338,7 @@ table tbody tr:hover {
         display: inline;
         width: 150%;
         margin-left: -30%;
+        padding: 20px;
         overflow-x: scroll;
     }
 
