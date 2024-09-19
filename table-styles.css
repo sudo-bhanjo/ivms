@@ -507,14 +507,21 @@ td button:nth-child(2) {
 
 #zoom-conferences {
     display: none;
-    margin: 10px;
+    margin: 0 10px;
     padding: 10px;
 }
 
+#zoom-conferences label{
+    margin: 10px -10px;
+}
+
 #zoom-options {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 106%;
     padding: 10px;
-    border-radius: 12px;
+    margin-left: -10px;
+    border-radius: 10px;
     color: black;
     border: 1px solid #999;
     cursor: pointer;

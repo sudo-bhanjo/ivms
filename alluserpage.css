@@ -95,7 +95,7 @@ body.loaded {
 
 .main--title {
     color: #0056b3;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 550;
     margin-bottom: 1rem;
 }
@@ -108,7 +108,7 @@ body.loaded {
 }
 
 .table-container {
-    width: 200%;
+    width: 210%;
 }
 
 table {
@@ -121,9 +121,19 @@ thead {
     color: #fff;
 }
 
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey background for even rows */
+}
+
 th {
     padding: 15px;
     text-align: left;
+}
+
+th, td ,tfoot{
+    /* padding: 15px; */
+    /* text-align: left; */
+    border: 1px solid gray !important; /* Adds vertical and horizontal lines */
 }
 
 tbody {
@@ -135,17 +145,6 @@ td {
     padding: 15px;
     font-size: 14px;
     color: #333;
-}
-
-tfoot {
-    background-color: #0056b3;
-    font-weight: bold;
-    color: #fff;
-}
-
-tfoot td {
-    padding: 15px;
-    color: #fff;
 }
 
 .table-container button {
@@ -292,7 +291,7 @@ td .btn-primary {
     color: white;
     border: none;
     padding: 10px 20px;
-    margin: 0 5px;
+    margin: 10px 5px;
     cursor: pointer;
     border-radius: 6px;
 }

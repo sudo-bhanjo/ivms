@@ -765,8 +765,8 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
       <div class="feedback-container">
         <h6>Feedback </h6>
-        <textarea rows="4" placeholder="I think you did a great job when you..."></textarea>
-    </form>
+        <textarea rows="4" cols="auto" maxlength="500" placeholder="I think you did a great job when you..."></textarea>
+      </form>
 </div>
       </div>
       <div class="modal-footer">
