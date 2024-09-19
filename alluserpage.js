@@ -33,7 +33,7 @@ function searchTable() {
 // Pagination
 
 let currentPage = 1;
-const rowsPerPage = 6;
+const rowsPerPage = 7;
 
 function displayTable(page) {
   const table = document
@@ -53,10 +53,10 @@ function displayTable(page) {
   }
 
   // Disable Previous button on the first page
-  document.getElementById("prevBtn").disabled = page === 1;
+  // document.getElementById("prevBtn").disabled = page === 1;
 
   // Disable Next button on the last page
-  document.getElementById("nextBtn").disabled = page === totalPages;
+  // document.getElementById("nextBtn").disabled = page === totalPages;
 }
 
 function nextPage() {
