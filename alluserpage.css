@@ -34,7 +34,6 @@ body.loaded {
     color: #fff;
     overflow: hidden;
     transition: all 0.5s linear;
-    /* background-color: #007bff; */
     background-color: #0056b3;
 }
 
@@ -78,7 +77,7 @@ body.loaded {
     width: 100%;
 }
 
-/*  ------ Table ------ */
+/* ------ Table ------ */
 
 .main--title {
     color: #0056b3;
@@ -124,12 +123,11 @@ td {
 }
 
 tr:nth-child(even) {
-    background: #fff;
+    background: #b9b8b8 !important;
 }
 
 tfoot {
     background-color: #0056b3;
-    /* background-color: #007bff; */
     font-weight: bold;
     color: #fff;
 }
@@ -185,7 +183,6 @@ tfoot td {
 }
 
 .meeting-summary ul li strong {
-    /* color: #ffeb3b; */
     color: aliceblue;
 }
 
@@ -206,16 +203,14 @@ tfoot td {
     margin: 0;
 }
 
-/* action button */
+/* Action button */
 
 form {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    /* background-color: #f4f7f8; */
     border-radius: 8px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .form-group {
@@ -253,8 +248,7 @@ textarea {
 }
 
 button[type="submit"] {
-    background-color: #007bff;
-    /* background-color: green; */
+    background-color: #0056b3;
     color: #fff;
     padding: 10px 16px;
     font-size: 16px;
@@ -265,7 +259,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #004494;
 }
 
 td .btn-primary {
@@ -273,17 +267,6 @@ td .btn-primary {
     font-weight: bold;
     border: none;
     background-color: #1362b7;
-}
-
-/* Alternate row color */
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* Footer Styling */
-tfoot td {
-    font-weight: bold;
-    background-color: #f4f4f4;
 }
 
 /* Pagination Controls */
@@ -314,8 +297,7 @@ tfoot td {
     font-weight: bold;
 }
 
-
-@media (max-width: 1150px) {
+@media (max-width: 768px) {
 
     html,
     body {
@@ -362,5 +344,4 @@ tfoot td {
         transition: all 0.5s linear;
         background-color: #007bff;
     }
-
 }

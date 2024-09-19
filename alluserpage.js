@@ -11,12 +11,16 @@ function searchTable() {
   for (var i = 1; i < tr.length; i++) {
     var tdID = tr[i].getElementsByTagName("td")[0];
     var tdName = tr[i].getElementsByTagName("td")[1];
-    if (tdID || tdName) {
+    var tdPcon = tr[i].getElementsByTagName("td")[3];
+
+    if (tdID || tdName || tdPcon) {
       var idValue = tdID.textContent || tdID.innerText;
       var nameValue = tdName.textContent || tdName.innerText;
+      var pconValue = tdPcon.textContent || tdPcon.innerText;
       if (
         idValue.toUpperCase().indexOf(filter) > -1 ||
-        nameValue.toUpperCase().indexOf(filter) > -1
+        nameValue.toUpperCase().indexOf(filter) > -1 ||
+        pconValue.toUpperCase().indexOf(filter) > -1
       ) {
         tr[i].style.display = "";
       } else {
