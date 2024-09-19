@@ -28,7 +28,7 @@ body.loaded {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 240px;
+    width: 220px;
     height: 100vh;
     padding: 0 1.7rem;
     color: #fff;
@@ -77,11 +77,20 @@ body.loaded {
     width: 100%;
 }
 
+/* --- Search Input --- */
+
+#searchInput{
+    width: 40%;
+    position: relative;
+    left: 60%;
+    top: 20%;
+}
+
 /* ------ Table ------ */
 
 .main--title {
     color: #0056b3;
-    font-size: 18px;
+    font-size: 28px;
     font-weight: 550;
     margin-bottom: 1rem;
 }
@@ -94,7 +103,7 @@ body.loaded {
 }
 
 .table-container {
-    width: 200%;
+    width: 225%;
 }
 
 table {
