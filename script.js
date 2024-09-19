@@ -765,7 +765,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
       <div class="feedback-container">
         <h6>Feedback </h6>
-        <textarea rows="4" cols="auto" maxlength="500" placeholder="I think you did a great job when you..."></textarea>
+        <textarea style="width: 100%; height: auto;" maxlength="500" placeholder="I think you did a great job when you..."></textarea>
       </form>
 </div>
       </div>
