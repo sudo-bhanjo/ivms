@@ -372,13 +372,23 @@ td .btn-primary {
         padding: 0.7em;
     }
 
-    .table-container{
+    .table-container {
         margin-top: 20%;
     }
 
-    .main--title{
+    .main--title {
         position: sticky;
         left: 0;
         top: 0;
+    }
+
+    #pagination :nth-child(2){
+        position: relative;
+        left: -35%;
+    }
+
+    #pagination :nth-child(3){
+        position: relative;
+        left: -70%;
     }
 }
