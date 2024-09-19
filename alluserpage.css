@@ -95,7 +95,7 @@ body.loaded {
 }
 
 .table-container {
-    width: 100%;
+    width: 200%;
 }
 
 table {
@@ -104,8 +104,7 @@ table {
 }
 
 thead {
-    background-color: #0056b3;
-    /* background-color: #007bff; */
+    background-color: #0056b3 !important;
     color: #fff;
 }
 
@@ -276,8 +275,47 @@ td .btn-primary {
     background-color: #1362b7;
 }
 
+/* Alternate row color */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
 
-@media (max-width: 1100px) {
+/* Footer Styling */
+tfoot td {
+    font-weight: bold;
+    background-color: #f4f4f4;
+}
+
+/* Pagination Controls */
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pagination button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#pagination span {
+    margin: 0 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+@media (max-width: 1150px) {
 
     html,
     body {
