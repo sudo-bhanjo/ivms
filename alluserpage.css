@@ -315,7 +315,7 @@ td .btn-primary {
 
     html,
     body {
-        display: flex;
+        display: block;
         width: 100%;
         overflow-x: scroll;
     }
@@ -381,7 +381,7 @@ td .btn-primary {
 
     .table-container table {
         overflow-x: scroll;
-        margin-top: 10%;
+        margin-top: 13%;
         /* width: 70%; */
     }
 
