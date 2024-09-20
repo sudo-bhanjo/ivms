@@ -336,8 +336,9 @@ td .btn-primary {
     }
 
     .main--title {
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 600;
+        display: none;
     }
 
     .sidebar {
@@ -365,7 +366,7 @@ td .btn-primary {
         width: 300px;
         position: fixed;
         left: 50%;
-        top: 27%;
+        top: 23%;
         transform: translate(-50%, -50%);
         border: 2px solid #ccc;
         border-style: ridge;
@@ -373,13 +374,15 @@ td .btn-primary {
         padding: 0.7em;
     }
 
-    .table-container {
-        margin-top: 25%;
-        width: 100%;
+    .table-wrapper {
+        width: 70%;
+        overflow-x: scroll;
     }
 
     .table-container table {
         overflow-x: scroll;
+        margin-top: 10%;
+        /* width: 70%; */
     }
 
     .main--title {
