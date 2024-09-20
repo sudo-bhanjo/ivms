@@ -311,6 +311,30 @@ td .btn-primary {
     /* font-weight: bold; */
 }
 
+@media (max-width:1150px) {
+
+    html,
+    body {
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    /* .table-wrapper{
+        width: 50%;
+    } */
+
+    .table-container {
+        width: 120%;
+    }
+
+    #searchInput {
+        left: auto;
+        width: 50%;
+    }
+
+}
+
 @media (max-width: 768px) {
 
     html,
@@ -366,7 +390,7 @@ td .btn-primary {
         width: 300px;
         position: fixed;
         left: 50%;
-        top: 23%;
+        top: 25%;
         transform: translate(-50%, -50%);
         border: 2px solid #ccc;
         border-style: ridge;
