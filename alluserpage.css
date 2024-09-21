@@ -80,15 +80,17 @@ body.loaded {
 /* --- Search Input --- */
 
 #searchInput {
-    width: 25%;
-    position: relative;
-    left: 75%;
-    top: 0;
-    margin-top: -50px;
+    width: 50%;
     border: 2px solid #ccc;
     border-style: ridge;
     border-radius: 8px;
     padding: 0.7em;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* ------ Table ------ */
@@ -108,7 +110,9 @@ body.loaded {
 }
 
 .table-container {
-    width: 200%;
+    width: 100%;
+    flex-grow: 1;
+    overflow-x: auto;
 }
 
 table {
@@ -134,8 +138,6 @@ th {
 th,
 td,
 tfoot {
-    /* padding: 15px; */
-    /* text-align: left; */
     border: 1px solid gray !important;
     /* Adds vertical and horizontal lines */
 }
@@ -283,6 +285,9 @@ td .btn-primary {
     background-color: #1362b7;
 }
 
+
+
+
 /* Pagination Controls */
 #pagination {
     display: flex;
@@ -311,29 +316,6 @@ td .btn-primary {
     /* font-weight: bold; */
 }
 
-@media (max-width:1150px) {
-
-    html,
-    body {
-        display: flex;
-        width: 100%;
-        overflow-x: scroll;
-    }
-
-    /* .table-wrapper{
-        width: 50%;
-    } */
-
-    .table-container {
-        width: 120%;
-    }
-
-    #searchInput {
-        left: auto;
-        width: 50%;
-    }
-
-}
 
 @media (max-width: 768px) {
 
@@ -398,15 +380,18 @@ td .btn-primary {
         padding: 0.7em;
     }
 
+    .table-container {
+        background-color: #004494;
+    }
+
     .table-wrapper {
-        width: 70%;
+        width: 100%;
         overflow-x: scroll;
     }
 
     .table-container table {
         overflow-x: scroll;
-        margin-top: 13%;
-        /* width: 70%; */
+        /* margin-top: 30%; */
     }
 
     .main--title {
