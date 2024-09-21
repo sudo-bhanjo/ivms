@@ -80,7 +80,7 @@ body.loaded {
 /* --- Search Input --- */
 
 #searchInput {
-    width: 45%;
+    width: 25%;
     border: 2px solid #ccc;
     border-style: ridge;
     border-radius: 8px;
@@ -285,7 +285,11 @@ td .btn-primary {
     background-color: #1362b7;
 }
 
-
+.main--content{
+    width: 100%;
+    flex-grow: 1;
+    overflow: auto;
+}
 
 
 /* Pagination Controls */
