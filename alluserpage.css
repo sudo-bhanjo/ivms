@@ -80,7 +80,7 @@ body.loaded {
 /* --- Search Input --- */
 
 #searchInput {
-    width: 50%;
+    width: 45%;
     border: 2px solid #ccc;
     border-style: ridge;
     border-radius: 8px;
@@ -354,7 +354,7 @@ td .btn-primary {
     #toggle {
         display: inline;
         left: 80%;
-        top: 4%;
+        top: 2%;
         position: absolute;
         border: none;
         transition: all 0.5s linear;
@@ -369,19 +369,11 @@ td .btn-primary {
     /* --- Search Input --- */
 
     #searchInput {
-        width: 300px;
-        position: fixed;
-        left: 50%;
-        top: 25%;
-        transform: translate(-50%, -50%);
+        width: 100%;
         border: 2px solid #ccc;
         border-style: ridge;
         border-radius: 8px;
         padding: 0.7em;
-    }
-
-    .table-container {
-        background-color: #004494;
     }
 
     .table-wrapper {
@@ -389,36 +381,8 @@ td .btn-primary {
         overflow-x: scroll;
     }
 
-    .table-container table {
+    .table-container{
         overflow-x: scroll;
-        /* margin-top: 30%; */
     }
 
-    .main--title {
-        position: fixed;
-        left: 50%;
-        top: 12%;
-        transform: translate(-50%, -50%);
-    }
-
-    /* #pagination :nth-child(1) {
-        position: fixed;
-        left: 20%;
-        top: 94%;
-        transform: translate(-50%, -50%);
-    }
-
-    #pagination :nth-child(2) {
-        position: fixed;
-        left: 50%;
-        top: 95%;
-        transform: translate(-50%, -50%);
-    }
-
-    #pagination :nth-child(3) {
-        position: fixed;
-        left: 80%;
-        top: 94%;
-        transform: translate(-50%, -50%);
-    } */
 }
