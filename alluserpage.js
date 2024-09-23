@@ -52,11 +52,9 @@ function displayTable(page) {
       i >= (page - 1) * rowsPerPage && i < page * rowsPerPage ? "" : "none";
   }
 
-  // Disable Previous button on the first page
-  // document.getElementById("prevBtn").disabled = page === 1;
+  document.getElementById("prevBtn").disabled = page === 1;
 
-  // Disable Next button on the last page
-  // document.getElementById("nextBtn").disabled = page === totalPages;
+  document.getElementById("nextBtn").disabled = page === totalPages;
 }
 
 function nextPage() {

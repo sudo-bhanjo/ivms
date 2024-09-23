@@ -130,13 +130,16 @@ body.loaded {
 
 .container {
     width: 100%;
+    height: unset;
     margin-left: 15.5% !important;
     margin-top: -47% !important;
-    max-width: 800px;
-    padding: 30px;
+    max-width: 1200px;
+    padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     transition: width 0.3s;
+    flex-grow: 1;
+    overflow-x: auto;
 }
 
 header {
@@ -176,7 +179,7 @@ header img {
     top: 0;
     left: 85%;
     transform: translate(-50%, 54%);
-    width: 260px;
+    width: 25%;
     padding: 10px;
     border: 2px solid rgb(111, 109, 109);
     border-radius: 12px;
@@ -511,7 +514,7 @@ td button:nth-child(2) {
     padding: 10px;
 }
 
-#zoom-conferences label{
+#zoom-conferences label {
     margin: 10px -10px;
 }
 
@@ -610,9 +613,9 @@ p {
         width: auto !important;
     }
 
-    #searchBox {
+    /* #searchBox {
         margin-left: -10%;
-    }
+    } */
 
     .container {
         margin-top: -600px !important;
@@ -637,6 +640,10 @@ p {
 
     input {
         width: auto !important;
+    }
+
+    #searchBox {
+        margin-left: -5%;
     }
 
     .container {

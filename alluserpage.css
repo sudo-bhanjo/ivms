@@ -28,7 +28,7 @@ body.loaded {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 220px;
+    width: 240px;
     height: 100vh;
     padding: 0 1.7rem;
     color: #fff;
@@ -80,15 +80,19 @@ body.loaded {
 /* --- Search Input --- */
 
 #searchInput {
-    width: 25%;
-    position: relative;
-    left: 75%;
-    top: 0;
-    margin-top: -50px;
     border: 2px solid #ccc;
     border-style: ridge;
     border-radius: 8px;
     padding: 0.7em;
+    /* flex-grow: 1; */
+    /* overflow-x: auto; */
+    width: 30%;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* ------ Table ------ */
@@ -108,7 +112,9 @@ body.loaded {
 }
 
 .table-container {
-    width: 210%;
+    width: 100%;
+    flex-grow: 1;
+    overflow-x: auto;
 }
 
 table {
@@ -122,7 +128,8 @@ thead {
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* Light grey background for even rows */
+    background-color: #f2f2f2;
+    /* Light grey background for even rows */
 }
 
 th {
@@ -130,10 +137,11 @@ th {
     text-align: left;
 }
 
-th, td ,tfoot{
-    /* padding: 15px; */
-    /* text-align: left; */
-    border: 1px solid gray !important; /* Adds vertical and horizontal lines */
+th,
+td,
+tfoot {
+    border: 1px solid gray !important;
+    /* Adds vertical and horizontal lines */
 }
 
 tbody {
@@ -279,6 +287,13 @@ td .btn-primary {
     background-color: #1362b7;
 }
 
+.main--content{
+    width: 100%;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+
 /* Pagination Controls */
 #pagination {
     display: flex;
@@ -307,11 +322,12 @@ td .btn-primary {
     /* font-weight: bold; */
 }
 
+
 @media (max-width: 768px) {
 
     html,
     body {
-        display: flex;
+        display: block;
         width: 100%;
         overflow-x: scroll;
     }
@@ -332,8 +348,9 @@ td .btn-primary {
     }
 
     .main--title {
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 600;
+        display: none;
     }
 
     .sidebar {
@@ -343,7 +360,7 @@ td .btn-primary {
     #toggle {
         display: inline;
         left: 80%;
-        top: 4%;
+        top: 2%;
         position: absolute;
         border: none;
         transition: all 0.5s linear;
@@ -358,33 +375,20 @@ td .btn-primary {
     /* --- Search Input --- */
 
     #searchInput {
-        width: 34%;
-        position: sticky;
-        left: 0;
-        top: 0;
+        width: 100%;
         border: 2px solid #ccc;
         border-style: ridge;
         border-radius: 8px;
         padding: 0.7em;
     }
 
-    .table-container {
-        margin-top: 20%;
+    .table-wrapper {
+        width: 100%;
+        overflow-x: scroll;
     }
 
-    .main--title {
-        position: sticky;
-        left: 0;
-        top: 0;
+    .table-container{
+        overflow-x: scroll;
     }
 
-    #pagination :nth-child(2){
-        position: relative;
-        left: -35%;
-    }
-
-    #pagination :nth-child(3){
-        position: relative;
-        left: -70%;
-    }
 }
