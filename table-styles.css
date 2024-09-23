@@ -173,8 +173,8 @@ header img {
 
 #searchBox {
     position: relative;
-    top: 100%;
-    left: 86%;
+    top: 0;
+    left: 85%;
     transform: translate(-50%, 54%);
     width: 260px;
     padding: 10px;
@@ -641,8 +641,8 @@ p {
 
     .container {
         /* margin-top: -600px !important; */
-        margin-left: 24% !important;
-        width: 80% !important;
+        margin-left: 28% !important;
+        width: 70% !important;
     }
 
     #customModal .modal-content form {

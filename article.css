@@ -125,7 +125,7 @@ body.loaded {
     width: 100%;
 }
 
-.header-btn{
+.header-btn {
     /* background-color: red; */
     display: flex;
     justify-content: center;
@@ -278,14 +278,14 @@ table tbody tr:hover {
 
 @media (max-width: 1150px) {
     .container {
-        width:  100% !important;
+        width: 100% !important;
     }
 
-    .sidebar{
+    .sidebar {
         width: 100px;
     }
 
-    .main-content nav{
+    .main-content nav {
         display: none;
     }
 }
@@ -345,7 +345,7 @@ table tbody tr:hover {
         overflow-x: scroll;
     }
 
-    .header-btn{
+    .header-btn {
         /* width: 100%; */
     }
 }
