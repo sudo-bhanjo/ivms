@@ -11,7 +11,7 @@
 
 body {
     display: flex;
-    background-color: #cfcece;
+    background-color: #eae6e6 !important;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -118,11 +118,12 @@ body.loaded {
     background-color: #0062cc;
     color: white;
     padding: 20px;
-    margin: 10px 0;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    border-radius: 6px 6px 0px 0px;
 }
 
 .header-btn {
@@ -144,7 +145,7 @@ body.loaded {
 
 .content {
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .profile-pic {
@@ -175,6 +176,14 @@ nav {
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.main-content {
+    position: relative;
+    background: white;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 6px;
 }
 
 .tab-btn {
@@ -209,8 +218,9 @@ table td {
     border-bottom: 1px solid #ddd;
 }
 
+
 table tbody tr:hover {
-    background-color: #f1f1f1;
+    background-color: #e0dfdf !important;
 }
 
 /* ----- Right ----- */
