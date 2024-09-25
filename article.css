@@ -200,7 +200,7 @@ nav {
     width: 100%;
     padding: 1rem;
     border-radius: 6px;
-    overflow-y: scroll;
+    /* overflow-y: scroll;/ */
 }
 
 .tab-btn {
@@ -222,7 +222,7 @@ table {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.dataTables_filter{
+.dataTables_filter {
     margin: 10px !important;
 }
 
@@ -376,7 +376,7 @@ table tbody tr:hover {
         overflow-x: scroll;
     }
 
-    .header-btn button{
+    .header-btn button {
         margin-left: auto;
         width: 100%;
         padding: 10px;
@@ -386,7 +386,7 @@ table tbody tr:hover {
         align-items: center;
     }
 
-    .dataTables_filter input{
+    .dataTables_filter input {
         width: 100%;
     }
 }
