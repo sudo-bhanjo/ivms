@@ -9,6 +9,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+</head>
 </head>
 
 <body>
@@ -137,131 +146,133 @@
 
   <div class="container">
 
+    <div class="header1">
+      <h4>Article Upload</h4>
+    </div>
+
     <div class="content">
 
       <div class="main-content">
+
         <div class="header">
           <h4>MD Affan Asghar<p style="font-size: 1.1rem;">NIN - 15303</p>
           </h4>
-        <div class="header-btn">
-  
-          <div class="articleupload">
-            <button id="articleuploadbtn" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#articleModal">
-              Upload Article
-            </button>
-  
-            <!-- Modal Structure -->
-            <div class="modal fade" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="articleModalLabel">Article Upload</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form id="articleUploadForm" method="POST">
-                      <div class="mb-3">
-                        <label for="articleAssignedBy" class="form-label">Article Assigned By</label>
-                        <input type="text" class="form-control" id="articleAssignedBy" placeholder="Shahid sir" required>
-                      </div>
-                      <div class="mb-3">
-                        <label for="articleAssignedBy" class="form-label">Article Topic</label>
-                        <input type="text" class="form-control" id="articleAssignedBy" placeholder="article name" required>
-                      </div>
-                      <div class="mb-3">
-                        <p>*multiples article can be upload in pdf format</p>
-                        <label for="articleUpload" class="form-label">Upload Article</label>
-                        <input type="file" class="form-control" id="articleUpload" multiple required>
-                      </div>
-                      <div class="mb-3">
-                        <label for="totalTimeTaken" class="form-label">Total Time Taken</label>
-                        <input type="text" class="form-control" id="totalTimeTaken" placeholder="200 minute" required>
-                      </div>
-                      <button id="openFiles" class="btn btn-primary mx-auto">Submit</button>
-                      <!-- <button type="submit" class="btn btn-success">Submit</button> -->
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="task-detail">
-            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#uniqueModal">
-              Task Details
-            </button>
-  
-            <!-- Modal Structure -->
-            <div class="modal fade" id="uniqueModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel">Task Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-  
-                    <div class="right">
-                      <div class="profile-section">
-                        <img src="https://static.vecteezy.com/system/resources/previews/047/462/744/non_2x/positive-man-on-clean-background-photo.jpg" alt="Profile Picture" class="profile-pic">
-                      </div>
-  
-                      <div class="data-section">
-                        <div class="tasks-data">
-                          <h3>Tasks Data</h3>
-                          <p>Ongoing: 1</p>
-                          <p>Completed: 36</p>
-                          <p>Total: 37</p>
-                        </div>
-  
-                        <div class="journal-data">
-                          <h3>Journal</h3>
-                          <p>Total Journal: 35</p>
-                          <p>Journal Approved: 30</p>
-                          <p>Journal Disapproved: 3</p>
-                        </div>
-  
-                        <div class="leave-data">
-                          <h3>Leave</h3>
-                          <p>Total Leave: 0</p>
-                        </div>
-  
-                        <div class="review-data">
-                          <h3>Weekly Review</h3>
-                          <p>Total Reviews: 0</p>
-                          <p>Reviews Approved: 0</p>
-                          <p>Reviews Disapproved: 0</p>
-                        </div>
-                      </div>
+          <div class="header-btn">
+
+            <div class="articleupload">
+              <button id="articleuploadbtn" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#articleModal">
+                Upload Article
+              </button>
+
+              <!-- Modal Structure -->
+              <div class="modal fade" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="articleModalLabel">Article Upload</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-  
+                    <div class="modal-body">
+                      <form id="articleUploadForm" method="POST">
+                        <div class="mb-3">
+                          <label for="articleAssignedBy" class="form-label">Article Assigned By</label>
+                          <input type="text" class="form-control" id="articleAssignedBy" placeholder="Shahid sir" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="articleAssignedBy" class="form-label">Article Topic</label>
+                          <input type="text" class="form-control" id="articleAssignedBy" placeholder="article name" required>
+                        </div>
+                        <div class="mb-3">
+                          <p>*multiples article can be upload in pdf format</p>
+                          <label for="articleUpload" class="form-label">Upload Article</label>
+                          <input type="file" class="form-control" id="articleUpload" multiple required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="totalTimeTaken" class="form-label">Total Time Taken</label>
+                          <input type="text" class="form-control" id="totalTimeTaken" placeholder="200 minute" required>
+                        </div>
+                        <button id="openFiles" class="btn btn-primary mx-auto">Submit</button>
+                        <!-- <button type="submit" class="btn btn-success">Submit</button> -->
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="task-detail">
+              <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#uniqueModal">
+                Task Details
+              </button>
+
+              <!-- Modal Structure -->
+              <div class="modal fade" id="uniqueModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalLabel">Task Details</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                      <div class="right">
+                        <div class="profile-section">
+                          <img src="https://static.vecteezy.com/system/resources/previews/047/462/744/non_2x/positive-man-on-clean-background-photo.jpg" alt="Profile Picture" class="profile-pic">
+                        </div>
+
+                        <div class="data-section">
+                          <div class="tasks-data">
+                            <h3>Tasks Data</h3>
+                            <p>Ongoing: 1</p>
+                            <p>Completed: 36</p>
+                            <p>Total: 37</p>
+                          </div>
+
+                          <div class="journal-data">
+                            <h3>Journal</h3>
+                            <p>Total Journal: 35</p>
+                            <p>Journal Approved: 30</p>
+                            <p>Journal Disapproved: 3</p>
+                          </div>
+
+                          <div class="leave-data">
+                            <h3>Leave</h3>
+                            <p>Total Leave: 0</p>
+                          </div>
+
+                          <div class="review-data">
+                            <h3>Weekly Review</h3>
+                            <p>Total Reviews: 0</p>
+                            <p>Reviews Approved: 0</p>
+                            <p>Reviews Disapproved: 0</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
-  
         </div>
-      </div>
-        <nav>
+        <!-- <nav>
           <button class="tab-btn">Ongoing Tasks</button>
           <button class="tab-btn">Completed Tasks</button>
           <button class="tab-btn">Paused Tasks</button>
-          <!-- <button class="tab-btn">Purged Tasks</button> -->
           <button class="tab-btn">All Tasks</button>
           <button class="tab-btn">Recurring Tasks</button>
           <button class="tab-btn">Leave</button>
           <button class="tab-btn">My Learnings</button>
           <button class="tab-btn">Profile</button>
-        </nav>
-
-        <table>
+        </nav> -->
+        <table id="journalTable" class="display">
           <thead>
             <tr>
               <th>Journal ID</th>
               <th>DOA</th>
               <th>Report</th>
               <th>Learnings</th>
-              <!-- <th>Rating Day</th> -->
               <th>Admin Remarks</th>
               <th>Leader Remarks</th>
             </tr>
@@ -272,19 +283,15 @@
               <td>27/08/2024</td>
               <td>Soft skills</td>
               <td>TailwindCSS, React Js</td>
-              <!-- <td>4</td> -->
               <td>
                 <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Feedback
                   </button>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
                     <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-warning">In-Process</button></a></li>
-                    <li>
-                      <p>Feedback</p>
-                    </li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
                     <li><textarea placeholder="good performance"></textarea></li>
                   </ul>
                 </div>
@@ -295,13 +302,112 @@
                     Feedback
                   </button>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
                     <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-warning">In-Process</button></a></li>
-                    <li>
-                      <p>Feedback</p>
-                    </li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
                     <li><textarea placeholder="good performance"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          
+            <!-- Sample Row 2 -->
+            <tr>
+              <td>JRN - 56955</td>
+              <td>28/08/2024</td>
+              <td>Project Management</td>
+              <td>Agile, Scrum</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="excellent management"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="needs improvement"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          
+            <!-- Sample Row 3 -->
+            <tr>
+              <td>JRN - 56956</td>
+              <td>29/08/2024</td>
+              <td>Frontend Development</td>
+              <td>HTML, CSS, JavaScript</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="solid frontend skills"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="improve CSS skills"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          
+            <!-- Sample Row 4 -->
+            <tr>
+              <td>JRN - 56957</td>
+              <td>30/08/2024</td>
+              <td>Backend Development</td>
+              <td>Node.js, MongoDB</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="strong backend"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="database skills need work"></textarea></li>
                   </ul>
                 </div>
               </td>
@@ -311,19 +417,15 @@
               <td>27/08/2024</td>
               <td>Soft skills</td>
               <td>TailwindCSS, React Js</td>
-              <!-- <td>4</td> -->
               <td>
                 <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Feedback
                   </button>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
                     <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-warning">In-Process</button></a></li>
-                    <li>
-                      <p>Feedback</p>
-                    </li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
                     <li><textarea placeholder="good performance"></textarea></li>
                   </ul>
                 </div>
@@ -334,13 +436,112 @@
                     Feedback
                   </button>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
                     <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-warning">In-Process</button></a></li>
-                    <li>
-                      <p>Feedback</p>
-                    </li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
                     <li><textarea placeholder="good performance"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          
+            <!-- Sample Row 2 -->
+            <tr>
+              <td>JRN - 56955</td>
+              <td>28/08/2024</td>
+              <td>Project Management</td>
+              <td>Agile, Scrum</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="excellent management"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="needs improvement"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          
+            <!-- Sample Row 3 -->
+            <tr>
+              <td>JRN - 56956</td>
+              <td>29/08/2024</td>
+              <td>Frontend Development</td>
+              <td>HTML, CSS, JavaScript</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="solid frontend skills"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="improve CSS skills"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          
+            <!-- Sample Row 4 -->
+            <tr>
+              <td>JRN - 56957</td>
+              <td>30/08/2024</td>
+              <td>Backend Development</td>
+              <td>Node.js, MongoDB</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="strong backend"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="database skills need work"></textarea></li>
                   </ul>
                 </div>
               </td>
@@ -350,19 +551,15 @@
               <td>27/08/2024</td>
               <td>Soft skills</td>
               <td>TailwindCSS, React Js</td>
-              <!-- <td>4</td> -->
               <td>
                 <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Feedback
                   </button>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
                     <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-warning">In-Process</button></a></li>
-                    <li>
-                      <p>Feedback</p>
-                    </li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
                     <li><textarea placeholder="good performance"></textarea></li>
                   </ul>
                 </div>
@@ -373,36 +570,134 @@
                     Feedback
                   </button>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
                     <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-warning">In-Process</button></a></li>
-                    <li>
-                      <p>Feedback</p>
-                    </li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
                     <li><textarea placeholder="good performance"></textarea></li>
                   </ul>
                 </div>
               </td>
             </tr>
-            <tr></tr>
+          
+            <!-- Sample Row 2 -->
+            <tr>
+              <td>JRN - 56955</td>
+              <td>28/08/2024</td>
+              <td>Project Management</td>
+              <td>Agile, Scrum</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="excellent management"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="needs improvement"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          
+            <!-- Sample Row 3 -->
+            <tr>
+              <td>JRN - 56956</td>
+              <td>29/08/2024</td>
+              <td>Frontend Development</td>
+              <td>HTML, CSS, JavaScript</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="solid frontend skills"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="improve CSS skills"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          
+            <!-- Sample Row 4 -->
+            <tr>
+              <td>JRN - 56957</td>
+              <td>30/08/2024</td>
+              <td>Backend Development</td>
+              <td>Node.js, MongoDB</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="strong backend"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><textarea placeholder="database skills need work"></textarea></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          
+            <tr>
               <td>JRN - 56954</td>
               <td>27/08/2024</td>
               <td>Soft skills</td>
               <td>TailwindCSS, React Js</td>
-              <!-- <td>4</td> -->
               <td>
                 <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Feedback
                   </button>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
                     <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
                     <li>
-                      <p>Feedback</p>
+                      <textarea placeholder="good performance"></textarea>
                     </li>
-                    <li><textarea placeholder="good performance"></textarea></li>
                   </ul>
                 </div>
               </td>
@@ -412,96 +707,199 @@
                     Feedback
                   </button>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
                     <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
-                    <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
                     <li>
-                      <p>Feedback</p>
+                      <textarea placeholder="good performance"></textarea>
                     </li>
-                    <li><textarea placeholder="good performance"></textarea></li>
                   </ul>
                 </div>
               </td>
             </tr>
-            <td>JRN - 57080</td>
-            <td>28/08/2024</td>
-            <td>consistency</td>
-            <td>HTML, CSS, Bootstrap</td>
-            <!-- <td>4</td> -->
-            <td>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Feedback
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-success">Approved</button></a></li>
-                  <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
-                  <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-warning">In-Process</button></a></li>
-                  <li>
-                    <p>Feedback</p>
-                  </li>
-                  <li><textarea placeholder="good performance"></textarea></li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Feedback
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-success">Approved</button></a></li>
-                  <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
-                  <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-warning">In-Process</button></a></li>
-                  <li>
-                    <p>Feedback</p>
-                  </li>
-                  <li><textarea placeholder="good performance"></textarea></li>
-                </ul>
-              </div>
-            </td>
+            <tr>
+              <td>JRN - 56954</td>
+              <td>27/08/2024</td>
+              <td>Soft skills</td>
+              <td>TailwindCSS, React Js</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li>
+                      <textarea placeholder="good performance"></textarea>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li>
+                      <textarea placeholder="good performance"></textarea>
+                    </li>
+                  </ul>
+                </div>
+              </td>
             </tr>
-            <tr></tr>
-            <td>JRN - 57080</td>
-            <td>28/08/2024</td>
-            <td>Patience and consistency</td>
-            <td>Bootstrap, php</td>
-            <!-- <td>4</td> -->
-            <td>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Feedback
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-success">Approved</button></a></li>
-                  <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
-                  <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-warning">In-Process</button></a></li>
-                  <li>
-                    <p>Feedback</p>
-                  </li>
-                  <li><textarea placeholder="good performance"></textarea></li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Feedback
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-success">Approved</button></a></li>
-                  <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
-                  <li><a class="dropdown-item" href="#"> <button type="button" class="btn btn-warning">In-Process</button></a></li>
-                  <li>
-                    <p>Feedback</p>
-                  </li>
-                  <li><textarea placeholder="good performance"></textarea></li>
-                </ul>
-              </div>
-            </td>
+            <tr>
+              <td>JRN - 56954</td>
+              <td>27/08/2024</td>
+              <td>Soft skills</td>
+              <td>TailwindCSS, React Js</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li>
+                      <textarea placeholder="good performance"></textarea>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li>
+                      <textarea placeholder="good performance"></textarea>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>JRN - 57080</td>
+              <td>28/08/2024</td>
+              <td>Consistency</td>
+              <td>HTML, CSS, Bootstrap</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li>
+                      <textarea placeholder="good performance"></textarea>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li>
+                      <textarea placeholder="good performance"></textarea>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>JRN - 57080</td>
+              <td>28/08/2024</td>
+              <td>Patience and consistency</td>
+              <td>Bootstrap, PHP</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li>
+                      <textarea placeholder="good performance"></textarea>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li>
+                      <textarea placeholder="good performance"></textarea>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>JRN - 56954</td>
+              <td>27/08/2024</td>
+              <td>Soft skills</td>
+              <td>TailwindCSS, React Js</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li>
+                      <textarea placeholder="good performance"></textarea>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Feedback
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-success">Approved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-danger">Disapproved</button></a></li>
+                    <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-warning">In-Process</button></a></li>
+                    <li>
+                      <textarea placeholder="good performance"></textarea>
+                    </li>
+                  </ul>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
+
       </div>
 
     </div>
