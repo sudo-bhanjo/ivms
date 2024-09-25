@@ -223,7 +223,7 @@ table {
 }
 
 .dataTables_filter {
-    margin: 10px !important;
+    margin-bottom: 10px !important;
 }
 
 table thead {
