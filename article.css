@@ -200,6 +200,7 @@ nav {
     width: 100%;
     padding: 1rem;
     border-radius: 6px;
+    overflow-y: scroll;
 }
 
 .tab-btn {
@@ -219,6 +220,10 @@ table {
     border-collapse: collapse;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dataTables_filter{
+    margin: 10px !important;
 }
 
 table thead {
@@ -371,7 +376,17 @@ table tbody tr:hover {
         overflow-x: scroll;
     }
 
-    .header-btn {
-        /* width: 100%; */
+    .header-btn button{
+        margin-left: auto;
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dataTables_filter input{
+        width: 100%;
     }
 }
