@@ -12,7 +12,7 @@
 body {
   display: flex;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 
 body.loaded {
@@ -99,8 +99,8 @@ body.loaded {
   flex-wrap: wrap;
   background: #fff;
   border-radius: 10px;
-  padding: 1px 2rem;
-  margin-bottom: 1rem;
+  padding: 10px 2rem;
+  margin-bottom: 10px;
 }
 
 .header--title {
@@ -323,19 +323,6 @@ tr:nth-child(even) {
   background: #fff !important;
 }
 
-tfoot {
-  background: rgba(113, 99, 186, 255);
-  background-color: #0056b3;
-  background-color: #007bff;
-  font-weight: bold;
-  color: #fff;
-}
-
-tfoot td {
-  padding: 15px;
-  color: #fff;
-}
-
 .table-container button {
   color: green;
   background: none;
@@ -467,9 +454,20 @@ button[type="submit"]:hover {
 
 td .btn-primary {
   color: white;
-  font-weight: bold;
   border: none;
-  background-color: #288ffc;
+  background-color: #0056b3 !important;
+}
+
+.dataTables_filter input {
+  border-radius: 8px !important;
+}
+
+.dataTables_length label {
+  display: flex !important;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  gap: 6px;
+  font-weight: normal;
 }
 
 @media (max-width: 1100px) {
@@ -522,6 +520,11 @@ td .btn-primary {
   .offcanvas-body {
     transition: all 0.5s linear;
     background-color: #007bff;
+  }
+
+  .dataTables_filter input {
+    border-radius: 8px !important;
+    width: 100%;
   }
 
 }
