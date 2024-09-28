@@ -134,7 +134,7 @@ body.loaded {
     margin-top: -47% !important;
     max-width: 1200px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ddd;
     border-radius: 8px;
     transition: width 0.3s;
     flex-grow: 1;
@@ -184,7 +184,7 @@ header img {
     /* background-color: #007bff; */
     /* background-color: #0062cc; */
     background-color: white;
-    border: 8px solid #bbb8b8;
+    /* border: 8px solid #bbb8b8; */
     color: #333;
     font-weight: 400;
     padding: 1.2rem;
@@ -221,8 +221,9 @@ header img {
     overflow-x: auto;
     padding: 20px;
     margin: 0;
-    border: 8px solid #bbb8b8;
+    /* border: 8px solid #bbb8b8; */
     border-radius: 16px;
+    background-color: white;
 }
 
 table {
@@ -792,5 +793,6 @@ p {
 
     .header1 {
         margin-bottom: 1rem;
+        border: 2px solid #7e7c7c;
     }
 }
