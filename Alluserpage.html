@@ -146,7 +146,16 @@
     </div>
     <div class="tabular--wrapper">
       <div class="heading">
-        <h2 class="main--title">All User Page</h2>
+        <div>
+          Show
+          <select id="entriesSelect" onchange="showEntries()">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+          entries
+        </div>
         <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="&#128269 Search by name or id" class="form-control mb-3" />
       </div>
       <div class="table-container">
