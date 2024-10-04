@@ -163,9 +163,9 @@ tbody tr:nth-child(even) {
 }
 
 th {
-    padding: 15px;
+    padding: 12px;
     text-align: left;
-    background-color: #004EA3;
+    background-color: #004EA3 !important;
 }
 
 th,
@@ -185,7 +185,7 @@ tbody {
 }
 
 td {
-    padding: 15px;
+    padding: 12px;
     font-size: 14px;
     color: #333;
 }
