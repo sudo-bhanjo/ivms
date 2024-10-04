@@ -141,7 +141,7 @@ body.loaded {
     width: 100%;
 }
 
-.header1 h4{
+.header1 h4 {
     font-weight: 500;
 }
 
@@ -380,11 +380,11 @@ table tbody tr:hover {
         overflow-x: scroll;
     }
 
-    .header-btn button {
-        margin-left: auto;
+    .header-btn {
+        /* margin-left: auto; */
         width: 100%;
         padding: 10px;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         display: flex;
         justify-content: center;
         align-items: center;
