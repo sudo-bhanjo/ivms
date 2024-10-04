@@ -323,6 +323,17 @@ tr:nth-child(even) {
   background: #fff !important;
 }
 
+th,
+td,
+tfoot {
+  border: 1px solid #e0dfdf !important;
+  /* Adds vertical and horizontal lines */
+}
+
+table tbody tr:hover {
+  background-color: #ddd;
+}
+
 .table-container button {
   color: green;
   background: none;

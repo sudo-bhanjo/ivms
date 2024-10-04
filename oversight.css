@@ -127,12 +127,15 @@ body.loaded {
     width: 100%;
 }
 
+main{
+    display: flex;
+}
+
 .container {
-    width: 100%;
     height: unset;
-    margin-left: 15.5% !important;
-    margin-top: -47% !important;
-    max-width: 1200px;
+    /* margin-left: 15.5% !important; */
+    /* margin-top: -47% !important; */
+    width: 100%;
     padding: 20px;
     background-color: #ddd;
     border-radius: 8px;
@@ -236,7 +239,7 @@ table {
 
 table th,
 table td {
-    border: 1px solid #ddd;
+    border: 1px solid #e0dfdf !important;
     padding: 10px;
     text-align: left;
     white-space: nowrap;
@@ -656,12 +659,13 @@ p {
         margin-left: -10%;
     } */
 
-    .container {
+    /* .container {
         margin-top: -600px !important;
         margin-left: 20% !important;
+        margin-left: auto;
         width: auto !important;
         padding: 20px !important;
-    }
+    } */
 
     #customModal .modal-content form {
         overflow-x: scroll !important;
@@ -687,8 +691,8 @@ p {
 
     .container {
         /* margin-top: -600px !important; */
-        margin-left: 28% !important;
-        width: 70% !important;
+        /* margin-left: 28% !important;
+        width: 70% !important; */
     }
 
     #customModal .modal-content form {
@@ -736,9 +740,9 @@ p {
     }
 
     .container {
-        margin-top: 0px !important;
-        margin-left: 0 !important;
-        width: 100% !important;
+        /* margin-top: 0px !important; */
+        /* margin-left: 0 !important; */
+        /* width: 100% !important; */
     }
 
     .navbar {
