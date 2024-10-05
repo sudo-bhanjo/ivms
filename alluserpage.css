@@ -113,7 +113,7 @@ body.loaded {
     background-color: white;
     color: #0056b3;
     padding: 20px !important;
-    margin: 10px 0 4px 0;
+    /* margin: 10px 0 4px 0; */
     border-radius: 6px;
     display: flex;
     justify-content: space-between;
@@ -424,6 +424,10 @@ td .btn-primary {
 
     .table-container {
         overflow-x: scroll;
+    }
+
+    .header1{
+        margin-top: 10px;
     }
 
 }

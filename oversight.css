@@ -189,14 +189,17 @@ header img {
     background-color: white;
     /* border: 8px solid #bbb8b8; */
     color: #0056b3;
-    font-weight: 400;
     padding: 1.2rem;
-    margin: 10px 0 10px 0;
+    margin-bottom: 0.8rem;
     border-radius: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.header1 h4{
+    font-weight: 500;
 }
 
 #searchBox {
