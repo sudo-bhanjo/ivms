@@ -191,7 +191,7 @@ header img {
     color: #0056b3;
     padding: 1.2rem;
     margin-bottom: 0.8rem;
-    border-radius: 16px;
+    border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -228,7 +228,7 @@ header img {
     padding: 20px;
     margin: 0;
     /* border: 8px solid #bbb8b8; */
-    border-radius: 16px;
+    border-radius: 8px;
     background-color: white;
 }
 
