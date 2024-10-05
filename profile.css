@@ -240,6 +240,11 @@ body.loaded {
         background-color: #007bff;
     }
 
+    .offcanvas-body li a {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
     .profile--detail {
         display: flex;
         flex-direction: column;

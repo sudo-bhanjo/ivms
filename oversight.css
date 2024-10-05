@@ -54,7 +54,7 @@ body.loaded {
 
 .menu li:hover,
 .active {
-    background: #e0e0e058;
+    background-color: #e0e0e058;
 }
 
 .menu a {
@@ -78,7 +78,7 @@ body.loaded {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 210px;
+    width: 240px;
     height: 100vh;
     padding: 0 1.7rem;
     color: #fff;
@@ -107,13 +107,13 @@ body.loaded {
 }
 
 .menu li:hover,
-.active {
-    background: #e0e0e058;
+.oversight {
+    background-color: #e0e0e058;
 }
 
 .menu a {
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -198,7 +198,7 @@ header img {
     width: 100%;
 }
 
-.header1 h4{
+.header1 h4 {
     font-weight: 500;
 }
 
@@ -762,7 +762,7 @@ p {
         top: 0;
         position: relative;
         transform: translate(140px, 0);
-        width: 50px;
+        /* width: 50px; */
         border: 1px solid white;
         transition: all 0.5s ease-in-out;
     }
@@ -770,6 +770,11 @@ p {
     .offcanvas-body {
         transition: all 0.5s linear;
         background-color: #007bff;
+    }
+
+    .offcanvas-body li a {
+        font-size: 1rem;
+        font-weight: normal;
     }
 
     .popup {
