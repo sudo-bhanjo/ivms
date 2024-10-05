@@ -74,7 +74,7 @@ body.loaded {
 }
 
 .menu a i {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .logout {
@@ -130,7 +130,7 @@ body.loaded {
     /* background-color: #007bff; */
     background-color: #0062cc;
     background-color: white;
-    color: #333;
+    color: #0056b3;
     font-weight: 600;
     padding: 1.2rem;
     margin: 10px 0 4px 0;
@@ -141,6 +141,9 @@ body.loaded {
     width: 100%;
 }
 
+.header1 h4 {
+    font-weight: 500;
+}
 
 .header-btn {
     /* background-color: red; */
@@ -227,16 +230,17 @@ table {
 }
 
 table thead {
-    background-color: #007bff;
+    /* background-color: #007bff; */
     background-color: #0062cc;
     color: white;
 }
 
 table th,
 table td {
+    border: 1px solid #e0dfdf;
     padding: 15px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
 }
 
 
@@ -376,11 +380,11 @@ table tbody tr:hover {
         overflow-x: scroll;
     }
 
-    .header-btn button {
-        margin-left: auto;
+    .header-btn {
+        /* margin-left: auto; */
         width: 100%;
         padding: 10px;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         display: flex;
         justify-content: center;
         align-items: center;

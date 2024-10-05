@@ -77,6 +77,11 @@ body.loaded {
     width: 100%;
 }
 
+#entriesSelect{
+    width: 50px;
+    padding: 6px 0;
+}
+
 /* --- Search Input --- */
 
 #searchInput {
@@ -86,13 +91,38 @@ body.loaded {
     padding: 0.7em;
     /* flex-grow: 1; */
     /* overflow-x: auto; */
-    width: 30%;
+    width: 25%;
 }
 
-.heading{
+.main--content {
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+.heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header1 {
+    /* background-color: #007bff; */
+    /* background-color: #0062cc; */
+    background-color: white;
+    color: #0056b3;
+    padding: 20px !important;
+    /* margin: 10px 0 4px 0; */
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header1 h4 {
+    font-weight: 500;
 }
 
 /* ------ Table ------ */
@@ -133,15 +163,20 @@ tbody tr:nth-child(even) {
 }
 
 th {
-    padding: 15px;
+    padding: 12px;
     text-align: left;
+    background-color: #004EA3 !important;
 }
 
 th,
 td,
 tfoot {
-    border: 1px solid gray !important;
+    border: 1px solid #e0dfdf !important;
     /* Adds vertical and horizontal lines */
+}
+
+table tbody tr:hover {
+    background-color: #ddd;
 }
 
 tbody {
@@ -150,7 +185,7 @@ tbody {
 }
 
 td {
-    padding: 15px;
+    padding: 12px;
     font-size: 14px;
     color: #333;
 }
@@ -287,7 +322,7 @@ td .btn-primary {
     background-color: #1362b7;
 }
 
-.main--content{
+.main--content {
     width: 100%;
     flex-grow: 1;
     overflow: auto;
@@ -360,7 +395,7 @@ td .btn-primary {
     #toggle {
         display: inline;
         left: 80%;
-        top: 2%;
+        top: 1%;
         position: absolute;
         border: none;
         transition: all 0.5s linear;
@@ -379,7 +414,7 @@ td .btn-primary {
         border: 2px solid #ccc;
         border-style: ridge;
         border-radius: 8px;
-        padding: 0.7em;
+        padding: 0.6em;
     }
 
     .table-wrapper {
@@ -387,8 +422,12 @@ td .btn-primary {
         overflow-x: scroll;
     }
 
-    .table-container{
+    .table-container {
         overflow-x: scroll;
+    }
+
+    .header1{
+        margin-top: 10px;
     }
 
 }

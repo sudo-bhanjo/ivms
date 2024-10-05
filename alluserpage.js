@@ -71,3 +71,44 @@ function prevPage() {
 window.onload = function () {
   displayTable(currentPage);
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  showEntries();
+});
+
+function showEntries() {
+  const rows = document.querySelectorAll("#membersTable tbody tr");
+  const entries = parseInt(document.getElementById("entriesSelect").value);
+
+  rows.forEach((row, index) => {
+    row.style.display = index < entries ? "" : "none";
+  });
+
+  createPagination(rows.length, entries);
+}
+
+// function createPagination(totalRows, rowsPerPage) {
+//   const pagination = document.getElementById("pagination");
+//   pagination.innerHTML = "";
+
+//   const pageCount = Math.ceil(totalRows / rowsPerPage);
+
+//   for (let i = 1; i <= pageCount; i++) {
+//     const btn = document.createElement("button");
+//     btn.innerText = i;
+//     btn.onclick = function () {
+//       paginate(i, rowsPerPage);
+//     };
+//     pagination.appendChild(btn);
+//   }
+// }
+
+function paginate(pageNumber, rowsPerPage) {
+  const rows = document.querySelectorAll("#membersTable tbody tr");
+  const start = (pageNumber - 1) * rowsPerPage;
+  const end = start + rowsPerPage;
+
+  rows.forEach((row, index) => {
+    row.style.display = index >= start && index < end ? "" : "none";
+  });
+}
