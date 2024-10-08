@@ -11,16 +11,19 @@ function searchTable() {
   for (var i = 1; i < tr.length; i++) {
     var tdID = tr[i].getElementsByTagName("td")[0];
     var tdName = tr[i].getElementsByTagName("td")[1];
+    var tdusertype = tr[i].getElementsByTagName("td")[2];
     var tdPcon = tr[i].getElementsByTagName("td")[3];
 
-    if (tdID || tdName || tdPcon) {
+    if (tdID || tdName || tdPcon || tdusertype) {
       var idValue = tdID.textContent || tdID.innerText;
       var nameValue = tdName.textContent || tdName.innerText;
       var pconValue = tdPcon.textContent || tdPcon.innerText;
+      var UsertypeValue = tdusertype.textContent || tdusertype.innerHTML;
       if (
         idValue.toUpperCase().indexOf(filter) > -1 ||
         nameValue.toUpperCase().indexOf(filter) > -1 ||
-        pconValue.toUpperCase().indexOf(filter) > -1
+        pconValue.toUpperCase().indexOf(filter) > -1 ||
+        UsertypeValue.toUpperCase().indexOf(filter) > -1
       ) {
         tr[i].style.display = "";
       } else {

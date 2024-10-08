@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALL User Page</title>
+  <title>IVMS - ALL User Page</title>
   <link rel="stylesheet" href="alluserpage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -19,8 +19,8 @@
   <div class="sidebar">
     <div class="logo"></div>
     <ul class="menu">
-      <li class="active">
-        <a href="/ivms/Dashboard.html">
+      <li>
+        <a href="Dashboard.html">
           <i class="fas fa-tachometer-alt"></i>
           <span>Dashboard</span>
         </a>
@@ -43,7 +43,7 @@
           <span>Article</span>
         </a>
       </li>
-      <li>
+      <li class="active">
         <a href="Alluserpage.html">
           <i class="fas fa-user-circle"></i>
           <span>All User Page</span>
@@ -86,8 +86,8 @@
             <div class="offcanvas-body">
               <div>
                 <ul class="menu">
-                  <li class="active">
-                    <a href="/ivms/Dashboard.html">
+                  <li>
+                    <a href="Dashboard.html">
                       <i class="fas fa-tachometer-alt"></i>
                       <span>Dashboard</span>
                     </a>
@@ -110,7 +110,7 @@
                       <span>Article</span>
                     </a>
                   </li>
-                  <li>
+                  <li class="active">
                     <a href="Alluserpage.html">
                       <i class="fas fa-user-circle"></i>
                       <span>All User Page</span>
@@ -167,7 +167,8 @@
               <th>Name</th>
               <th>User Type</th>
               <th>PCON ID</th>
-              <th>Action</th>
+              <th>Member Update</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -177,6 +178,14 @@
               <td>Admin</td>
               <td>12345678</td>
               <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button></td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
+              </td>
             </tr>
             <tr>
               <td>002</td>
@@ -184,6 +193,14 @@
               <td>Volunteer</td>
               <td>87654321</td>
               <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button></td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
+              </td>
             </tr>
             <tr>
               <td>003</td>
@@ -191,6 +208,14 @@
               <td>TAC</td>
               <td>11223344</td>
               <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button></td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
+              </td>
             </tr>
             <tr>
               <td>004</td>
@@ -198,6 +223,14 @@
               <td>Manager</td>
               <td>55667788</td>
               <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button></td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
+              </td>
             </tr>
             <tr>
               <td>005</td>
@@ -205,6 +238,14 @@
               <td>Volunteer</td>
               <td>99887766</td>
               <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button></td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
+              </td>
             </tr>
             <tr>
               <td>006</td>
@@ -213,6 +254,14 @@
               <td>33445566</td>
               <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
+              </td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
               </td>
             </tr>
             <tr>
@@ -223,6 +272,14 @@
               <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
               </td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
+              </td>
             </tr>
             <tr>
               <td>008</td>
@@ -231,6 +288,14 @@
               <td>55667788</td>
               <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
+              </td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
               </td>
             </tr>
             <tr>
@@ -241,6 +306,14 @@
               <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
               </td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
+              </td>
             </tr>
             <tr>
               <td>010</td>
@@ -249,6 +322,14 @@
               <td>77889900</td>
               <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
+              </td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
               </td>
             </tr>
             <tr>
@@ -259,6 +340,14 @@
               <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
               </td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
+              </td>
             </tr>
             <tr>
               <td>012</td>
@@ -267,6 +356,14 @@
               <td>99001122</td>
               <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
+              </td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
               </td>
             </tr>
             <tr>
@@ -277,6 +374,14 @@
               <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
               </td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
+              </td>
             </tr>
             <tr>
               <td>014</td>
@@ -285,6 +390,14 @@
               <td>22003344</td>
               <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
+              </td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
               </td>
             </tr>
             <tr>
@@ -295,6 +408,14 @@
               <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
               </td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
+              </td>
             </tr>
             <tr>
               <td>016</td>
@@ -303,6 +424,14 @@
               <td>44005566</td>
               <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
+              </td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
               </td>
             </tr>
             <tr>
@@ -313,6 +442,14 @@
               <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
               </td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
+              </td>
             </tr>
             <tr>
               <td>018</td>
@@ -321,6 +458,14 @@
               <td>66007788</td>
               <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
+              </td>
+              <td>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm1">
+                  <i class="btn btn-primary fas fa-edit"></i> <!-- Icon for the first modal -->
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalForm2">
+                  <i class="btn btn-primary fas fa-message"></i> <!-- Icon for the second modal -->
+                </button>
               </td>
             </tr>
           </tbody>
@@ -333,7 +478,9 @@
       </div>
     </div>
   </div>
-  <!-- Modal Form -->
+
+  <!-- Modal Form for member update-->
+
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -369,6 +516,68 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Forms 1 for action -->
+  <div class="modal fade" id="modalForm1" tabindex="-1" aria-labelledby="modalForm1Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalForm1Label">Edit Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="accountStatusForm">
+            <!-- Name Field (for reference) -->
+            <div class="mb-3">
+              <label for="userName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="userName" placeholder="Enter Name">
+            </div>
+
+            <!-- Dropdown for Active/Dormant status -->
+            <div class="mb-3">
+              <label for="accountStatus" class="form-label">Account Status</label>
+              <select class="form-select" id="accountStatus">
+                <option value="active">Active</option>
+                <option value="dormant">Dormant</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Form 2 for action-->
+  <div class="modal fade" id="modalForm2" tabindex="-1" aria-labelledby="modalForm2Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalForm2Label">Feedback</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="feedback" class="form-label">Feedback</label>
+            <textarea class="form-control" id="feedback" rows="3" placeholder="Provide feedback"></textarea>
+          </div>
+
+          <!-- Email option to notify the person -->
+          <div class="mb-3">
+            <label for="emailNotification" class="form-label">Send email notification to:</label>
+            <input type="email" class="form-control" id="emailNotification" placeholder="Enter the recipient's email address">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-success">Send</button>
         </div>
       </div>
     </div>

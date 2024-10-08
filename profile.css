@@ -116,9 +116,11 @@ body.loaded {
 .profile--container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: #fff;
     padding: 2rem;
     border-radius: 10px;
+    /* cursor: pointer; */
 }
 
 .profile--details {
@@ -128,14 +130,51 @@ body.loaded {
 .profile--image {
     width: 30%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .profile--image img {
     width: 100%;
     height: auto;
     border-radius: 20%;
+}
+
+.profile-image {
+    position: relative;
+    border: 2px dashed #ccc;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+#dpImage {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#dropText {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+    width: 300%;
+    text-align: center;
+}
+
+#uploadBtn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .profile--info {
@@ -195,6 +234,7 @@ body.loaded {
     body {
         display: block;
         width: 100%;
+        overflow-x: hidden;
     }
 
     .main--content {
@@ -205,13 +245,23 @@ body.loaded {
     .profile--container {
         display: flex;
         flex-direction: column-reverse;
+        gap: 2rem;
     }
 
     .profile--container img {
-        position: relative;
-        left: 120% !important;
-        bottom: 20px !important;
-        width: 300px;
+        padding: 10%;
+    }
+
+    .profile--image {
+        /* padding: 0; */
+        /* width: 100%; */
+    }
+
+    .profile--image:nth-child(2) {
+        /* padding: 0; */
+        /* margin: 2rem; */
+        width: 100%;
+        /* border: 1px dashed gray; */
     }
 
     #responsive-sidebar {
@@ -228,9 +278,9 @@ body.loaded {
 
     #toggle {
         display: inline;
-        left: 8%;
+        left: 20px;
         top: 2%;
-        position: absolute;
+        position: relative;
         transition: all 0.5s linear;
         /* background: rgba(113, 99, 186, 255); */
     }
@@ -240,13 +290,22 @@ body.loaded {
         background-color: #007bff;
     }
 
+    .offcanvas-body li a {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    .profile--details {
+        width: 100%;
+    }
+
     .profile--detail {
         display: flex;
         flex-direction: column;
     }
 
     .detail--label {
-        width: 200% !important;
+        width: 100%;
         display: block;
     }
 

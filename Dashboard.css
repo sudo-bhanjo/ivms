@@ -59,7 +59,7 @@ body.loaded {
 
 .menu li:hover,
 .active {
-  background: #e0e0e058;
+  background-color: #e0e0e058;
 }
 
 .menu a {
@@ -531,6 +531,11 @@ td .btn-primary {
   .offcanvas-body {
     transition: all 0.5s linear;
     background-color: #007bff;
+  }
+
+  .offcanvas-body li a{
+    font-size: 1rem;
+    font-weight: normal;
   }
 
   .dataTables_filter input {
