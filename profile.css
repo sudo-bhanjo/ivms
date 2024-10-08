@@ -245,6 +245,7 @@ body.loaded {
     .profile--container {
         display: flex;
         flex-direction: column-reverse;
+        gap: 2rem;
     }
 
     .profile--container img {
@@ -252,15 +253,15 @@ body.loaded {
     }
 
     .profile--image {
-        padding: 0;
-        width: 100%;
+        /* padding: 0; */
+        /* width: 100%; */
     }
 
     .profile--image:nth-child(2) {
         /* padding: 0; */
-        margin: 2rem;
+        /* margin: 2rem; */
         width: 100%;
-        border: 1px dashed gray;
+        /* border: 1px dashed gray; */
     }
 
     #responsive-sidebar {
@@ -294,7 +295,7 @@ body.loaded {
         font-weight: normal;
     }
 
-    .profile--details{
+    .profile--details {
         width: 100%;
     }
 
