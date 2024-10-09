@@ -147,6 +147,15 @@ body.loaded {
     object-fit: cover;
 }
 
+#imagePreview {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+}
+
 #uploadedImage {
     display: none;
 }
