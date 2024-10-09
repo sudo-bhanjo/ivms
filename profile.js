@@ -34,6 +34,7 @@ formFile.addEventListener("change", function () {
 });
 
 // Submit button logic
+
 submitBtn.addEventListener("click", function () {
   const file = formFile.files[0];
   if (file) {
