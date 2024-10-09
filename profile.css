@@ -141,8 +141,13 @@ body.loaded {
     border-radius: 20%;
 }
 
-#uploadedImage {
+#uploadedImage,
+#imagePreview {
+    border-radius: 50%;
     object-fit: cover;
+}
+
+#uploadedImage {
     display: none;
 }
 
@@ -215,6 +220,26 @@ body.loaded {
         display: flex;
         flex-direction: column-reverse;
         gap: 2rem;
+    }
+
+    #uploadedImage {
+        width: 200px;
+        height: 200px;
+    }
+
+    #uploadBtn {
+        width: 200px;
+        height: 100%;
+        /* background-color: red; */
+    }
+
+    #imagePreview {
+        width: 250px;
+        height: 250px;
+        position: relative;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0%);
     }
 
     #responsive-sidebar {

@@ -1,5 +1,6 @@
 const uploadBtn = document.getElementById("uploadBtn");
 const uploadedImage = document.getElementById("uploadedImage");
+const imagePreview = document.getElementById("imagePreview");
 const formFile = document.getElementById("formFile");
 const submitBtn = document.getElementById("submitBtn");
 
@@ -17,6 +18,20 @@ function displayImageFromLocalStorage() {
 window.onload = function () {
   displayImageFromLocalStorage();
 };
+
+// File input change event to display preview
+formFile.addEventListener("change", function () {
+  const file = formFile.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      // Show preview in modal before submitting
+      imagePreview.src = e.target.result;
+      imagePreview.style.display = "block";
+    };
+    reader.readAsDataURL(file);
+  }
+});
 
 // Submit button logic
 submitBtn.addEventListener("click", function () {
