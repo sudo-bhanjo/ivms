@@ -1,41 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purple Theme Login</title>
-      <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
 
-</head>
-<body class="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-600 to-purple-900">
-    <div class="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105">
-        <div class="text-center">
-            <h2 class="text-3xl font-bold text-purple-800">Login</h2>
-        </div>
-        <form class="mt-8 space-y-6">
-            <div class="relative">
-                <label for="email" class="sr-only">Email</label>
-                <input id="email" name="email" type="email" required
-                    class="block w-full px-4 py-2 text-purple-800 placeholder-purple-500 bg-purple-50 border border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-300 ease-in-out"
-                    placeholder="Email">
-            </div>
-            <div class="relative">
-                <label for="password" class="sr-only">Password</label>
-                <input id="password" name="password" type="password" required
-                    class="block w-full px-4 py-2 text-purple-800 placeholder-purple-500 bg-purple-50 border border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-300 ease-in-out"
-                    placeholder="Password">
-            </div>
-            <div>
-                <button type="submit"
-                    class="w-full px-4 py-2 font-semibold text-white bg-purple-700 rounded-lg shadow-md hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transition duration-300 ease-in-out">
-                    Sign In
-                </button>
-            </div>
-        </form>
-        <div class="text-center">
-            <p class="text-sm text-purple-700">Don't have an account? <a href="#" class="font-semibold text-purple-900 hover:text-purple-600">Sign Up</a></p>
-        </div>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IVMS - Login</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<body>
+  <div class="form-container">
+    <form class="sign-up-form">
+      <h2>Login</h2>
+      <div class="input-field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-field">
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="checkbox" id="showPassword" />Show Password
+      </div>
+      <button class="submit-btn" type="submit">Sign In</button>
+      <div class="already-registered">
+        Don't have an account? <a href="signup.html">Sign Up</a>
+      </div>
+    </form>
+  </div>
+  <script src="login.js"></script>
+
 </body>
+
 </html>
