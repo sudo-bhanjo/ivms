@@ -1,117 +1,110 @@
+const uploadBtn = document.getElementById("uploadBtn");
+const uploadedImage = document.getElementById("uploadedImage");
+const imagePreview = document.getElementById("imagePreview");
+const formFile = document.getElementById("formFile");
+const submitBtn = document.getElementById("submitBtn");
+
+// Function to display image from local storage (if available)
+function displayImageFromLocalStorage() {
+  const savedImage = localStorage.getItem("profileImage");
+
+  if (savedImage) {
+    uploadedImage.src = savedImage;
+    uploadedImage.style.display = "block";
+    uploadBtn.style.display = "none";
+  }
+}
+
+// Call this function when the page loads to check for the image in localStorage
 window.onload = function () {
-  checkUploadStatus(); // Check if user has already uploaded DP
+  displayImageFromLocalStorage();
 };
 
-const dpInput = document.getElementById("dpInput");
-const dpImage = document.getElementById("dpImage");
-const dropArea = document.getElementById("dropArea");
-const uploadBtn = document.getElementById("uploadBtn");
-const statusMsg = document.getElementById("statusMsg");
-
-// Prevent default drag behaviors
-["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
-  dropArea.addEventListener(eventName, preventDefaults, false);
-});
-
-function preventDefaults(e) {
-  e.preventDefault();
-  e.stopPropagation();
-}
-
-// Highlight drop area when file is dragged over it
-["dragenter", "dragover"].forEach((eventName) => {
-  dropArea.addEventListener(
-    eventName,
-    () => dropArea.classList.add("highlight"),
-    false
-  );
-});
-
-["dragleave", "drop"].forEach((eventName) => {
-  dropArea.addEventListener(
-    eventName,
-    () => dropArea.classList.remove("highlight"),
-    false
-  );
-});
-
-// Handle dropped files
-dropArea.addEventListener("drop", handleDrop, false);
-dropArea.addEventListener("click", () => dpInput.click(), false);
-
-dpInput.addEventListener("change", handleFiles);
-
-uploadBtn.addEventListener("click", uploadDP);
-
-function handleDrop(e) {
-  const dt = e.dataTransfer;
-  const file = dt.files[0];
-  handleFile(file);
-}
-
-function handleFiles() {
-  const file = dpInput.files[0];
-  handleFile(file);
-}
-
-function handleFile(file) {
-  if (file && file.type.startsWith("image/")) {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      dpImage.src = e.target.result;
-      uploadBtn.disabled = false;
-    };
-    reader.readAsDataURL(file);
-  } else {
-    alert("Please upload a valid image file.");
-  }
-}
-
-function checkUploadStatus() {
-  // Check if DP is already uploaded (using localStorage here, but you could use backend verification)
-  const isUploaded = localStorage.getItem("dpUploaded");
-
-  if (isUploaded) {
-    dpInput.disabled = true;
-    uploadBtn.disabled = true;
-    statusMsg.innerText = "You have already uploaded your DP!";
-  } else {
-    dpInput.disabled = false;
-    uploadBtn.disabled = true;
-  }
-}
-
-function uploadDP() {
-  const file = dpInput.files[0];
-
+// File input change event to display preview
+formFile.addEventListener("change", function () {
+  const file = formFile.files[0];
   if (file) {
     const reader = new FileReader();
-
     reader.onload = function (e) {
-      const base64Data = e.target.result.split(",")[1]; // Extract base64 string
-      sendImageToServer(base64Data);
+      // Show preview in modal before submitting
+      imagePreview.src = e.target.result;
+      imagePreview.style.display = "block";
     };
-
     reader.readAsDataURL(file);
-  } else {
-    alert("Please select or drag an image first!");
   }
-}
+});
 
-function sendImageToServer(base64Data) {
-  const xhr = new XMLHttpRequest();
-  const url = `upload_dp.php?dp=${encodeURIComponent(base64Data)}`; // Sending image data as query param
+// Submit button logic
 
-  xhr.open("GET", url, true);
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      alert("DP uploaded successfully!");
+// submitBtn.addEventListener("click", function () {
+//   const file = formFile.files[0];
+//   if (file) {
+//     const reader = new FileReader();
+//     reader.onload = function (e) {
+//       // Set the image, display it, and store it in localStorage
+//       const imageSrc = e.target.result;
+//       uploadedImage.src = imageSrc;
+//       uploadedImage.style.display = "block";
+//       localStorage.setItem("profileImage", imageSrc);
 
-      // Disable further uploads
-      localStorage.setItem("dpUploaded", "true");
-      checkUploadStatus();
-    }
-  };
+//       // Hide the upload button
+//       uploadBtn.style.display = "none";
 
-  xhr.send();
-}
+//       // Close the modal
+//       const modal = bootstrap.Modal.getInstance(
+//         document.getElementById("uploaddp")
+//       );
+//       modal.hide();
+//     };
+//     reader.readAsDataURL(file);
+//   }
+// });
+
+submitBtn.addEventListener("click", function () {
+  const file = formFile.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      // Set the image, display it, and store it in localStorage
+      const imageSrc = e.target.result;
+      uploadedImage.src = imageSrc;
+      uploadedImage.style.display = "block";
+      localStorage.setItem("profileImage", imageSrc);
+
+      // Hide the upload button
+      uploadBtn.style.display = "none";
+
+      // Close the modal
+      const modal = bootstrap.Modal.getInstance(
+        document.getElementById("uploaddp")
+      );
+      modal.hide();
+
+      // Trigger a one-time refresh after uploading the image
+      localStorage.setItem("hasRefreshed", "true");
+      setTimeout(function () {
+        location.reload();
+      }, 1000); // Refresh after 1 second (adjust the delay as needed)
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+// On page load, display the image from localStorage if available
+window.onload = function () {
+  const savedImage = localStorage.getItem("profileImage");
+  const hasRefreshed = localStorage.getItem("hasRefreshed");
+
+  // If an image is stored in localStorage, display it
+  if (savedImage) {
+    uploadedImage.src = savedImage;
+    uploadedImage.style.display = "block";
+    uploadBtn.style.display = "none";
+  }
+
+  // Check if the page has already been refreshed once
+  if (hasRefreshed === "true") {
+    // After refreshing once, do not refresh again and reset the flag
+    localStorage.removeItem("hasRefreshed");
+  }
+};
