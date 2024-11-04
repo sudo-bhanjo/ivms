@@ -15,24 +15,57 @@
       <!-- <h6>Volunteer</h6> -->
       <div class="input-field">
         <input type="text" id="name" placeholder="Full Name" required>
-        <input type="text" name="roll_id" hidden value="2">
+        <input type="text"  name="roll_id" hidden value="2">
       </div>
       <div class="input-field">
-        <input type="email" id="email" placeholder="Email" required>
+        <input type="email" name="email" id="email" placeholder="Email" required>
       </div>
       <div class="input-field">
-        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
       </div>
       <div class="input-field">
-        <input type="password" id="password" placeholder="Password" required>
-        <input type="checkbox" id="showPassword"/>Show Password
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="checkbox"  id="showPassword"/>Show Password
+      </div>
+      
+      <div class="input-field">
+        <input type="password" id="confirmpassword"  name="confirm-password" placeholder="confirm password" required>
+        <input type="checkbox"  id="confirmshowpassword"/>Show Password
       </div>
       <button type="submit" class="submit-btn">Sign Up</button>
       <p class="already-registered">Already have an account? <a href="login.html">Sign In</a></p>
     </form>
   </div>
+ <script src="volunteersignup.js"></script>
 
-  <script src="volunteersignup.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+      $(document).ready(function () {
+        $("#volunteerForm").on("submit", function (e) {
+          e.preventDefault();
+          console.log("Form submitted"); // Log message to ensure the form submission event is triggered
+          $.ajax({
+            type: "POST",
+            url: "volunteersignup.php",
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function (response) {
+              console.log("Response received:", response); // Log the response received from the server
+              if (response.trim() === "1") {
+                // Trim the response to remove any whitespace
+                alert("okdfd");
+                window.location.href = "profile.html";
+              } else {
+                alert(response.trim());
+                location.reload();
+              }
+            },
+          });
+        });
+      });
+    </script>
 </body>
 
 </html>
