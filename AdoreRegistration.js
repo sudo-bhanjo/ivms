@@ -9,7 +9,6 @@ const selectedLanguagesContainer = document.getElementById('selected-languages')
 
 let selectedLanguages = [];
 
-// Populate the dropdown with the predefined languages
 function populateDropdown() {
   dropdownList.innerHTML = '';
   languages.forEach(language => {
@@ -21,41 +20,60 @@ function populateDropdown() {
   });
 }
 
-// Select a language from the dropdown or input field
 function selectLanguage(language) {
-  if (!selectedLanguages.includes(language)) {
-      selectedLanguages.push(language);
+  if (!selectedLanguages.find(l => l.language === language)) {
+      selectedLanguages.push({ language, proficiency: 'Fluent' });
       renderSelectedLanguages();
   }
   dropdownList.style.display = 'none';
   languageInput.value = '';
 }
 
-// Render selected languages in the container
 function renderSelectedLanguages() {
   selectedLanguagesContainer.innerHTML = '';
-  selectedLanguages.forEach(language => {
+  selectedLanguages.forEach((langObj, index) => {
       const item = document.createElement('div');
       item.classList.add('language-item');
-      item.textContent = language;
-      item.addEventListener('click', () => removeLanguage(language));
+
+      const text = document.createElement('span');
+      text.textContent = langObj.language;
+
+      const proficiencySelect = document.createElement('select');
+      ['Fluent', 'Moderate', 'Native'].forEach(level => {
+          const option = document.createElement('option');
+          option.value = level;
+          option.textContent = level;
+          option.selected = langObj.proficiency === level;
+          proficiencySelect.appendChild(option);
+      });
+      proficiencySelect.addEventListener('change', (e) => {
+          selectedLanguages[index].proficiency = e.target.value;
+      });
+
+      const removeBtn = document.createElement('button');
+      removeBtn.classList.add('remove-btn');
+      removeBtn.textContent = 'X';
+      removeBtn.addEventListener('click', () => removeLanguage(index));
+
+      item.appendChild(text);
+      item.appendChild(proficiencySelect);
+      item.appendChild(removeBtn);
+
       selectedLanguagesContainer.appendChild(item);
   });
 }
 
-// Remove a language from the selected list
-function removeLanguage(language) {
-  selectedLanguages = selectedLanguages.filter(l => l !== language);
+function removeLanguage(index) {
+  selectedLanguages.splice(index, 1);
   renderSelectedLanguages();
 }
 
-// Show the dropdown when typing in the input
 languageInput.addEventListener('input', () => {
   const input = languageInput.value.toLowerCase();
   dropdownList.style.display = input ? 'block' : 'none';
   dropdownList.innerHTML = '';
   languages
-      .filter(lang => lang.toLowerCase().includes(input) || lang.toLowerCase() === input)
+      .filter(lang => lang.toLowerCase().includes(input))
       .forEach(lang => {
           const item = document.createElement('div');
           item.classList.add('dropdown-item');
@@ -65,15 +83,10 @@ languageInput.addEventListener('input', () => {
       });
 });
 
-// Allow adding new languages by pressing Enter
-languageInput.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter' && languageInput.value) {
-      e.preventDefault();
-      selectLanguage(languageInput.value);
-  }
+languageInput.addEventListener('click', () => {
+  dropdownList.style.display = 'block';
 });
 
-// Hide the dropdown when clicking outside
 document.addEventListener('click', (e) => {
   if (!e.target.closest('.multi-select')) {
       dropdownList.style.display = 'none';
