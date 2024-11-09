@@ -1,557 +1,559 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
-    width: 100%;
-    margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+  margin: 20px;
 }
 
 header {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 header img {
-    max-width: 100px;
-    margin-bottom: 10px;
+  max-width: 100px;
+  margin-bottom: 10px;
 }
 
 header h1 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 header p {
-    font-size: 14px;
-    color: #555;
+  font-size: 14px;
+  color: #555;
 }
 
 form {
-    display: grid;
-    gap: 15px;
+  display: grid;
+  gap: 15px;
 }
 
 .form-group {
-    display: grid;
-    gap: 5px;
+  display: grid;
+  gap: 5px;
 }
 
 label {
-    font-weight: bold;
-    font-size: 14px;
-    color: #333;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
 }
 
 input,
 textarea,
 select,
 button {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
 }
 
 button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .rating-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
 }
 
 .rating-form h2 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .rating-value {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .submit-btn {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
 }
 
 .submit-btn:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .table-responsive {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 table,
 th,
 td {
-    border: 1px solid #ccc;
+  border: 1px solid #ccc;
 }
 
 th,
 td {
-    padding: 10px;
-    text-align: left;
+  padding: 10px;
+  text-align: left;
 }
 
 th {
-    background-color: rgb(38, 248, 19);
+  background-color: rgb(38, 248, 19);
 }
 
 @media (max-width: 768px) {
-    .container {
-        margin: 10px;
-        padding: 15px;
-    }
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
 
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
-        display: block;
-    }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
 
-    thead tr {
-        display: none;
-    }
+  thead tr {
+    display: none;
+  }
 
-    td {
-        position: relative;
-        padding-left: 50%;
-        text-align: right;
-    }
+  td {
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
 
-    td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        width: 50%;
-        padding-left: 10px;
-        font-weight: bold;
-        text-align: left;
-    }
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 50%;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
 }
 
-#languagebody{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#languagebody {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 /* Container for language selection */
 .language-container {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-
+  background-color: #ffffff;
+  border-radius: 10px;
+  /* padding: 30px; */
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  width: 100%;
+  max-width: 500px;
+  /* text-align: center; */
 }
 
 h3 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 14px;
+  display: flex;
+  color: #333;
+  font-weight: bold;
+  /* margin-bottom: 20px; */
 }
 
 /* Selected languages section */
 .selected-languages {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
 }
 
 .language-badge {
-    background-color: #4A90E2;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+  /* background-color: #4a90e2; */
+  color: white;
+  padding: 8px 15px;
+  border-radius: 30px;
+  /* display: flex; */
+  /* align-items: center; */
+  font-size: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
 .language-badge button {
-    background: none;
-    border: none;
-    color: white;
-    font-weight: bold;
-    margin-left: 10px;
-    cursor: pointer;
-    font-size: 12px;
-    transition: color 0.3s ease;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: color 0.3s ease;
 }
 
 .language-badge:hover {
-    background-color: #357ABD;
+  background-color: #357abd;
 }
 
 .language-badge button:hover {
-    color: #ff3b3b;
+  color: #ff3b3b;
 }
 
 /* Add language button */
 .add-language-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #4A90E2;
-    color: white;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .add-language-btn:hover {
-    background-color: #357ABD;
-    transform: translateY(-2px);
+  background-color: #357abd;
+  transform: translateY(-2px);
 }
 
 /* Modal styling */
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    text-align: center;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .close {
-    font-size: 28px;
-    color: #333;
-    float: right;
-    cursor: pointer;
-    transition: color 0.3s ease;
+  font-size: 28px;
+  color: #333;
+  float: right;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .close:hover {
-    color: #ff3b3b;
+  color: #ff3b3b;
 }
 
 #language-search {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
 }
 
 #language-search:focus {
-    border-color: #4A90E2;
-    outline: none;
+  border-color: #4a90e2;
+  outline: none;
 }
 
 #language-list {
-    list-style-type: none;
-    padding: 0;
-    max-height: 200px;
-    overflow-y: auto;
+  list-style-type: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 #language-list li {
-    padding: 12px;
-    background-color: #f8f9fa;
-    margin-bottom: 8px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  background-color: #f8f9fa;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #language-list li:hover {
-    background-color: #e9ecef;
+  background-color: #e9ecef;
 }
 
 /* Button inside modal */
 .modal button {
-    background-color: #4A90E2;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+  background-color: #4a90e2;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
 .modal button {
-    background-color: #357ABD;
+  background-color: #357abd;
 }
 
 .language-badge {
-    display: inline-flex;
-    align-items: center;
-    margin: 5px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    padding: 5px 10px;
+  display: inline-flex;
+  align-items: center;
+  margin: 5px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .language-badge select {
-    margin-left: 10px;
-    padding: 3px;
+  margin-left: 10px;
+  padding: 3px;
 }
 
 .language-badge button {
-    background: none;
-    border: none;
-    color: red;
-    margin-left: 10px;
-    cursor: pointer;
+  background: none;
+  border: none;
+  color: red;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 /* General Modal Styles */
 .modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    z-index: 100;
-    /* High priority */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Black background with opacity */
-    justify-content: center;
-    align-items: center;
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  z-index: 100;
+  /* High priority */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Black background with opacity */
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 600px;
-    width: 90%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.3s ease-in-out;
+  background-color: #fefefe;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: #ff0000;
-    text-decoration: none;
-    cursor: pointer;
+  color: #ff0000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Language Badge Styles */
 .language-badge {
-    display: inline-flex;
-    align-items: center;
-    background-color: #e0e7ff;
-    background-color: #3a54a0;
-    color: #fff;
-    border-radius: 20px;
-    padding: 8px 15px;
-    margin: 5px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  background-color: #e0e7ff;
+  background-color: #3a54a0;
+  color: #fff;
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 .language-badge:hover {
-    background-color: #4A90E2;
-    transform: scale(1.05);
-    /* Hover effect */
+  background-color: #4a90e2;
+  transform: scale(1.05);
+  /* Hover effect */
 }
 
 .language-badge button {
-    background: none;
-    border: none;
-    color: #ff4d4f;
-    font-size: 16px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: color 0.3s;
+  background: none;
+  border: none;
+  color: #ff4d4f;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
 .language-badge button:hover {
-    color: #d32f2f;
+  color: #d32f2f;
 }
 
 /* Proficiency Select Dropdown */
 .language-badge select {
-    margin-left: 15px;
-    padding: 3px 8px;
-    font-size: 13px;
-    border-radius: 24px;
-    border: 1px solid #b0b7c3;
-    background-color: #f0f3fc;
-    color: #333;
-    transition: background-color 0.3s;
-    width: auto;
+  margin-left: 15px;
+  padding: 3px 8px;
+  font-size: 13px;
+  border-radius: 24px;
+  border: 1px solid #b0b7c3;
+  background-color: #f0f3fc;
+  color: #333;
+  transition: background-color 0.3s;
+  width: auto;
 }
 
 .language-badge select:hover {
-    background-color: #e5e9f8;
+  background-color: #e5e9f8;
 }
 
 /* Modal Search Input */
 #language-search {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    outline: none;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
 }
 
 #language-search:focus {
-    border-color: #4b6cb7;
-    box-shadow: 0 0 4px rgba(75, 108, 183, 0.5);
+  border-color: #4b6cb7;
+  box-shadow: 0 0 4px rgba(75, 108, 183, 0.5);
 }
 
 /* Language List Styles */
 #language-list {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 15px;
-    max-height: 200px;
-    overflow-y: auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 #language-list li {
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 #language-list li:hover {
-    background-color: #f0f4ff;
+  background-color: #f0f4ff;
 }
 
 #language-list li:nth-child(odd) {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 /* Selected Languages Container */
 .selected-languages {
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 /* Add Language Button */
 .add-language-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4b6cb7;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4b6cb7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
 .add-language-btn:hover {
-    background-color: #3a54a0;
+  background-color: #3a54a0;
 }
 
 /* For responsiveness */
 @media only screen and (max-width: 768px) {
-    .modal-content {
-        width: 100%;
-        max-width: 95%;
-    }
+  .modal-content {
+    width: 100%;
+    max-width: 95%;
+  }
 
-    .language-badge {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
+  .language-badge {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
 
-    .language-badge select {
-        margin-left: 10px;
-        padding: 2px 6px;
-    }
+  .language-badge select {
+    margin-left: 10px;
+    padding: 2px 6px;
+  }
 }
