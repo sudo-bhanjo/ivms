@@ -183,7 +183,8 @@ body.loaded {
 }
 
 .dashboard-button {
-  background-color: #007bff;
+  background-color: #006eff;
+  /* background-color: #004da1; */
   color: white;
   /* padding: 15px 25px; */
   margin: 10px;
@@ -300,7 +301,7 @@ table {
 thead {
   background: rgba(113, 99, 186, 255);
   background-color: #0056b3;
-  background-color: #007bff;
+  /* background-color: #007bff; */
   color: #fff;
 }
 

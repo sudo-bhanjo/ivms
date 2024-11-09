@@ -153,7 +153,8 @@ table {
 }
 
 thead {
-    background-color: #0056b3;
+    /* background-color: #0056b3; */
+    background-color: #0058b7 !important;
     color: #fff;
 }
 
@@ -165,7 +166,8 @@ tbody tr:nth-child(even) {
 th {
     padding: 10px;
     text-align: left;
-    background-color: #004EA3 !important;
+    /* background-color: #004EA3 !important; */
+    background-color: #0058b7;
 }
 
 th,
