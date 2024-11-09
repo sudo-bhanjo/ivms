@@ -1,143 +1,83 @@
-// Sample list of predefined languages
 const languages = [
-  "English",
-  "Hindi",
-  "German",
-  "Tamil",
-  "Spanish",
-  "French",
-  "Hebrew",
-  "Arabic",
-  "Japanese",
-  "Chinese",
-  "Russian",
-  "Italian",
-  "Portuguese",
-  "Punjabi",
+  "English", "Hindi", "Spanish", "French", "German",
+  "Chinese", "Japanese", "Portuguese", "Russian", "Italian"
 ];
 
-// Selected languages and proficiency map
-const selectedLanguages = [];
+const languageInput = document.getElementById('language-input');
+const dropdownList = document.getElementById('dropdown-list');
+const selectedLanguagesContainer = document.getElementById('selected-languages');
 
-// Get elements from the DOM
-const languageSearchInput = document.getElementById("language-search");
-const languageList = document.getElementById("language-list");
-const selectedLanguagesContainer = document.querySelector(
-  ".selected-languages"
-);
-const modal = document.querySelector(".modal");
-const closeBtn = document.querySelector(".close");
+let selectedLanguages = [];
 
-// Function to update the list of languages in the modal
-function updateLanguageList(query = "") {
-  // Clear the current list
-  languageList.innerHTML = "";
-
-  // Filter languages based on the search query
-  const filteredLanguages = languages.filter((language) =>
-    language.toLowerCase().includes(query.toLowerCase())
-  );
-
-  // If no match is found, show the 'Add Custom Language' option
-  if (filteredLanguages.length === 0) {
-    const li = document.createElement("li");
-    li.textContent = `Add "${query}"`;
-    li.addEventListener("click", () => addLanguage(query)); // Allow user to add custom language
-    languageList.appendChild(li);
-  } else {
-    // Add matched languages to the list
-    filteredLanguages.forEach((language) => {
-      const li = document.createElement("li");
-      li.textContent = language;
-      li.addEventListener("click", () => addLanguage(language));
-      languageList.appendChild(li);
-    });
-  }
-}
-
-// Function to add language to the selected list
-function addLanguage(language) {
-  // Check if language is already selected
-  if (!selectedLanguages.some((item) => item.language === language)) {
-    selectedLanguages.push({ language: language, proficiency: "Native" }); // Default to 'Native'
-    renderSelectedLanguages();
-  }
-  modal.style.display = "none"; // Close the modal after selection
-}
-
-// Function to render selected languages on the page with proficiency dropdown
-function renderSelectedLanguages() {
-  selectedLanguagesContainer.innerHTML = ""; // Clear the container
-  selectedLanguages.forEach((item) => {
-    const badge = document.createElement("div");
-    badge.classList.add("language-badge");
-
-    badge.innerHTML = `
-              ${item.language}
-              <select class="proficiency-select">
-                  <option value="Native" ${
-                    item.proficiency === "Native" ? "selected" : ""
-                  }>Native</option>
-                  <option value="Moderate" ${
-                    item.proficiency === "Moderate" ? "selected" : ""
-                  }>Moderate</option>
-                  <option value="Fluent" ${
-                    item.proficiency === "Fluent" ? "selected" : ""
-                  }>Fluent</option>
-              </select>
-              <button>&times;</button>
-          `;
-
-    // Add event listener for removing language
-    badge
-      .querySelector("button")
-      .addEventListener("click", () => removeLanguage(item.language));
-
-    // Update proficiency when changed
-    badge
-      .querySelector(".proficiency-select")
-      .addEventListener("change", (e) => {
-        updateProficiency(item.language, e.target.value);
-      });
-
-    selectedLanguagesContainer.appendChild(badge);
+// Populate the dropdown with the predefined languages
+function populateDropdown() {
+  dropdownList.innerHTML = '';
+  languages.forEach(language => {
+      const item = document.createElement('div');
+      item.classList.add('dropdown-item');
+      item.textContent = language;
+      item.addEventListener('click', () => selectLanguage(language));
+      dropdownList.appendChild(item);
   });
 }
 
-// Function to remove a selected language
+// Select a language from the dropdown or input field
+function selectLanguage(language) {
+  if (!selectedLanguages.includes(language)) {
+      selectedLanguages.push(language);
+      renderSelectedLanguages();
+  }
+  dropdownList.style.display = 'none';
+  languageInput.value = '';
+}
+
+// Render selected languages in the container
+function renderSelectedLanguages() {
+  selectedLanguagesContainer.innerHTML = '';
+  selectedLanguages.forEach(language => {
+      const item = document.createElement('div');
+      item.classList.add('language-item');
+      item.textContent = language;
+      item.addEventListener('click', () => removeLanguage(language));
+      selectedLanguagesContainer.appendChild(item);
+  });
+}
+
+// Remove a language from the selected list
 function removeLanguage(language) {
-  const index = selectedLanguages.findIndex(
-    (item) => item.language === language
-  );
-  if (index > -1) {
-    selectedLanguages.splice(index, 1);
-    renderSelectedLanguages(); // Re-render after removal
-  }
+  selectedLanguages = selectedLanguages.filter(l => l !== language);
+  renderSelectedLanguages();
 }
 
-// Function to update the proficiency level of a language
-function updateProficiency(language, proficiency) {
-  const languageObj = selectedLanguages.find(
-    (item) => item.language === language
-  );
-  if (languageObj) {
-    languageObj.proficiency = proficiency;
+// Show the dropdown when typing in the input
+languageInput.addEventListener('input', () => {
+  const input = languageInput.value.toLowerCase();
+  dropdownList.style.display = input ? 'block' : 'none';
+  dropdownList.innerHTML = '';
+  languages
+      .filter(lang => lang.toLowerCase().includes(input) || lang.toLowerCase() === input)
+      .forEach(lang => {
+          const item = document.createElement('div');
+          item.classList.add('dropdown-item');
+          item.textContent = lang;
+          item.addEventListener('click', () => selectLanguage(lang));
+          dropdownList.appendChild(item);
+      });
+});
+
+// Allow adding new languages by pressing Enter
+languageInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && languageInput.value) {
+      e.preventDefault();
+      selectLanguage(languageInput.value);
   }
-}
-
-// Event listener for the search box
-languageSearchInput.addEventListener("input", (e) => {
-  updateLanguageList(e.target.value);
 });
 
-// Close the modal when the close button is clicked
-closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
+// Hide the dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.multi-select')) {
+      dropdownList.style.display = 'none';
+  }
 });
 
-// Open the modal to select a language
-document.querySelector(".add-language-btn").addEventListener("click", () => {
-  modal.style.display = "flex"; // Show modal
-  languageSearchInput.value = ""; // Reset search input
-  updateLanguageList(); // Display the full list when the modal opens
-});
+populateDropdown();
