@@ -207,8 +207,8 @@ input,
   cursor: pointer;
 }
 #language-input {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  /* background-color: #f9f9f9; */
+  border: 1px solid #ccc;
   border-radius: 4px;
 }
 .selected-languages {
