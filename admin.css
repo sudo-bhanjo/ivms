@@ -141,7 +141,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  background-color: #3498db;
+  background-color: #0056b3;
   padding: 20px;
   border-radius: 4px;
 }
@@ -162,7 +162,7 @@ header h1 {
 
 .card {
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   width: 240px;
   cursor: pointer;
   border-radius: 12px;
@@ -237,7 +237,7 @@ table td {
 }
 
 table th {
-  background-color: #3498db;
+  background-color: #0056b3;
   color: #fff;
 }
 
