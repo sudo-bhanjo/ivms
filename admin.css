@@ -30,8 +30,7 @@ body.loaded {
   color: #fff;
   overflow: hidden;
   transition: all 0.5s linear;
-  /* background-color: #007bff; */
-  background-color: #0056b3;
+  background-color: #004da1;
 }
 
 .logo {
@@ -141,7 +140,8 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  background-color: #0056b3;
+  background-color: #004da1 !important;
+  transition: all 0.5s linear;
   padding: 20px;
   border-radius: 4px;
 }
@@ -190,7 +190,7 @@ header h1 {
 
 .card-icon {
   font-size: 2.5em;
-  color: #3498db;
+  color: #0056b3;
 }
 
 /* Fade-in Animation */
@@ -236,8 +236,12 @@ table td {
   text-align: left;
 }
 
+.dataTables_length, .dataTables_filter{
+  margin: 1rem;
+}
+
 table th {
-  background-color: #0056b3;
+  background-color: #004da1;
   color: #fff;
 }
 
@@ -252,4 +256,19 @@ table tbody tr:hover {
 .actions {
   color: #3498db;
   cursor: pointer;
+}
+
+#journalTable {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+#journalTable th, #journalTable td {
+  text-align: center;
+  padding: 10px;
+}
+
+#journalTable .btn {
+  font-size: 12px;
 }
