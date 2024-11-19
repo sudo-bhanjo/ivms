@@ -324,22 +324,6 @@
             </tbody>
           </table>
         </section>
-
-        <script>
-          $(document).ready(function () {
-            $("#journalTable").DataTable({
-              paging: true,
-              searching: true,
-              lengthChange: true,
-              pageLength: 10,
-              info: true,
-              responsive: true,
-              columnDefs: [
-                { orderable: false, targets: 4 }, // Disables sorting for "Actions" column
-              ],
-            });
-          });
-        </script>
       </main>
     </div>
 
