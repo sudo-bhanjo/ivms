@@ -84,6 +84,13 @@ body.loaded {
   padding: 1rem;
 }
 
+.table-section {
+  /* background-color: #f2f2f2; */
+  border-radius: 4px;
+  /* padding: 10px; */
+  width: 100%;
+}
+
 /* Content Area */
 .content {
   flex: 1;
@@ -244,7 +251,7 @@ tfoot {
   body {
     display: block;
     width: 100%;
-    /* overflow-x: scroll; */
+    overflow-x: hidden;
   }
 
   .main--content {
@@ -302,14 +309,11 @@ tfoot {
   .main--content {
     display: flex;
     flex-direction: column;
-  }
-
-  .table-section {
-    width: 360px;
     overflow-x: scroll;
   }
 
-  #journalTable table {
-    overflow-x: scroll;
+  .table-section{
+    overflow-x: scroll !important;
   }
+
 }
