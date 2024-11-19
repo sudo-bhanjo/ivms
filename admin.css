@@ -111,7 +111,7 @@ header h1 {
   /* display: grid; */
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   margin-bottom: 20px;
-  gap: 1rem;
+  gap: 2rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -211,6 +211,13 @@ table tbody tr:hover {
   background-color: #e1e1e1;
 }
 
+th,
+td,
+tfoot {
+  border: 1px solid #e0dfdf !important;
+  /* Adds vertical and horizontal lines */
+}
+
 .actions {
   color: #3498db;
   cursor: pointer;
@@ -232,8 +239,7 @@ table tbody tr:hover {
   font-size: 12px;
 }
 
-@media (max-width: 700px) {
-
+@media (max-width: 768px) {
   html,
   body {
     display: block;
@@ -298,13 +304,12 @@ table tbody tr:hover {
     flex-direction: column;
   }
 
-  .table-section{
+  .table-section {
     width: 360px;
     overflow-x: scroll;
   }
 
-  #journalTable table{
-    width: 100px;
+  #journalTable table {
     overflow-x: scroll;
   }
 }
