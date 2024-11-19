@@ -819,7 +819,7 @@ p {
         margin-bottom: 1rem;
         border: 2px solid #7e7c7c;
         display: flex;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
     }
 
