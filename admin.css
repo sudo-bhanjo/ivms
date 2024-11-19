@@ -246,7 +246,7 @@ tfoot {
   font-size: 12px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   html,
   body {
     display: block;
