@@ -480,7 +480,7 @@ td .btn-primary {
   font-weight: normal;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 880px) {
 
   html,
   body {
@@ -489,16 +489,17 @@ td .btn-primary {
     overflow-x: hidden;
   }
 
-  .header--wrapper {
+  /* .header--wrapper {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-  }
+  } */
 
   .header--title {
-    margin-bottom: 10px;
+    text-align: left;
     font-weight: 700;
   }
+
 
   .tabular--wrapper {
     overflow-x: scroll;
@@ -513,14 +514,10 @@ td .btn-primary {
     display: none;
   }
 
-  .search--box input {
-    width: 80% !important;
-  }
-
   #toggle {
     display: inline;
+    align-items: center;
     left: 80%;
-    /* top: 2%; */
     position: absolute;
     border: none;
     transition: all 0.5s linear;
