@@ -333,7 +333,7 @@ table tbody tr:hover {
     }
 
     .container {
-        margin-top: -20px;
+        margin-top: -30px;
     }
 
     .container .main-content {
@@ -356,13 +356,12 @@ table tbody tr:hover {
     .toggle {
         display: inline;
         position: absolute;
-        top: 240%;
+        top: 200%;
         width: 100%;
     }
 
     #toggle {
-        left: 80%;
-        top: 20% !important;
+        left: 75%;
         position: relative;
         /* width: 50px; */
         border: 1px solid white;
