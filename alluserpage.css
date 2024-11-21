@@ -360,7 +360,7 @@ td .btn-primary {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
 
     html,
     body {
@@ -376,7 +376,7 @@ td .btn-primary {
     }
 
     .header--title {
-        margin-bottom: 10px;
+        margin-top: -150px;
         font-weight: 700;
     }
 
@@ -397,7 +397,7 @@ td .btn-primary {
     #toggle {
         display: inline;
         left: 80%;
-        top: 1%;
+        top: 1.5rem;
         position: absolute;
         border: none;
         transition: all 0.5s linear;
@@ -434,7 +434,7 @@ td .btn-primary {
     }
 
     .header1 {
-        margin-top: 10px;
+        margin-top: -28px;
     }
 
 }
