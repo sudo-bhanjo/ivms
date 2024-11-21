@@ -36,7 +36,7 @@ function searchTable() {
 // Pagination
 
 let currentPage = 1;
-const rowsPerPage = 5;
+const rowsPerPage = 10;
 
 function displayTable(page) {
   const table = document

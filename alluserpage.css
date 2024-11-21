@@ -88,7 +88,7 @@ body.loaded {
     border: 2px solid #ccc;
     border-style: ridge;
     border-radius: 8px;
-    padding: 0.7em;
+    /* padding: 0.7em; */
     /* flex-grow: 1; */
     /* overflow-x: auto; */
     width: 25%;
