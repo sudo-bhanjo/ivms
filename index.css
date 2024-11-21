@@ -518,6 +518,7 @@ td .btn-primary {
     display: inline;
     align-items: center;
     left: 80%;
+    top: 2rem;
     position: absolute;
     border: none;
     transition: all 0.5s linear;
