@@ -316,7 +316,7 @@ table tbody tr:hover {
 }
   
 
-@media (max-width: 1150px) {
+/* @media (max-width: 1150px) {
     .container {
         width: 100% !important;
     }
@@ -328,9 +328,9 @@ table tbody tr:hover {
     .main-content nav {
         display: none;
     }
-}
+} */
 
-@media (max-width: 920px) {
+@media (max-width: 1040px) {
 
     html,
     body {
@@ -361,6 +361,8 @@ table tbody tr:hover {
 
     .toggle {
         display: flex;
+        position: absolute;
+        top: 240%;
         width: 100%;
     }
 
