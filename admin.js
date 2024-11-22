@@ -4,16 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.classList.add("loaded");
 });
 
+
+// Show entries
+
 $(document).ready(function () {
-  $("#journalTable").DataTable({
-    paging: true,
-    searching: true,
-    lengthChange: true,
-    pageLength: 10,
-    info: true,
-    responsive: true,
-    columnDefs: [
-      { orderable: false, targets: 4 }, // Disables sorting for "Actions" column
-    ],
+  $("table").DataTable({
+    pageLength: 10, // Default page length
+    lengthMenu: [
+      [10, 25, 50, 100],
+      [10, 25, 50, 100],
+    ], // Page length options
   });
 });
