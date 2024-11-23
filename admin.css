@@ -451,6 +451,13 @@ td .btn-primary {
   background-color: #0056b3 !important;
 }
 
+.dataTables_length label{
+  display: flex !important;
+  gap: 6px;
+  align-items: center;
+}
+
+
 @media (max-width: 990px) {
   html,
   body {
