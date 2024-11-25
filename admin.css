@@ -114,6 +114,15 @@ body.loaded {
   gap: 1rem;
 }
 
+.primary-dashboard {
+  color: #004da1;
+  height: 30px;
+}
+
+.primary-dashboard h3 {
+  font-size: 1.5rem;
+}
+
 /* -- card container -- */
 
 .card--container {
@@ -451,12 +460,11 @@ td .btn-primary {
   background-color: #0056b3 !important;
 }
 
-.dataTables_length label{
+.dataTables_length label {
   display: flex !important;
   gap: 6px;
   align-items: center;
 }
-
 
 @media (max-width: 990px) {
   html,
