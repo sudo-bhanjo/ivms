@@ -168,6 +168,11 @@ table tbody tr:hover {
   background-color: #ddd;
 }
 
+.btn{
+  height: 60px;
+  width: 100%;
+}
+
 /* Jquery style */
 
 .dataTables_filter{
