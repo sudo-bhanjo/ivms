@@ -180,7 +180,7 @@ table tbody tr:hover {
   background-color: #004da1;
 }
 
-#actionbutton{
+#actionbutton {
   background-color: #004da1;
   margin: 4px;
 }
@@ -261,6 +261,19 @@ table tbody tr:hover {
 #platform-select,
 #zoom-options {
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#gmeet-link label{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#gmeet-link input{
+  width: 100%;
 }
 
 .modal-body button {
