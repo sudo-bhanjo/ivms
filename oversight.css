@@ -180,6 +180,11 @@ table tbody tr:hover {
   background-color: #004da1;
 }
 
+#actionbutton{
+  background-color: #004da1;
+  margin: 4px;
+}
+
 /* Jquery style */
 
 .dataTables_filter {
