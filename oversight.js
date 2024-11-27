@@ -16,23 +16,25 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.classList.add("loaded");
 });
 
+// Modal button 2 Action Button Logic
+
 const platformSelect = document.getElementById("platform-select");
 const zoomConferences = document.getElementById("zoom-conferences");
-const gmeetConferences = document.getElementById("gmeet");
+const gmeetLink = document.getElementById("gmeet-link");
 
-platformSelect.addEventListener("change", function () {
-  if (this.value === "zoom") {
+platformSelect.addEventListener("change", () => {
+  if (platformSelect.value === "zoom") {
     zoomConferences.style.display = "block";
-  } else {
+    gmeetLink.style.display = "none";
+  } else if (platformSelect.value === "gmeet") {
     zoomConferences.style.display = "none";
+    gmeetLink.style.display = "block";
   }
 });
 
-platformSelect.addEventListener("change", function () {
-  if (this.value === "gmeet") {
-    gmeetConferences.style.display = "block";
-  } else {
-    gmeetConferences.style.display = "none";
-    gmeetConferences.style.input.display = "none";
-  }
-});
+// Initialize visibility based on default value
+if (platformSelect.value === "zoom") {
+  zoomConferences.style.display = "block";
+} else if (platformSelect.value === "gmeet") {
+  gmeetLink.style.display = "block";
+}
