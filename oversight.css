@@ -347,6 +347,7 @@ table tbody tr:hover {
 
   .modal-body {
     padding: 15px;
+    overflow-x: scroll;
   }
 
   .form-group label {
@@ -361,5 +362,10 @@ table tbody tr:hover {
 
   .modal-body button {
     font-size: 14px;
+  }
+
+  #detailsModalLabel {
+    display: flex;
+    flex-direction: column;
   }
 }
