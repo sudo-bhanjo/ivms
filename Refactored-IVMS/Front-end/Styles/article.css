@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 * {
     margin: 0;
@@ -32,7 +32,6 @@ body.loaded {
     color: #fff;
     overflow: hidden;
     transition: all 0.5s linear;
-    /* background-color: #007bff; */
     background-color: #0056b3;
 }
 
@@ -82,7 +81,7 @@ body.loaded {
     bottom: 3;
     left: 0;
     width: 100%;
-}
+} */
 
 .toggle {
     display: none;
@@ -309,20 +308,6 @@ table tbody tr:hover {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2rem;
 }
-
-/* @media (max-width: 1150px) {
-    .container {
-        width: 100% !important;
-    }
-
-    .sidebar {
-        width: 100px;
-    }
-
-    .main-content nav {
-        display: none;
-    }
-} */
 
 @media (max-width: 1040px) {
 

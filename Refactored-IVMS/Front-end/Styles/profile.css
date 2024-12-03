@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 * {
   margin: 0;
@@ -30,7 +30,6 @@ body.loaded {
   color: #fff;
   overflow: hidden;
   transition: all 0.5s linear;
-  /* background-color: #007bff; */
   background-color: #0056b3;
 }
 
@@ -72,7 +71,7 @@ body.loaded {
   bottom: 10;
   left: 0;
   width: 100%;
-}
+} */
 
 .toggle {
   display: none;
