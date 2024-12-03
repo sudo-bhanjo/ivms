@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discussion Form</title>
+  <link rel="stylesheet" href="./Styles/discussion.css">
+  <link rel="shortcut icon" href="/Front-end/Assets/logo2.jpg" type="image/x-icon" />
+</head>
+
+<body>
+  <div class="min-h-screen flex items-center justify-center bg-blue-500 top-2">
+    <div class="w-full max-w-2xl mt-5 bg-slate-200 opacity-90 p-8 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-105">
+      <h2 class="text-2xl font-extrabold text-center mb-6 text-gray-700 animate-fade-in-down">
+        Discussion Form
+      </h2>
+
+      <form class="space-y-4">
+        <div class="animate-fade-in-up">
+          <label class="block text-gray-700 font-bold">Title</label>
+          <input type="text" placeholder="Enter your title" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+
+        <div class="animate-fade-in-up">
+          <label class="block text-gray-700 font-bold">Name</label>
+          <input type="text" placeholder="Enter your name" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+
+        <div class="animate-fade-in-up delay-100">
+          <label class="block text-gray-700 font-bold">Email</label>
+          <input type="email" placeholder="Enter your email" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+
+        <div class="animate-fade-in-up delay-200">
+          <label class="block text-gray-700 font-bold">City</label>
+          <input type="text" placeholder="Enter your city" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+
+        <div class="animate-fade-in-up delay-300">
+          <label class="block text-gray-700 font-bold">College</label>
+          <input type="text" placeholder="Enter your college name" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+
+        <div class="animate-fade-in-up delay-400">
+          <label class="block text-gray-700 font-bold">Hobbies</label>
+          <input type="text" placeholder="Enter your hobbies" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+
+        <div class="animate-fade-in-up delay-500">
+          <label class="block text-gray-700 font-bold">Working Time</label>
+          <input type="text" placeholder="Enter your working hours" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+
+        <!-- <div class="animate-fade-in-up delay-600">
+          <label class="block text-gray-700 font-bold">Language</label>
+          <input type="text" placeholder="Enter languages you know" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+        </div> -->
+
+        <div class="modal">
+          <div class="modal-content">
+            <h2>Add Language</h2>
+            <label for="skill">Language*</label>
+            <input type="text" id="skill-input" placeholder="English">
+
+            <div class="suggestions">
+              <p>Suggested based on your profile:</p>
+              <div class="suggestion-tags">
+                <button class="skill-tag">Hindi</button>
+                <button class="skill-tag">Spanish</button>
+                <button class="skill-tag">French</button>
+                <button class="skill-tag">Bengoli</button>
+                <button class="skill-tag">Greek</button>
+                <button class="skill-tag">Arabic</button>
+                <button class="skill-tag">Hebrew</button>
+                <!-- <button class="skill-tag">REST</button> -->
+                <!-- <button class="skill-tag">UED</button> -->
+                <!-- <button class="skill-tag">SASS</button> -->
+              </div>
+            </div>
+
+            <!-- <button class="save-btn">Save</button> -->
+          </div>
+        </div>
+
+
+        <div class="animate-fade-in-up delay-700">
+          <label class="block text-gray-700 font-bold">How Much You Know</label>
+          <select required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
+            <option value="">Select an option</option>
+            <option value="reading">Reading</option>
+            <option value="writing">Writing</option>
+            <option value="education">Education</option>
+          </select>
+        </div>
+
+        <div class="animate-fade-in-up delay-800">
+          <label class="block text-gray-700 font-bold">Other Languages</label>
+          <input type="text" placeholder="Enter other languages you know" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+
+        <div class="animate-fade-in-up delay-900">
+          <label class="block text-gray-700 font-bold">Phone Number</label>
+          <input type="tel" placeholder="Enter your phone number" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+
+        <div class="animate-fade-in-up delay-1000">
+          <label class="block text-gray-700 font-bold">LinkedIn</label>
+          <input type="url" placeholder="Enter your LinkedIn profile" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+
+        <div class="animate-fade-in-up delay-1100">
+          <label class="block text-gray-700 font-bold">Already Working</label>
+          <select required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
+            <option value="Select">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <div class="animate-fade-in-up delay-1200">
+          <label class="block text-gray-700 font-bold">Discussion Body</label>
+          <textarea placeholder="Write your discussion here..." required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" rows="4"></textarea>
+        </div>
+
+        <div class="animate-fade-in-up delay-1300">
+          <label class="block text-gray-700 font-bold">Attachment</label>
+          <input type="file" required class="w-full mt-1 p-2 border rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+
+        <div class="flex items-center animate-fade-in-up delay-1400">
+          <input type="checkbox" required class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:scale-105" />
+          <label class="ml-2 block text-gray-700 font-bold">
+            &nbsp;&nbsp;Agree to Terms and Conditions
+          </label>
+        </div>
+
+        <div class="text-center animate-fade-in-up delay-1500">
+          <button type="submit" class="mt-4 w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-105">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./Scripts/discussion.js"></script>
+</body>
+
+</html>

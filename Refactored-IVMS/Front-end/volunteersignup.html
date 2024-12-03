@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IVMS - Volunteer Sign Up</title>
+  <link rel="stylesheet" href="./Styles/volunteersignup.css">
+  <link rel="shortcut icon" href="/Front-end/Assets/logo2.jpg" type="image/x-icon" />
+</head>
+
+<body>
+  <div class="form-container">
+    <form id="volunteerForm" class="sign-up-form">
+      <h2>Sign Up</h2>
+      <!-- <h6>Volunteer</h6> -->
+      <div class="input-field">
+        <input type="text" id="name" placeholder="Full Name" required>
+      </div>
+      <div class="input-field">
+        <input type="email" id="email" placeholder="Email" required>
+      </div>
+      <div class="input-field">
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+      </div>
+      <div class="input-field">
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="checkbox" id="showPassword"/>Show Password
+      </div>
+      <button type="submit" class="submit-btn">Sign Up</button>
+      <p class="already-registered">Already have an account? <a href="login.html">Sign In</a></p>
+    </form>
+  </div>
+
+  <script src="./Scripts/volunteersignup.js"></script>
+</body>
+
+</html>
