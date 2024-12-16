@@ -115,3 +115,4 @@ function paginate(pageNumber, rowsPerPage) {
     row.style.display = index >= start && index < end ? "" : "none";
   });
 }
+
