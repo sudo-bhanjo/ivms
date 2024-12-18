@@ -455,7 +455,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const row = document.createElement("tr");
       row.innerHTML = `
           <td>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uniqueModalForm">
+          <button id="firstcolumn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uniqueModalForm">
               <a href="#" class="name-link" data-index="${index}">${application.name}</a>
           </button>
 
@@ -500,7 +500,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </td>
           <td>
           ${application["meeting-date"]} ${application["meeting-time"]}</td>
-          <td><button class="platform-link"><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09" class="meeting-link">${
+          <td><button id="firstcolumn" class="platform-link"><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09" class="meeting-link">${
             application.platform
           }</a></button></td>
           <td>

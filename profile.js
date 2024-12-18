@@ -4,10 +4,9 @@ const imagePreview = document.getElementById("imagePreview");
 const formFile = document.getElementById("formFile");
 const submitBtn = document.getElementById("submitBtn");
 
-// Function to display image from local storage (if available)
+// Function to display the image from localStorage (if available)
 function displayImageFromLocalStorage() {
   const savedImage = localStorage.getItem("profileImage");
-
   if (savedImage) {
     uploadedImage.src = savedImage;
     uploadedImage.style.display = "block";
@@ -15,57 +14,27 @@ function displayImageFromLocalStorage() {
   }
 }
 
-// Call this function when the page loads to check for the image in localStorage
-window.onload = function () {
-  displayImageFromLocalStorage();
-};
-
-// File input change event to display preview
-formFile.addEventListener("change", function () {
+// Function to handle file input change and preview the selected image
+function handleFileInputChange() {
   const file = formFile.files[0];
   if (file) {
     const reader = new FileReader();
     reader.onload = function (e) {
-      // Show preview in modal before submitting
+      // Display the image preview in the modal
       imagePreview.src = e.target.result;
       imagePreview.style.display = "block";
     };
     reader.readAsDataURL(file);
   }
-});
+}
 
-// Submit button logic
-
-// submitBtn.addEventListener("click", function () {
-//   const file = formFile.files[0];
-//   if (file) {
-//     const reader = new FileReader();
-//     reader.onload = function (e) {
-//       // Set the image, display it, and store it in localStorage
-//       const imageSrc = e.target.result;
-//       uploadedImage.src = imageSrc;
-//       uploadedImage.style.display = "block";
-//       localStorage.setItem("profileImage", imageSrc);
-
-//       // Hide the upload button
-//       uploadBtn.style.display = "none";
-
-//       // Close the modal
-//       const modal = bootstrap.Modal.getInstance(
-//         document.getElementById("uploaddp")
-//       );
-//       modal.hide();
-//     };
-//     reader.readAsDataURL(file);
-//   }
-// });
-
-submitBtn.addEventListener("click", function () {
+// Function to handle the submit action
+function handleFormSubmit() {
   const file = formFile.files[0];
   if (file) {
     const reader = new FileReader();
     reader.onload = function (e) {
-      // Set the image, display it, and store it in localStorage
+      // Save the image to localStorage and display it
       const imageSrc = e.target.result;
       uploadedImage.src = imageSrc;
       uploadedImage.style.display = "block";
@@ -80,31 +49,25 @@ submitBtn.addEventListener("click", function () {
       );
       modal.hide();
 
-      // Trigger a one-time refresh after uploading the image
+      // Trigger a one-time refresh to update the page
       localStorage.setItem("hasRefreshed", "true");
-      setTimeout(function () {
-        location.reload();
-      }, 1000); // Refresh after 1 second (adjust the delay as needed)
+      setTimeout(() => location.reload(), 1000); // Refresh after 1 second
     };
     reader.readAsDataURL(file);
   }
-});
+}
 
-// On page load, display the image from localStorage if available
+// On page load
 window.onload = function () {
-  const savedImage = localStorage.getItem("profileImage");
+  displayImageFromLocalStorage();
+
+  // Handle refresh logic
   const hasRefreshed = localStorage.getItem("hasRefreshed");
-
-  // If an image is stored in localStorage, display it
-  if (savedImage) {
-    uploadedImage.src = savedImage;
-    uploadedImage.style.display = "block";
-    uploadBtn.style.display = "none";
-  }
-
-  // Check if the page has already been refreshed once
   if (hasRefreshed === "true") {
-    // After refreshing once, do not refresh again and reset the flag
     localStorage.removeItem("hasRefreshed");
   }
 };
+
+// Event Listeners
+formFile.addEventListener("change", handleFileInputChange);
+submitBtn.addEventListener("click", handleFormSubmit);

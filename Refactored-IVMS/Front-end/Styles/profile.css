@@ -1,0 +1,307 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 240px;
+  height: 100vh;
+  padding: 0 1.7rem;
+  color: #fff;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  background-color: #0056b3;
+}
+
+.logo {
+  height: 80px;
+  padding: 16px;
+}
+
+.menu {
+  height: 88%;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 1rem;
+  margin: 8px 0;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.active {
+  background: #e0e0e058;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logout {
+  position: absolute;
+  bottom: 10;
+  left: 0;
+  width: 100%;
+} */
+
+.toggle {
+  display: none;
+}
+
+.main--content {
+  position: relative;
+  background: #ebe9e9;
+  width: 100%;
+  padding: 1rem;
+}
+
+.header--wrapper img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.header--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 2rem;
+  margin-bottom: 10px;
+}
+
+.header--title {
+  color: rgba(113, 99, 186, 255);
+  color: #0056b3;
+}
+
+.user--info {
+  display: flex;
+  align-items: center;
+}
+
+.profile--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  /* cursor: pointer; */
+}
+
+.profile--details {
+  width: 50%;
+}
+
+.profile--image {
+  width: 30%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile--image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20%;
+}
+
+#uploadedImage,
+#imagePreview {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#imagePreview {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0%);
+}
+
+#uploadedImage {
+  display: none;
+}
+
+.profile--info {
+  margin-bottom: 1rem;
+}
+
+.main--title {
+  color: rgba(113, 99, 186, 255);
+  color: #09519e;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.profile--detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.detail--label {
+  font-weight: 600;
+  /* color: rgba(113, 99, 186, 255); */
+  color: #0056b3;
+}
+
+.detail--value {
+  color: #333;
+  font-weight: bold;
+}
+
+.profile--actions {
+  margin-top: 1rem;
+}
+
+.edit-btn,
+.change-password-btn {
+  background: rgba(113, 99, 186, 255);
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 1rem;
+}
+
+.edit-btn:hover,
+.change-password-btn:hover {
+  background: rgba(113, 99, 186, 200);
+  background-color: #024388;
+}
+
+@media (max-width: 880px) {
+  html,
+  body {
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .main--content {
+    margin-top: -20px;
+    z-index: -10;
+  }
+
+  .profile--container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  #uploadedImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  #uploadBtn {
+    width: 200px;
+    height: 100%;
+    /* background-color: red; */
+  }
+
+  #imagePreview {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+  }
+
+  #responsive-sidebar {
+    display: none;
+  }
+
+  .toggle {
+    /* display: inline;
+    position: fixed;
+    top: 10px;
+    right: 60px;
+    border: none; */
+    display: flex;
+    position: absolute;
+    top: 200%;
+    left: 70%;
+  }
+
+  #toggle {
+    display: inline;
+    left: 80%;
+    top: 2%;
+    position: relative;
+    transition: all 0.5s linear;
+    /* background: rgba(113, 99, 186, 255); */
+  }
+
+  .offcanvas-body {
+    transition: all 0.5s linear;
+    background-color: #007bff;
+  }
+
+  .offcanvas-body li a {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  .profile--details {
+    width: 100%;
+  }
+
+  .profile--detail {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .detail--label {
+    width: 100%;
+    display: block;
+  }
+
+  .profile--actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

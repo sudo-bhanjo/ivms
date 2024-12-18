@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IVMS - Dashboard</title>
+    <link
+      rel="shortcut icon"
+      href="/Front-end/Assets/logo2.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./Styles/index.css" />
+    <link rel="stylesheet" href="./Styles/layoutstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap"
+      rel="stylesheet"
+    />
+    <!-- DataTables CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css"
+    />
+
+    <!-- jQuery and DataTables JS -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="logo"></div>
+      <ul class="menu">
+        <li class="active">
+          <a href="index.html">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="oversight.html">
+            <i class="fas fa-chart-bar"></i>
+            <span>Oversight</span>
+          </a>
+        </li>
+        <li>
+          <a href="article.html">
+            <i class="fas fa-briefcase"></i>
+            <span>Article</span>
+          </a>
+        </li>
+        <li>
+          <a href="Alluserpage.html">
+            <i class="fas fa-user-circle"></i>
+            <span>All User Page</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-star"></i>
+            <span>Testimonials</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+        <li class="logout">
+          <a href="#">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main--content">
+      <div class="header--wrapper">
+        <div class="header--title">
+          <div class="toggle">
+            <button
+              class="btn btn-primary"
+              id="toggle"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#staticBackdrop"
+              aria-controls="staticBackdrop"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start"
+              data-bs-backdrop="static"
+              tabindex="-1"
+              id="staticBackdrop"
+              aria-labelledby="staticBackdropLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="staticBackdropLabel">IVMS</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <div>
+                  <ul class="menu">
+                    <li class="active">
+                      <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="profile.html">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="oversight.html">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Oversight</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="article.html">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Article</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="Alluserpage.html">
+                        <i class="fas fa-user-circle"></i>
+                        <span>All User Page</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fas fa-star"></i>
+                        <span>Testimonials</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li class="logout">
+                      <a href="#">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="primary-dashboard">
+            <span>Primary</span>
+            <h3>Dashboard</h3>
+          </div>
+        </div>
+        <div class="user--info">
+          <!-- <div class="search--box">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" placeholder="Search">
+        </div> -->
+          <!-- <img src="logo2.jpg" alt="#"> -->
+        </div>
+      </div>
+      <div class="card--container">
+        <h3 class="main--title">Today's Data</h3>
+        <div class="card--wrapper">
+          <div class="card-header">
+            <p>Dashboard Overview</p>
+          </div>
+          <div class="dashboard-container">
+            <div class="card">
+              <div class="dashboard-button">
+                <i class="fas fa-user-tie"></i>
+                Total Manager
+                <span id="manager-count">15</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="dashboard-button">
+                <i class="fas fa-users"></i>
+                Total Volunteers
+                <span id="volunteers-count">250</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="dashboard-button">
+                <i class="fas fa-video"></i>
+                Total Meetings
+                <span id="meeting-count">5</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="dashboard-button">
+                <i class="fas fa-calendar-alt"></i>
+                Total Leave
+                <span id="leave-count">5</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="dashboard-button">
+                <i class="fas fa-file-alt"></i>
+                Total Articles
+                <span id="articles-count">120</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="dashboard-button">
+                <i class="fas fa-check"></i>
+                Approved Articles
+                <span id="approved-articles-count">80</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="dashboard-button">
+                <i class="fas fa-times"></i>
+                Disapproved Articles
+                <span id="disapproved-articles-count">40</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="dashboard-button">
+                <i class="fas fa-star"></i>
+                Total Reviews
+                <span id="reviews-count">85</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabular--wrapper">
+        <!-- <h2 class="main--title">Finance Data</h2> -->
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Meetings Date</th>
+                <th>Meetings Time</th>
+                <th>Taken by</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2023-05-01</td>
+                <td>September 5, 2024</td>
+                <td>10:00 AM - 11:30 AM</td>
+                <td>Simran Sharma</td>
+                <td>Approved</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2023-05-02</td>
+                <td>September 6, 2024</td>
+                <td>11:00 AM - 12:30 PM</td>
+                <td>Rahul Mehta</td>
+                <td>Pending</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2023-05-03</td>
+                <td>September 7, 2024</td>
+                <td>9:30 AM - 11:00 AM</td>
+                <td>Anjali Patel</td>
+                <td>Approved</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2023-05-04</td>
+                <td>September 8, 2024</td>
+                <td>1:00 PM - 2:30 PM</td>
+                <td>Rohan Gupta</td>
+                <td>Rejected</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2023-05-05</td>
+                <td>September 9, 2024</td>
+                <td>10:00 AM - 11:30 AM</td>
+                <td>Sneha Verma</td>
+                <td>Approved</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2023-05-06</td>
+                <td>September 10, 2024</td>
+                <td>2:00 PM - 3:30 PM</td>
+                <td>Vikram Singh</td>
+                <td>Pending</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2023-05-07</td>
+                <td>September 11, 2024</td>
+                <td>8:00 AM - 9:30 AM</td>
+                <td>Pooja Kumar</td>
+                <td>Approved</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2023-05-08</td>
+                <td>September 12, 2024</td>
+                <td>3:00 PM - 4:30 PM</td>
+                <td>Neha Sharma</td>
+                <td>Rejected</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2023-05-09</td>
+                <td>September 13, 2024</td>
+                <td>10:30 AM - 12:00 PM</td>
+                <td>Arjun Desai</td>
+                <td>Pending</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2023-05-10</td>
+                <td>September 14, 2024</td>
+                <td>1:30 PM - 3:00 PM</td>
+                <td>Shivani Iyer</td>
+                <td>Approved</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2023-05-11</td>
+                <td>September 15, 2024</td>
+                <td>4:00 PM - 5:30 PM</td>
+                <td>Ramesh Rao</td>
+                <td>Approved</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Action button -->
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Rendon Feedback
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <div class="form-container">
+                <form>
+                  <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" required>
+                      <option value="approved">Approved</option>
+                      <option value="disapproved">Disapproved</option>
+                      <option value="inprogress">Inprocess</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="leaderRemarks">Leader Remarks</label>
+                    <textarea
+                      id="leaderRemarks"
+                      name="leaderRemarks"
+                      placeholder="Enter leader's remarks here..."
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="adminRemarks">Admin Remarks</label>
+                    <textarea
+                      id="adminRemarks"
+                      name="adminRemarks"
+                      placeholder="Enter admin's remarks here..."
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn mx-auto btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./Scripts/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

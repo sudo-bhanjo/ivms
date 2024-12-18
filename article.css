@@ -310,7 +310,7 @@ table tbody tr:hover {
     font-size: 1.2rem;
 }
 
-@media (max-width: 1150px) {
+/* @media (max-width: 1150px) {
     .container {
         width: 100% !important;
     }
@@ -322,9 +322,9 @@ table tbody tr:hover {
     .main-content nav {
         display: none;
     }
-}
+} */
 
-@media (max-width: 920px) {
+@media (max-width: 1040px) {
 
     html,
     body {
@@ -333,7 +333,7 @@ table tbody tr:hover {
     }
 
     .container {
-        margin-top: -20px;
+        margin-top: -30px;
     }
 
     .container .main-content {
@@ -354,13 +354,14 @@ table tbody tr:hover {
     }
 
     .toggle {
-        display: flex;
+        display: inline;
+        position: absolute;
+        top: 200%;
         width: 100%;
     }
 
     #toggle {
-        left: 80%;
-        top: 20% !important;
+        left: 75%;
         position: relative;
         /* width: 50px; */
         border: 1px solid white;

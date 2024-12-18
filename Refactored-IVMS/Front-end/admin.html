@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IVMS - Admin Panel</title>
+    <link rel="shortcut icon" href="/Front-end/Assets/logo2.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="./Styles/admin.css" />
+    <link rel="stylesheet" href="./Styles/layoutstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap"
+      rel="stylesheet"
+    />
+    <!-- DataTables CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css"
+    />
+
+    <!-- jQuery and DataTables JS -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="logo"></div>
+      <ul class="menu">
+        <li>
+          <a href="index.html">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="oversight.html">
+            <i class="fas fa-chart-bar"></i>
+            <span>Oversight</span>
+          </a>
+        </li>
+        <li>
+          <a href="userarticle.html">
+            <i class="fas fa-briefcase"></i>
+            <span>User Article</span>
+          </a>
+        </li>
+        <li>
+          <a href="Alluserpage.html">
+            <i class="fas fa-user-circle"></i>
+            <span>All User Page</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-star"></i>
+            <span>Testimonials</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+        <li class="logout">
+          <a href="#">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main--content">
+      <div class="header--wrapper">
+        <div class="header--title">
+          <div class="toggle">
+            <button
+              class="btn btn-primary"
+              id="toggle"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#staticBackdrop"
+              aria-controls="staticBackdrop"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start"
+              data-bs-backdrop="static"
+              tabindex="-1"
+              id="staticBackdrop"
+              aria-labelledby="staticBackdropLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="staticBackdropLabel">IVMS</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <div>
+                  <ul class="menu">
+                    <li>
+                      <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="profile.html">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="oversight.html">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Oversight</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="userarticle.html">
+                        <i class="fas fa-briefcase"></i>
+                        <span>User Article</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="Alluserpage.html">
+                        <i class="fas fa-user-circle"></i>
+                        <span>All User Page</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fas fa-star"></i>
+                        <span>Testimonials</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li class="logout">
+                      <a href="#">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="primary-dashboard">
+            <h3>Admin Dashboard</h3>
+          </div>
+        </div>
+      </div>
+      <div class="card--container">
+        <div class="card--wrapper">
+          <div class="dashboard-container">
+            <div class="card">
+              <div class="dashboard-button">
+                <i class="fas fa-user-tie"></i>
+                <p>Volunteers Meeting</p>
+                <!-- <span id="manager-count">15</span> -->
+              </div>
+            </div>
+            <div class="card">
+              <div class="dashboard-button">
+                <i class="fas fa-users"></i>
+                <p>Article</p>
+                <!-- <span id="volunteers-count">250</span> -->
+              </div>
+            </div>
+            <div class="card">
+              <div class="dashboard-button">
+                <i class="fas fa-video"></i>
+                <p>Volunteer Status</p>
+                <!-- <span id="meeting-count">5</span> -->
+              </div>
+            </div>
+            <div class="card">
+              <div class="dashboard-button">
+                <i class="fas fa-calendar-alt"></i>
+                <p>Volunteer Leave</p>
+                <!-- <span id="leave-count">5</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabular--wrapper">
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2024-11-01</td>
+                <td>John Doe</td>
+                <td>johndoe@example.com</td>
+                <td>Admin</td>
+                <td>Active</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-02</td>
+                <td>Jane Smith</td>
+                <td>janesmith@example.com</td>
+                <td>User</td>
+                <td>Inactive</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-03</td>
+                <td>Michael Brown</td>
+                <td>michaelbrown@example.com</td>
+                <td>Employee</td>
+                <td>Active</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-04</td>
+                <td>Emily Davis</td>
+                <td>emilydavis@example.com</td>
+                <td>User</td>
+                <td>Pending</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-05</td>
+                <td>Chris Wilson</td>
+                <td>chriswilson@example.com</td>
+                <td>Admin</td>
+                <td>Active</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-06</td>
+                <td>Sarah Johnson</td>
+                <td>sarahjohnson@example.com</td>
+                <td>Employee</td>
+                <td>Inactive</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-07</td>
+                <td>Daniel Lee</td>
+                <td>daniellee@example.com</td>
+                <td>User</td>
+                <td>Active</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-08</td>
+                <td>Olivia Martinez</td>
+                <td>oliviamartinez@example.com</td>
+                <td>Admin</td>
+                <td>Pending</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-09</td>
+                <td>James Garcia</td>
+                <td>jamesgarcia@example.com</td>
+                <td>Employee</td>
+                <td>Inactive</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-10</td>
+                <td>Isabella Hernandez</td>
+                <td>isabellahernandez@example.com</td>
+                <td>User</td>
+                <td>Active</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-11</td>
+                <td>David Lopez</td>
+                <td>davidlopez@example.com</td>
+                <td>Admin</td>
+                <td>Active</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-12</td>
+                <td>Emma Gonzalez</td>
+                <td>emmagonzalez@example.com</td>
+                <td>Employee</td>
+                <td>Pending</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-13</td>
+                <td>Alexander Young</td>
+                <td>alexanderyoung@example.com</td>
+                <td>User</td>
+                <td>Active</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-14</td>
+                <td>Sophia Rodriguez</td>
+                <td>sophiarodriguez@example.com</td>
+                <td>Admin</td>
+                <td>Inactive</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024-11-15</td>
+                <td>Benjamin Perez</td>
+                <td>benjaminperez@example.com</td>
+                <td>Employee</td>
+                <td>Active</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Action button -->
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Rendon Feedback
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <div class="form-container">
+                <form>
+                  <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" required>
+                      <option value="approved">Approved</option>
+                      <option value="disapproved">Disapproved</option>
+                      <option value="inprogress">Inprocess</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="leaderRemarks">Leader Remarks</label>
+                    <textarea
+                      id="leaderRemarks"
+                      name="leaderRemarks"
+                      placeholder="Enter leader's remarks here..."
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="adminRemarks">Admin Remarks</label>
+                    <textarea
+                      id="adminRemarks"
+                      name="adminRemarks"
+                      placeholder="Enter admin's remarks here..."
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn mx-auto btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./Scripts/admin.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+

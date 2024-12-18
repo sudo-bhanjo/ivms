@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IVMS - User Article Upload</title>
+  <link rel="stylesheet" type="text/css" href="./Styles/userarticle.css">
+  <!-- <link rel="stylesheet" href="./Styles/layoutstyle.css" /> -->
+  <link rel="shortcut icon" href="/Front-end/Assets/logo2.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="toggle">
+
+      <button class="btn btn-primary" id="toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="staticBackdropLabel">IVMS</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <ul class="menu">
+              <li>
+                <a href="index.html">
+                  <i class="fas fa-tachometer-alt"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="profile.html">
+                  <i class="fas fa-user"></i>
+                  <span>Profile</span>
+                </a>
+              </li>
+              <li>
+                <a href="oversight.html">
+                  <i class="fas fa-chart-bar"></i>
+                  <span>Oversight</span>
+                </a>
+              </li>
+              <li class="article">
+                <a href="article.html">
+                  <i class="fas fa-briefcase"></i>
+                  <span>User Article</span>
+                </a>
+              </li>
+              <li>
+                <a href="Alluserpage.html">
+                  <i class="fas fa-user-circle"></i>
+                  <span>All User Page</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-star"></i>
+                  <span>Testimonials</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-cog"></i>
+                  <span>Settings</span>
+                </a>
+              </li>
+              <li class="logout">
+                <a href="#">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="sidebar" id="responsive-sidebar">
+    <div class="logo"></div>
+    <ul class="menu">
+      <li>
+        <a href="index.html">
+          <i class="fas fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="profile.html">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="oversight.html">
+          <i class="fas fa-chart-bar"></i>
+          <span>Oversight</span>
+        </a>
+      </li>
+      <li class="article">
+        <a href="article.html">
+          <i class="fas fa-briefcase"></i>
+          <span>User Article</span>
+        </a>
+      </li>
+      <li>
+        <a href="Alluserpage.html">
+          <i class="fas fa-user-circle"></i>
+          <span>All User Page</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-star"></i>
+          <span>Testimonials</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </a>
+      </li>
+      <li class="logout">
+        <a href="#">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+
+    <div class="header1">
+      <h4>User Article Upload</h4>
+    </div>
+
+    <div class="content">
+
+      <div class="main-content">
+
+        <div class="header">
+          <h4>MD Affan Asghar<p style="font-size: 1.1rem;">NIN - 15303</p>
+          </h4>
+          <div class="header-btn">
+
+            <div class="articleupload">
+              <button id="articleuploadbtn" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#articleModal">
+                Upload Article
+              </button>
+
+              <!-- Modal Structure -->
+              <div class="modal fade" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="articleModalLabel">Article Upload</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="articleUploadForm" method="POST">
+                        <div class="mb-3">
+                          <label for="articleAssignedBy" class="form-label">Article Assigned By</label>
+                          <input type="text" class="form-control" id="articleAssignedBy" placeholder="Shahid sir" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="articleAssignedBy" class="form-label">Article Topic</label>
+                          <input type="text" class="form-control" id="articleAssignedBy" placeholder="article name" required>
+                        </div>
+                        <div class="mb-3">
+                          <p>*multiples article can be upload in pdf format</p>
+                          <label for="articleUpload" class="form-label">Upload Article</label>
+                          <input type="file" class="form-control" id="articleUpload" multiple required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="totalTimeTaken" class="form-label">Total Time Taken</label>
+                          <input type="text" class="form-control" id="totalTimeTaken" placeholder="200 minute" required>
+                        </div>
+                        <button id="openFiles" class="btn btn-primary mx-auto">Submit</button>
+                        <!-- <button type="submit" class="btn btn-success">Submit</button> -->
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="task-detail">
+              <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#uniqueModal">
+                Task Details
+              </button>
+
+              <!-- Modal Structure -->
+              <div class="modal fade" id="uniqueModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalLabel">Task Details</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                      <div class="right">
+                        <div class="profile-section">
+                          <img src="https://static.vecteezy.com/system/resources/previews/047/462/744/non_2x/positive-man-on-clean-background-photo.jpg" alt="Profile Picture" class="profile-pic">
+                        </div>
+
+                        <div class="data-section">
+                          <div class="tasks-data">
+                            <h3>Tasks Data</h3>
+                            <p>Ongoing: 1</p>
+                            <p>Completed: 36</p>
+                            <p>Total: 37</p>
+                          </div>
+
+                          <div class="journal-data">
+                            <h3>Journal</h3>
+                            <p>Total Journal: 35</p>
+                            <p>Journal Approved: 30</p>
+                            <p>Journal Disapproved: 3</p>
+                          </div>
+
+                          <div class="leave-data">
+                            <h3>Leave</h3>
+                            <p>Total Leave: 0</p>
+                          </div>
+
+                          <div class="review-data">
+                            <h3>Weekly Review</h3>
+                            <p>Total Reviews: 0</p>
+                            <p>Reviews Approved: 0</p>
+                            <p>Reviews Disapproved: 0</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div id="table">
+          <table id="journalTable" class="display">
+            <thead>
+                <tr>
+                  <th>ID No</th>
+                  <th>Name</th>
+                  <th>Meeting Date & Time</th>
+                  <th>Meeting Platform</th>
+                  <th>Article Upload</th>
+                </tr>
+              </thead>
+            <tbody>
+              <tr>
+                <td>101</td>
+                <td>John Doe</td>
+                <td>2024-11-15 10:00 AM</td>
+                <td><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09"><button class="btn btn-primary custom-width" >Zoom</button></a></td>
+                <td>Uploaded</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Jane Smith</td>
+                <td>2024-11-16 3:00 PM</td>
+                <td><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09"><button class="btn btn-primary custom-width">Zoom</button></a></td>
+                <td>Pending</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Mike Johnson</td>
+                <td>2024-11-17 9:30 AM</td>
+                <td><a href="https://meet.google.com/atj-pqyy-zem"><button class="btn btn-primary custom-width">Google Meet</button></a></td>
+                <td>Uploaded</td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>Sarah Lee</td>
+                <td>2024-11-18 1:00 PM</td>
+                <td><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09"><button class="btn btn-primary custom-width">Zoom</button></a></td>
+                <td>Uploaded</td>
+            </tr>
+            <tr>
+                <td>105</td>
+                <td>Chris Brown</td>
+                <td>2024-11-19 11:15 AM</td>
+                <td><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09"><button class="btn btn-primary custom-width">Zoom</button></a></td>
+                <td>Pending</td>
+            </tr>
+            <tr>
+                <td>106</td>
+                <td>Emily Davis</td>
+                <td>2024-11-20 2:00 PM</td>
+                <td><a href="https://meet.google.com/atj-pqyy-zem"><button class="btn btn-primary custom-width">Google Meet</button></a></td>
+                <td>Uploaded</td>
+            </tr>
+            <tr>
+                <td>107</td>
+                <td>Robert Wilson</td>
+                <td>2024-11-21 4:30 PM</td>
+                <td><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09"><button class="btn btn-primary custom-width">Zoom</button></a></td>
+                <td>Pending</td>
+            </tr>
+            <tr>
+                <td>108</td>
+                <td>Linda Martinez</td>
+                <td>2024-11-22 10:45 AM</td>
+                <td><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09"><button class="btn btn-primary custom-width">Zoom</button></a></td>
+                <td>Uploaded</td>
+            </tr>
+            <tr>
+                <td>109</td>
+                <td>Michael Scott</td>
+                <td>2024-11-23 5:00 PM</td>
+                <td><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09"><button class="btn btn-primary custom-width">Zoom</button></a></td>
+                <td>Pending</td>
+            </tr>
+            <tr>
+                <td>110</td>
+                <td>Angela White</td>
+                <td>2024-11-24 9:00 AM</td>
+                <td><a href="https://meet.google.com/atj-pqyy-zem"><button class="btn btn-primary custom-width">Google Meet</button></a></td>
+                <td>Uploaded</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>James Taylor</td>
+                <td>2024-11-25 1:30 PM</td>
+                <td><a href="https://us06web.zoom.us/j/7300060335?pwd=aVVBSlViS2xBZDdkLzlDdUwzSERRdz09"><button class="btn btn-primary custom-width">Zoom</button></a></td>
+                <td>Pending</td>
+            </tr>
+            
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script src="./Scripts/article.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
